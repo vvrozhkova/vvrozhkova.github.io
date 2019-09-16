@@ -59,3 +59,9 @@ typings/
 
 # next.js build output
 .next
+/node_modules/*
+/dist/*
+/.cache/*
+/src/.temp/*
+/blog/ru/temp/*
+/blog/ignore_posts/*
