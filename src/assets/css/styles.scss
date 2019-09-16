@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic-ext');
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url('https://fonts.googleapis.com/css?family=Keania+One');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
+@import url('https://fonts.googleapis.com/css?family=Jura');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+$neon_blue: #0052cc;
+$white: #fff;
+$zcool_font: "ZCOOL QingKe HuangYou", cursive;
+$play: 'Play', sans-serif;
+$keania: 'Keania One', cursive;
+$oswald: 'Oswald', sans-serif;
+
+.neon_blue {
+  background-color: $neon_blue;
+}
+
+.white {
+  color: $white;
+}
+
+.zcool_font {
+  font-family: $zcool_font;
+}
+
+.keania {
+  font-family: $keania;
+}
+
+.oswald{
+  font-family: $oswald;
+}
+
+.center{
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+
+  .body {
+    font-size: 2vw;
+
+    h1{ font-size: 5vw; }
+
+    h2{ font-size: 2vw; }
+
+    h3{ font-size: 3vw; }
+
+    h4{ font-size: 2vw; }
+
+    h5{ font-size: 2vw; }
+  }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+  .body {
+    font-size: 1vw;
+
+    h1{ font-size: 3vw; }
+
+    h2{ font-size: 2vw; }
+
+    h3{ font-size: 1.5vw; }
+
+    h5{ font-size: 1.3vw; }
+  }
+}
+
+@media (min-width: 1800px) {
+  .body h5{
+    font-size: 1vw;
+  }
+} 
+
+.commonBody{
+  background-image: url(../img/back1.png);
+  background-repeat: round;
+}
+
+.body {
+  font-family: $play;
+  color: $white;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+ul li, ol li {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul{
+  padding-left: 0;
+  margin: 0;
+}
+
+hr {
+  border-color: #0052cc;
+  width: 200px;
+  background-color: #0052cc;
+  height: 3px;
+}
+
+.row {
+  margin: 0;
+}
+
+.post-content-box {
+
+  ul > li:before {
+    content: "# ";
+    font-family: "Keania One", cursive;
+    color: blue;
+    padding: 0 0.4vw;
+    font-size: 1em;
+  }
+
+  ol {
+    counter-reset: listCounter;
+  }
+
+  ol > li:before {
+    counter-increment: listCounter;
+    content: counter(listCounter, decimal-leading-zero);
+    font-family: "Keania One", cursive;
+    color: blue;
+    padding: 0 0.4vw;
+    font-size: 0.7vw;
+  }
+
+  pre {
+    margin: 0 10vw;
+  }
+
+}
+
+.post-table-content a {
+  color: #000;
+}
+
+.post-content {
+  a {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  a:hover {
+    color: navy;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+  }
+
+  img {
+    margin: 0 auto;
+    max-width: 90%;
+    display: block;
+    box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.75);
+  }
+
+  ul, ol{
+    padding-left: 1vw;
+  }
+
+}
+
+
+#terminal {
+  max-width: 90%;
+  margin: 1vw auto;
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  position: relative;
+
+  .right {
+    text-align: right;
+    position: absolute;
+    right: 1vw;
+    top: 0;
+  }
+
+  .center {
+    text-align: center;
+    position: relative;
+    top: -7px;
+  }
+
+  .title {
+    font-size: 0.75em;
+    color: #999;
+    height: 18px;
+  }
+
+  .window {
+    color: #d6d6d6;
+    font-size: 14px;
+    font-family: monospace;
+    overflow-wrap: break-word;
+    line-height: 1.25em;
+
+    pre {
+      margin: 0 !important;
+      background-color: #2d2d2d;
+    }
+  }
+
+  .icons {
+    margin: 0;
+    position: absolute;
+    list-style: none;
+    padding: 0 !important;
+
+    li {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+
+      &.closei {
+        background-color: #ff5552;
+      }
+
+      &.minimize {
+        background-color: #ffbe42;
+      }
+
+      &.maximize {
+        background-color: #31c74a;
+      }
+
+      &.closei:before,
+      &.minimize:before,
+      &.maximize:before {
+        content: "";
+      }
+    }    
+  }
+}
+
+.screen {
+  display: table;
+  background-color: #e8e8e8 !important;
+
+  .window img {
+    margin: 0 !important;
+    box-shadow: none;
+    max-width: 100%;
+    padding-top: 5px;
+  }
+
+  .comment {
+    text-align: center;
+    color: #272822;
+    font-size: 0.7vw;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  }
+  
+  .arrows {
+    margin: 0 50%;
+    color: #747474;
+    width: 100%;
+  }
+
+  .address-line .fas {
+    margin-right: 20%;
+    font-weight: 900;
+  }
+  
+  .address-line .line {
+    width: 100%;
+    background-color: #fff;
+    margin: 0.8% 0;
+    border-radius: 0.2vw;
+    color: #747474;
+    font-size: 0.6vw;
+    padding: 0.2vw;
+  }
+}
+
+/* share btns */
+.ya-share2__container_size_m{
+
+  .ya-share2__icon {
+    width: 3vw !important;
+    height: 3vw !important;
+  }
+
+  .ya-share2__counter {
+    padding: 1vw !important;
+    line-height: 1vw !important;
+    &:before{
+      background: none !important;
+    }
+  }
+
+}
