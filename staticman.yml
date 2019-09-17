@@ -2,13 +2,13 @@ comments:
   allowedFields: ["name", "message"]
   branch: "master"
   commitMessage: "Add Staticman data"
-  filename: "comment-{@timestamp}"
+  filename: "comment"
   format: "yaml"
   generatedFields:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "timestamp"
   moderation: true
   name: "testautomation.space"
   path: "blog/comments/{options.slug}"
