@@ -53,7 +53,7 @@ export default {
       this.axios
         .post(
           // "https://dev.staticman.net/v2/entry/github/vvrozhkova/testautomation.space/master",
-          "https://dev.staticman.net/v3/entry/github/vvrozhkova/testautomation.space/master",
+          "https://dev.staticman.net/v2/entry/github/vvrozhkova/testautomation.space/master",
           {
             "options[redirect]": this.redirect,
             "options[slug]": this.slug,
