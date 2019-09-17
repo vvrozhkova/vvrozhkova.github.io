@@ -69,7 +69,7 @@ export default {
         .post(
           // "https://dev.staticman.net/v2/entry/github/vvrozhkova/testautomation.space/master",
           "https://dev.staticman.net/v3/entry/github/vvrozhkova/testautomation.space/master/comments",
-          qs.stringify(request),
+          JSON.stringify(request),
           config
         )
         .then(function(response) {
