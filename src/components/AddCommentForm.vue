@@ -46,20 +46,31 @@ export default {
   },
   methods: {
     formSubmit: function(e) {
+      const qs = require("querystring");
+
       e.preventDefault();
       let currentObj = this;
       currentObj.loading = true;
       currentObj.disabled = true;
+
+      const request = {
+        "options[redirect]": this.redirect,
+        "options[slug]": this.slug,
+        "fields[name]": this.name,
+        "fields[message]": this.message
+      };
+
+      const config = {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        }
+      };
       this.axios
         .post(
           // "https://dev.staticman.net/v2/entry/github/vvrozhkova/testautomation.space/master",
           "https://dev.staticman.net/v3/entry/github/vvrozhkova/testautomation.space/master/comments",
-          {
-            "options[redirect]": this.redirect,
-            "options[slug]": this.slug,
-            "fields[name]": this.name,
-            "fields[message]": this.message
-          }
+          qs.stringify(request),
+          config
         )
         .then(function(response) {
           currentObj.output = response.data;

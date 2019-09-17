@@ -25,7 +25,8 @@
     "remark-attr": "^0.8.3",
     "remark-emoji": "^2.0.2",
     "vue": "^2.6.10",
-    "vue-fuse": "^2.1.0"
+    "vue-fuse": "^2.1.0",
+    "query-string": "^6.8.3"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
