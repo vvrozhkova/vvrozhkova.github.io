@@ -53,12 +53,11 @@ export default {
       currentObj.loading = true;
       currentObj.disabled = true;
 
-      const request = {
-        "options[redirect]": this.redirect,
-        "options[slug]": this.slug,
-        "fields[name]": this.name,
-        "fields[message]": this.message
-      };
+      const params = new URLSearchParams();
+      params.append("options[redirect]", this.redirect);
+      params.append("options[slug]", this.slug);
+      params.append("fields[name]", this.name);
+      params.append("fields[message]", this.message);
 
       const config = {
         headers: {
@@ -69,7 +68,7 @@ export default {
         .post(
           // "https://dev.staticman.net/v2/entry/github/vvrozhkova/testautomation.space/master",
           "https://dev.staticman.net/v3/entry/github/vvrozhkova/testautomation.space/master/comments",
-          JSON.stringify(request),
+          params,
           config
         )
         .then(function(response) {
