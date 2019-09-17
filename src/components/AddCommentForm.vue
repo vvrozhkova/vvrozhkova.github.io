@@ -6,7 +6,7 @@
       <div class="form-group">
         <label for="commentAuthorName">Имя</label>
         <input
-          model="name"
+          v-model="name"
           :disabled="disabled"
           type="text"
           class="form-control"
