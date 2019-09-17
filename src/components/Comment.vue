@@ -1,7 +1,12 @@
 <template>
   <div>
-    <CommentItem :comment="comment"/>
-    <AddCommentForm class="replyForm" :id="'reply-'+comment.id" />
+    <CommentItem :comment="comment" />
+    <AddCommentForm
+      class="replyForm"
+      :id="'reply-'+comment.id"
+      :pagePath="pagePath"
+      :pageSlug="pageSlug"
+    />
     <div class="children">
       <comment
         class="comment-child"
@@ -9,6 +14,8 @@
         :key="reply.node.id"
         :comment="reply.node"
         :comments="comments"
+        :pagePath="pagePath"
+        :pageSlug="pageSlug"
       />
     </div>
   </div>
@@ -25,7 +32,7 @@ export default {
     CommentItem,
     AddCommentForm
   },
-  props: ["comment", "comments"],
+  props: ["comment", "comments", "pagePath", "pageSlug"],
   name: "Comment",
   methods: {
     getNavItems(parentId) {

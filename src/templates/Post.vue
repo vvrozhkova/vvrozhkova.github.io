@@ -22,7 +22,11 @@
       </div>
       <div class="post-content col-12 col-xl-8">
         <div itemprop="text" v-html="$page.post.content" />
-        <Comments :comments="$page.comments.edges"/>
+        <Comments
+          :comments="$page.comments.edges"
+          :pagePath="$page.metadata.siteUrl+$page.post.path"
+          :pageSlug="$page.post.path"
+        />
       </div>
     </main>
   </Layout>
@@ -116,6 +120,10 @@ export default {
           date
         }
       }
+    }
+
+    metadata{
+      siteUrl
     }
   }
     

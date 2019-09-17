@@ -1,8 +1,8 @@
 <template>
   <div class="add-new-comment">
     <form id="comment-form" @submit="formSubmit" method="POST">
-      <input v-model="redirect" type="hidden" value="vvrozhkova.github.io/" />
-      <input v-model="slug" type="hidden" value="test" />
+      <!-- <input v-model="redirect" type="hidden" value="vvrozhkova.github.io/" /> -->
+      <!-- <input v-model="slug" type="hidden" value="test" /> -->
       <div class="form-group">
         <label for="commentAuthorName">Имя</label>
         <input
@@ -29,15 +29,14 @@
 </template>
 
 <script>
-import { setTimeout } from "timers";
 export default {
-  props: ["checked"],
+  props: ["pagePath", "pageSlug"],
   data() {
     return {
       name: "",
       message: "",
-      redirect: "",
-      slug: "",
+      redirect: this.pagePath,
+      slug: this.pageSlug,
       output: "",
       errored: false,
       successed: false,
@@ -53,7 +52,7 @@ export default {
       currentObj.disabled = true;
       this.axios
         .post(
-          "https://dev.staticman.net/v2/entry/github/vvrozhkova/vvrozhkova.github.io/master",
+          "https://dev.staticman.net/v2/entry/github/vvrozhkova/testautomation.space/master",
           {
             "options[redirect]": this.redirect,
             "options[slug]": this.slug,

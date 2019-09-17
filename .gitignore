@@ -65,3 +65,5 @@ typings/
 /src/.temp/*
 /blog/ru/temp/*
 /blog/ignore_posts/*
+package-lock.json
+.DS_Store

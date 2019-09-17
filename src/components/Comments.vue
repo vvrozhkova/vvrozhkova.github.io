@@ -2,7 +2,7 @@
   <div class="comments">
     <hr />
     <h2>Комментарии</h2>
-    <AddCommentForm class="active"/>
+    <AddCommentForm class="active" :pagePath="pagePath" :pageSlug="pageSlug" />
     <div id="commentsToDisplay">
       <comment
         class="parent-comment"
@@ -10,6 +10,8 @@
         :key="edge.node.id"
         :comment="edge.node"
         :comments="comments"
+        :pagePath="pagePath"
+        :pageSlug="pageSlug"
       />
     </div>
   </div>
@@ -25,7 +27,7 @@ export default {
     AddCommentForm,
     Comment
   },
-  props: ["comments"],
+  props: ["comments", "pagePath", "pageSlug"],
   name: "Comments",
   methods: {
     getNavItems(parentId) {
