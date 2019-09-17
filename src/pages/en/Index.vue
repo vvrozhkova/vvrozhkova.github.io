@@ -22,7 +22,7 @@ export default {
   metaInfo: {
     title: siteConfig.siteName,
     titleTemplate: "TestAutomation.Space",
-    link: [{ rel: "canonical", href: "http://www.testautomation.space" }],
+    link: [{ rel: "canonical", href: "testautomation.space" }],
     meta: [
       { description: siteConfig.siteDescription },
       { property: "og:locale", content: "ru_RU" },
