@@ -31,7 +31,7 @@ export default function (Vue, {head}) {
     head.script.push({
         src: 'https://yastatic.net/share2/share.js'
     });
-    head.script.push({src: 'http://cookieinfoscript.com/js/cookieinfo.min.js',
+    head.script.push({src: '//cookieinfoscript.com/js/cookieinfo.min.js',
     id:'cookieinfo', type: 'text/javascript'});
 
 

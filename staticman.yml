@@ -2,8 +2,8 @@ comments:
   allowedFields: ["name", "message"]
   branch: "master"
   commitMessage: "Add Staticman data"
-  filename: "comment"
-  format: "yaml"
+  filename: "comment-{@timestamp}"
+  format: "frontmatter"
   generatedFields:
     date:
       type: date
