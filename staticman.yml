@@ -1,7 +1,7 @@
 comments:
   allowedFields: ["name", "message"]
   branch: "master"
-  commitMessage: "Add Staticman data"
+  commitMessage: "New comment by {fields.name}"
   filename: "comment-{@timestamp}"
   format: "frontmatter"
   generatedFields:
