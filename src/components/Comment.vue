@@ -4,7 +4,7 @@
     <AddCommentForm
       class="replyForm"
       :id="'reply-'+comment.id"
-      :pageSlug="pageSlug"
+      :pageSlug="pageSlug" :reply="comment.id"
     />
     <div class="children">
       <comment

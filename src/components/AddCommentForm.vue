@@ -10,12 +10,12 @@
           :disabled="disabled"
           type="text"
           class="form-control"
-          placeholder="Ваше имя"
+          placeholder="Ваше имя" required
         />
       </div>
       <div class="form-group">
         <label for="commentText">Комментарий</label>
-        <textarea :disabled="disabled" v-model="message" class="form-control" rows="3"></textarea>
+        <textarea :disabled="disabled" v-model="message" class="form-control" rows="3" required></textarea>
       </div>
       <div
         class="alert"
@@ -32,13 +32,14 @@
 
 <script>
 export default {
-  props: ["pageSlug"],
+  props: ["pageSlug", "reply"],
   data() {
     return {
       name: "",
       message: "",
       slug: this.pageSlug.replaceAll("/", ""),
       post: this.pageSlug,
+      replies: this.reply,
       output: "",
       errored: false,
       successed: false,
@@ -59,7 +60,8 @@ export default {
         "options[slug]": this.slug,
         "fields[name]": this.name,
         "fields[message]": this.message,
-        "fields[post]": this.post
+        "fields[post]": this.post,
+        "fields[replies]": this.replies
       };
 
       const config = {
@@ -74,12 +76,12 @@ export default {
           config
         )
         .then(function(response) {
-          currentObj.output = response.data;
+          currentObj.output = "Ваш комментарий успешно отпрвлен! Он отобразится после того как будет проверен модератором сайта.";
           currentObj.errored = false;
           currentObj.successed = true;
         })
         .catch(function(error) {
-          currentObj.output = error;
+          currentObj.output = "Упс... Что-то пошло не так :(";
           currentObj.successed = false;
           currentObj.errored = true;
         })
