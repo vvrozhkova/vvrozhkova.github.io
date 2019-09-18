@@ -2,7 +2,7 @@ comments:
   allowedFields: ["name", "post", "message"]
   branch: "master"
   commitMessage: "New comment by {fields.name}"
-  filename: "{options.slug}/comment-{@timestamp}"
+  filename: "comment-{@timestamp}"
   format: "frontmatter"
   generatedFields:
     date:
