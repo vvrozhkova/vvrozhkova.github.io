@@ -8,7 +8,7 @@ comments:
     date:
       type: date
       options:
-        format: "timestamp"
+        format: "timestamp-seconds"
   moderation: true
   name: "testautomation.space"
   path: "blog/comments/{options.slug}"
