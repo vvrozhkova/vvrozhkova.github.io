@@ -28,15 +28,17 @@
   </div>
 </template>
 
+
+
 <script>
 export default {
-  props: ["pagePath", "pageSlug"],
+  props: ["pageSlug"],
   data() {
     return {
       name: "",
       message: "",
-      redirect: this.pagePath,
-      slug: this.pageSlug,
+      slug: this.pageSlug.replaceAll("/", ""),
+      post: this.pageSlug,
       output: "",
       errored: false,
       successed: false,
@@ -54,10 +56,10 @@ export default {
       currentObj.disabled = true;
 
       const params = {
-        // "options[redirect]": this.redirect,
-        // "options[slug]": this.slug,
+        "options[slug]": this.slug,
         "fields[name]": this.name,
-        "fields[message]": this.message
+        "fields[message]": this.message,
+        "fields[post]": this.post
       };
 
       const config = {

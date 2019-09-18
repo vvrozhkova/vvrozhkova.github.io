@@ -24,7 +24,6 @@
         <div itemprop="text" v-html="$page.post.content" />
         <Comments
           :comments="$page.comments.edges"
-          :pagePath="$page.metadata.siteUrl+$page.post.path"
           :pageSlug="$page.post.path"
         />
       </div>
@@ -120,10 +119,6 @@ export default {
           date
         }
       }
-    }
-
-    metadata{
-      siteUrl
     }
   }
     
