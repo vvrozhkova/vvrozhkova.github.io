@@ -76,9 +76,11 @@ export default {
           config
         )
         .then(function(response) {
-          currentObj.output = "Ваш комментарий успешно отпрвлен! Он отобразится после того как будет проверен модератором сайта.";
+          currentObj.output = "Ваш комментарий успешно отправлен! Он отобразится после того как будет проверен модератором сайта.";
           currentObj.errored = false;
           currentObj.successed = true;
+          currentObj.name="";
+          currentObj.message="";
         })
         .catch(function(error) {
           currentObj.output = "Упс... Что-то пошло не так :(";

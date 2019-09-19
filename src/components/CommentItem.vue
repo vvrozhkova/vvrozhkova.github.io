@@ -49,6 +49,11 @@ export default {
           openLinks[i].classList.remove("active");
         }
       }
+
+      var openForm = document.querySelector(".add-new-comment.active");
+      if (openForm == null) {
+        replyForms[0].classList.add("active");
+      }
     }
   }
 };
