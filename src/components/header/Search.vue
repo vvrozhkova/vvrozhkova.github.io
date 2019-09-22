@@ -1,5 +1,5 @@
 <template>
-    <div class="search col-xl-3">
+    <div class="search">
         <search-focus @keyup="focusSearch"></search-focus>
         <div class="search__box">
             <i class="search__icon fas fa-search"></i>
@@ -127,8 +127,9 @@
         width: 100%;
         position: relative;
         border-bottom: 2px solid lightgrey;
-        height: 2em;
-        margin-top: 1em;
+        height: 2vw;
+        margin-top: 1vw;
+        /* padding: 1vw; */
     }
 
     .search__box:focus-within {
@@ -138,33 +139,35 @@
 
     .search__icon {
         position: absolute;
-        font-size: 1.3rem;
+        font-size: 1.5vw;
+        margin-top: -0.5vw;
     }
 
     .search__close-icon {
         position: absolute;
-        font-size: 1.5rem;
+        font-size: 1.5vw;
         right: 0;
         cursor: pointer;
     }
 
     .search__input {
-        top: -2.2em;
+        top: -3.6vw;
         position: absolute;
-        left: 1em;
+        left: 1vw;
         width: 85%;
+        /* margin: 2vw 1vw; */
         border: none;
         outline: none;
-        height: 2em;
-        margin: 2em 1em;
-        color: lightgray;
+        height: 3vw;
+        margin: 2vw 1vw;
+        color: #fff;
     }
 
     .search-results {
-        top: 2.5em;
-        max-height: 20em;
+        top: 2.5vw;
+        max-height: 20vw;
         overflow: scroll;
-        border-radius: 0.5em;
+        border-radius: 0.5vw;
         position: absolute;
         width: 85%;
         background-color: #fff;
@@ -175,11 +178,11 @@
 
     .search-result {
         border-bottom: 1px solid grey;
-        padding: 0.5em;
+        padding: 0.5vw;
     }
 
     .search-result__null {
-        padding: 0.5em;
+        padding: 0.5vw;
     }
 
     .search-result__link, .search-results {
@@ -189,7 +192,7 @@
 
     .search-result__title {
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.2vw;
         color: #3f51b5;
     }
 
@@ -211,4 +214,4 @@
     .fade-enter, .fade-leave-to {
         opacity: 0;
     }
-</style>
+</style> 

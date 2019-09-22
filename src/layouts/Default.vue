@@ -33,16 +33,21 @@ export default {
   padding: 0;
   margin-bottom: 7vw;
 }
-
-@media (min-width: 500px) {
+/* @media (max-width: 499px) {
   .main {
-    margin-top: 41vw;
+    margin-top: 29vw;
   }
-}
+} */
 
- @media (min-width: 768px) {
-.main {
+/* @media (min-width: 500px) {
+  .main {
     margin-top: 20vw;
+  }
+} */
+
+ @media (max-width: 1199px) {
+.main {
+    margin-top: 17vw;
   }
 } 
 

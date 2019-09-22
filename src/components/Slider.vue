@@ -40,7 +40,7 @@
 <style>
 
     .slider {
-        padding: 2em 1em;
+        padding: 2vw 1vw;
     }
 
     .carousel-caption {
@@ -52,14 +52,14 @@
     .carousel-control-next, .carousel-control-prev {
         height: 4vw;
         width: 4vw;
-        border: 2px solid #fff;
+        border: 0.2vw solid #fff;
         top: auto;
         z-index: 10;
-        padding: 0.5em;
+        padding: 0.5vw;
     }
 
     .carousel-control-next:hover, .carousel-control-prev:hover {
-        border: 2px solid #0052cc;
+        border: 0.2vw solid #0052cc;
     }
 
     .carousel-control-next:hover .carousel-control-next-icon {
@@ -76,7 +76,7 @@
     }
 
     .carousel {
-        height: 35vw;
+        height: 36vw;
     }
 
     .carousel-indicators {

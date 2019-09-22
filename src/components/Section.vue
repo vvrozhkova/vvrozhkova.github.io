@@ -35,11 +35,11 @@
     }
 
     .section__title_right {
-        right: 2vw;
+        right: 7vw;
     }
 
     .section__title_left {
-        left: 2vw;
+        left: 7vw;
     }
 
 </style>

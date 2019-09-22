@@ -61,7 +61,7 @@ export default {
   padding: 2vw;
   font-size: 1.5vw;
   overflow: hidden;
-  max-height: 30vw;
+  max-height: 33vw;
 }
 
 .post-header-image {
@@ -84,5 +84,9 @@ export default {
     )
     no-repeat center;
   z-index: 1;
+}
+
+hr{
+  margin: 1vw 0;
 }
 </style>
