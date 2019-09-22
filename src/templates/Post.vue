@@ -3,7 +3,7 @@
     <PostHeader :post="$page.post" />
     <div class="post-share row">
       <span class="post-share-title">
-        <h4>Share it:</h4>
+        <h3>Share it:</h3>
       </span>
 
       <div class="post-share-btns">
@@ -22,10 +22,7 @@
       </div>
       <div class="post-content col-12 col-xl-8">
         <div itemprop="text" v-html="$page.post.content" />
-        <Comments
-          :comments="$page.comments.edges"
-          :pageSlug="$page.post.path"
-        />
+        <Comments :comments="$page.comments.edges" :pageSlug="$page.post.path" />
       </div>
     </main>
   </Layout>
@@ -130,9 +127,22 @@ export default {
   margin: 0 10%;
 }
 
+@media(max-width: 1200px){
+  .post-table-content{
+    top: 17vw;
+  }
+}
+@media(min-width: 1201px){
+  .post-table-content{
+    top: 5vw;
+  }
+}
+
 .post-table-content {
+  display: table;
   position: sticky;
-  top: 10%;
+  background: #fff;
+  z-index: 10;
   /* float: right; */
 }
 
@@ -158,7 +168,7 @@ export default {
 
 .post-share {
   background-color: #252f6f;
-  padding: 1vw 4vw;
+  padding: 1vw 6vw;
   border: 1px solid #fff;
 }
 

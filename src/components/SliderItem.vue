@@ -25,8 +25,8 @@
       >{{slide.category.title.toUpperCase()}}</g-link>
       <br />
 
-      <h2>
-        <g-link :to="slide.path" class="slide-title-link">{{slide.title}}</g-link>
+      <h2 class="slide-title-link">
+        <g-link :to="slide.path" >{{slide.title}}</g-link>
       </h2>
 
       <hr align="center" />
@@ -121,7 +121,7 @@ $element-size: 6vw;
 .slide-number {
   font-family: "Keania One", cursive;
   font-size: 12vw;
-  margin-top: -0.3em;
+  margin-top: -0.3vw;
 }
 
 // .circle {
@@ -142,7 +142,6 @@ $element-size: 6vw;
 .slide-title-link {
   font-size: 2vw;
   font-weight: bold;
-  line-height: 0.7;
   color: #fff;
   text-decoration: none;
 }
@@ -154,6 +153,10 @@ $element-size: 6vw;
 .slide-read-button {
   bottom: 0;
   position: absolute;
-  right: 1em;
+  right: 5vw;
+}
+
+hr{
+    margin: 1.5vw 0;
 }
 </style>

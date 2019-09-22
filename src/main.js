@@ -34,12 +34,4 @@ export default function (Vue, {head}) {
     head.script.push({src: '//cookieinfoscript.com/js/cookieinfo.min.js',
     id:'cookieinfo', type: 'text/javascript'});
 
-
-    // head.script.push({
-    //     rel: "stylesheet",
-    //     href: "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
-    //     integrity: "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T",
-    //     crossorigin: "anonymous"
-    // })
-
 }

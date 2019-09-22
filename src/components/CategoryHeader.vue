@@ -1,10 +1,10 @@
 <template>
     <header class="category-header row">
-        <div class="category-title col">
+        <div class="category-title col-4">
             <h1><slot/></h1><br>
             <a :href="item.path" class="category-item__link">{{item.title}}</a>
         </div>
-        <div class="category-related col">
+        <div class="category-related col-4">
             <h2>RELATED:</h2>
             <ul>
                 <li v-for="relTag in related" :key="relTag.id">
@@ -13,7 +13,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col">
+        <div class="col-4">
             <h3>{{size}} article(s)</h3>
         </div>
 
@@ -45,12 +45,12 @@
     }
 
     .category-related ul {
-        font-size: 1em;
+        font-size: 1vw;
     }
 
     .category-related ul li {
         display: flex;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5vw;
     }
 
 </style>
