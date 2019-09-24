@@ -31,11 +31,8 @@ export default {
       { property: "og:description", content: siteConfig.siteDescription },
       { property: "og:url", content: siteConfig.siteUrl },
       { property: "og:site_name", content: siteConfig.siteName },
-      {
-        property: "keywords",
-        content:
-          "testing, automation testing, тестирование, автоматизация тестирования"
-      }
+      { name: "yandex-verification", content: "067903c2cc71daeb" },
+      { property: "keywords", content: "testing, automation testing, тестирование, автоматизация тестирования" }
     ]
   },
   components: {
