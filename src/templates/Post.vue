@@ -16,7 +16,7 @@
         <h2>СОДЕРЖАНИЕ:</h2>
         <ul>
           <li v-for="tableContentItem in $page.post.headings" :key="tableContentItem.id">
-            <g-link :href="tableContentItem.anchor">{{tableContentItem.value}}</g-link>
+            <g-link :to="$page.post.path.slice(0, -1)+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
           </li>
         </ul>
       </div>
@@ -159,6 +159,8 @@ export default {
 .post-table-content a:hover {
   color: navy;
 }
+
+
 
 .postPage {
   background-color: #fff;
