@@ -16,7 +16,9 @@
         <h2>СОДЕРЖАНИЕ:</h2>
         <ul>
           <li v-for="tableContentItem in $page.post.headings" :key="tableContentItem.id">
-            <g-link :to="$page.post.path.slice(0, -1)+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
+            <g-link
+              :to="$page.post.path.slice(0, -1)+tableContentItem.anchor"
+            >{{tableContentItem.value}}</g-link>
           </li>
         </ul>
       </div>
@@ -44,6 +46,11 @@ export default {
     return {
       title: this.$page.post.title,
       bodyAttrs: { class: "postBody body" },
+      script: [
+        { src: "https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" },
+        { src: "https://yastatic.net/share2/share.js",
+        async: "async" }
+        ],
       meta: [
         { description: this.$page.post.description },
         { property: "og:locale", content: "ru_RU" },
@@ -127,16 +134,17 @@ export default {
   margin: 0 10%;
 }
 
-@media(max-width: 1200px){
-  .post-table-content{
+@media (max-width: 1200px) {
+  .post-table-content {
     top: 17vw;
   }
 }
-@media(min-width: 1201px){
-  .post-table-content{
+@media (min-width: 1201px) {
+  .post-table-content {
     top: 5vw;
   }
 }
+
 
 .post-table-content {
   display: table;
@@ -159,8 +167,6 @@ export default {
 .post-table-content a:hover {
   color: navy;
 }
-
-
 
 .postPage {
   background-color: #fff;

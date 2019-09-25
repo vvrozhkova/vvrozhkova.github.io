@@ -25,12 +25,7 @@ export default function (Vue, {head}) {
         crossorigin: "anonymous"
     });
     head.bodyAttrs = {class: 'body commonBody'};
-    head.script.push({
-        src: 'https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js'
-    });
-    head.script.push({
-        src: 'https://yastatic.net/share2/share.js'
-    });
+
     head.script.push({src: '//cookieinfoscript.com/js/cookieinfo.min.js',
     id:'cookieinfo', type: 'text/javascript'});
 

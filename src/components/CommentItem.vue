@@ -17,7 +17,7 @@
     <div class="row">
       <div class="col"></div>
       <div class="col">
-        <small class="openLink" v-on:click="openReplyForm" :comment-id="comment.id"></small>
+        <span class="openLink" v-on:click="openReplyForm" :comment-id="comment.id"></span>
       </div>
     </div>
   </div>
@@ -59,6 +59,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
 .comment {
   border: 1px solid #cfcfcf;
   //border-radius: 5px;
