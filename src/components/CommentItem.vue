@@ -63,14 +63,10 @@ export default {
 .comment {
   border: 1px solid #cfcfcf;
   //border-radius: 5px;
-  line-height: 1vw;
-  font-size: 0.8vw;
   margin-bottom: 1vw;
   padding: 0.8vw;
 
-  .comment-name {
-    font-size: 0.9vw;
-  }
+
 
   .comment-name::first-letter {
     text-transform: uppercase;

@@ -145,7 +145,6 @@ export default {
   }
 }
 
-
 .post-table-content {
   display: table;
   position: sticky;
