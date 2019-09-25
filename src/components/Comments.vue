@@ -47,7 +47,7 @@ export default {
     } */
 
 .comment-child {
-  margin-left: 60px;
+  margin-left: 12vw;
 }
 
 #commentsToDisplay {

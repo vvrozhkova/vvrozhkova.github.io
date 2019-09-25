@@ -66,7 +66,7 @@ export default {
   line-height: 1vw;
   font-size: 0.8vw;
   margin-bottom: 1vw;
-  padding: 0.3vw;
+  padding: 0.8vw;
 
   .comment-name {
     font-size: 0.9vw;
