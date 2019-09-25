@@ -18,7 +18,7 @@
         <textarea :disabled="disabled" v-model="message" class="form-control" rows="3" required></textarea>
       </div>
       <div
-        class="alert"
+        class="alert" v-if="output != ''"
         :class="{'alert-danger': errored, 'alert-success': successed}"
         role="alert"
       >{{output}}</div>
