@@ -46,13 +46,13 @@ export default {
 
 <style lang="scss" >
 .comment-child .comment {
-  margin-left: 60px;
+  margin-left: 12vw;
   background: #dee3e6;
-  border-radius: 10px 0px 10px 10px;
+  border-radius: 2vw 0px 2vw 2vw;
 }
 
 .parent-comment > .comment:first-child {
-  border-radius: 0px 10px 10px 10px;
+  border-radius: 0px 2vw 2vw 2vw;
 }
 </style>
 
