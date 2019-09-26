@@ -46,7 +46,7 @@ export default {
 
 <style lang="scss" >
 .comment-child .comment {
-  margin-left: 12vw;
+  margin-left: 10vw;
   background: #dee3e6;
   border-radius: 2vw 0px 2vw 2vw;
 }
