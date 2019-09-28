@@ -3,6 +3,13 @@ jobs:
   build:
     docker:
       - image: circleci/node:8.9.0
+    environment:
+      - GH_EMAIL: vvrozhkova@gmail.com
+      - GH_NAME: Victoria Rozhkova
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: master
+      - SOURCE_REPOSITORY_URL: https://github.com/vvrozhkova/testautomation.space.git
+      - TARGET_REPOSITORY_URL: https://github.com/vvrozhkova/vvrozhkova.github.io.git
 
     steps:
       - checkout
@@ -16,8 +23,8 @@ jobs:
 
       - run: 
         name: Install dependencies
-        command: yarn install
-        
+        command: npm install
+
       - run:
         name: Gridsome build
         command: gridsome build
@@ -26,3 +33,30 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - deploy:
+        name: Deploy
+        command: |
+          if [$CIRCLE_BRANCH == $SOURCE_BRANCH]; then
+            git config --global user.email $GH_EMAIL
+            git config --global user.name $GH_NAME
+
+            git clone $TARGET_REPOSITORY_URL out
+            cd out
+            git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+            git rm -rf .
+            cd ..
+            gridsome build
+            cp -a dist/. out/.
+            cd out
+            git add -A
+            git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+            git push origin $TARGET_BRANCH
+          fi
+
+
+
+
+
+
+
