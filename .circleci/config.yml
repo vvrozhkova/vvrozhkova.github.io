@@ -25,10 +25,6 @@ jobs:
         name: Install dependencies
         command: npm install
 
-      - run:
-        name: Gridsome build
-        command: gridsome build
-
       - save_cache:
           paths:
             - node_modules
