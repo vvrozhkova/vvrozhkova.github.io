@@ -21,18 +21,14 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: 
-        name: Install dependencies
-        command: yarn install
+      - run: yarn install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run:
-        name: Deploy
-        command: |
+      - run: |
           if [$CIRCLE_BRANCH == $SOURCE_BRANCH]; then
             git config --global user.email $GH_EMAIL
             git config --global user.name $GH_NAME
@@ -49,10 +45,3 @@ jobs:
             git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
             git push origin $TARGET_BRANCH
           fi
-
-
-
-
-
-
-
