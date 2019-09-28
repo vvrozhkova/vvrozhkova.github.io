@@ -30,7 +30,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - deploy:
+      - run:
         name: Deploy
         command: |
           if [$CIRCLE_BRANCH == $SOURCE_BRANCH]; then
