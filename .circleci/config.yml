@@ -42,6 +42,7 @@ jobs:
             git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
             git rm -rf .
             cd ..
+            npm install --global @gridsome/cli
             gridsome build
             cp -a dist/. out/.
             cd out
