@@ -14,7 +14,13 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run: 
+        name: Install dependencies
+        command: yarn install
+        
+      - run:
+        name: Gridsome build
+        command: gridsome build
 
       - save_cache:
           paths:
