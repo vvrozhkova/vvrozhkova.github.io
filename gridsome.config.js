@@ -6,7 +6,7 @@
 
 module.exports = {
     siteName: 'TestAutomation.Space',
-    siteUrl: 'http://www.testautomation.space',
+    siteUrl: 'https://www.testautomation.space',
     siteDescription: 'Блог про автоматизацию тестирования и не только.',
 
     icon: {
