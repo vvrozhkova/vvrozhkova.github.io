@@ -1,3 +1,3 @@
 # TestAutomation.Space
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/84e44fed-e005-4f3b-a600-74e5824f5c45/deploy-status)](https://app.netlify.com/sites/testautomation-space/deploys)
+[![CircleCI](https://circleci.com/gh/vvrozhkova/testautomation.space.svg?style=svg)](https://circleci.com/gh/vvrozhkova/testautomation.space)
