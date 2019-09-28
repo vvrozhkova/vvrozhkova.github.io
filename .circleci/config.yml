@@ -22,6 +22,8 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
+      
+      - run: yarn global add @gridsome/cli
 
       - save_cache:
           paths:
