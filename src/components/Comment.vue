@@ -47,12 +47,14 @@ export default {
 
 <style lang="scss" >
 .comment-child .comment {
-  background: #dee3e6;
-  border-radius: 2vw 0px 2vw 2vw;
+  // background: #dee3e6;
+  background: linear-gradient(to right, #208cd6, #88cfc5);
+  border-radius: 1.5vw 0px 1.5vw 1.5vw;
 }
 
 .parent-comment > .comment:first-child {
-  border-radius: 0px 2vw 2vw 2vw;
+  border-radius: 0px 1.5vw 1.5vw 1.5vw;
+  background: linear-gradient(to right, #252f6f, #d165ac);
 }
 </style>
 
