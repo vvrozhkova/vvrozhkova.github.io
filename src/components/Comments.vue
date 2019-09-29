@@ -2,7 +2,7 @@
   <div class="comments">
     <hr />
     <h2>Комментарии</h2>
-    <AddCommentForm class="active" :pageSlug="pageSlug"/>
+    <AddCommentForm class="active" :pageSlug="pageSlug" />
     <div id="commentsToDisplay">
       <comment
         class="parent-comment"
@@ -47,7 +47,7 @@ export default {
     } */
 
 .comment-child {
-  margin-left: 12vw;
+  margin-left: 5vw;
 }
 
 #commentsToDisplay {
