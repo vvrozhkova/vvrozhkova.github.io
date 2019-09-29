@@ -71,7 +71,7 @@ export default {
       };
       this.axios
         .post(
-          "https://api.staticman.net/v2/entry/vvrozhkova/testautomation.space/master/comments",
+          "https://vvrozhkova-staticman.glitch.me/v3/entry/github/vvrozhkova/testautomation.space/master/comments",
           qs.stringify(params),
           config
         )
