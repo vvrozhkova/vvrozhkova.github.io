@@ -1,7 +1,7 @@
 <template>
   <div class="comment">
     <strong>
-      <div class="comment-name text-muted">
+      <div class="comment-name">
         {{comment.name}}
         <small class="text-muted comment-date">
           -
@@ -64,6 +64,7 @@ export default {
   //border-radius: 5px;
   margin-bottom: 1vw;
   padding: 0.8vw;
+  color: #fff;
 
   .comment-name::first-letter {
     text-transform: uppercase;
@@ -72,8 +73,9 @@ export default {
   .openLink {
     color: #000;
     float: right;
+    cursor: pointer;
     &:before {
-      content: "Открыть";
+      content: "Ответить";
     }
   }
 
