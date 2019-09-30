@@ -26,7 +26,7 @@ export default function (Vue, {head}) {
     });
     head.bodyAttrs = {class: 'body commonBody'};
 
-    head.script.push({id:'cookieinfo', type: 'text/javascript',
+    head.script.push({id:'cookieinfo',
 src: '//cookieinfoscript.com/js/cookieinfo.min.js' });
 
 }
