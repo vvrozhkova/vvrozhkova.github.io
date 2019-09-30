@@ -12,7 +12,7 @@
                    @keyup.enter="gotoLink"
                    @keyup.esc="searchResultsVisible = false"
                    class="search__input neon_blue"
-                   placeholder="Search (Press  &quot;\/&quot; to focus)"
+                   placeholder="Search (Press  '/' to focus)"
                    ref="search" type="text" v-model="query">
             <div @click="reset" class="search__close-icon" v-if="query.length > 0 && searchResultsVisible">&times;</div>
         </div>
