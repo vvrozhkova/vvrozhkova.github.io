@@ -13,8 +13,8 @@
         <g-image :src="article.image" class="card-image__img" :alt="article.title"></g-image>
       </div>
       <!-- <CardImage class="mini-card-image" :article="article" /> -->
-      <ArticleTags class="mini-card-tags" :tags="article.tags" />
     </g-link>
+    <ArticleTags class="mini-card-tags" :tags="article.tags" />
   </article>
 </template>
 
