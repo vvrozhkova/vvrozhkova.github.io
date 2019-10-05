@@ -32,6 +32,7 @@ export default {
   vertical-align: middle;
   text-align: center;
 }
+
 .card-image__img {
   width: 100%;
 }
