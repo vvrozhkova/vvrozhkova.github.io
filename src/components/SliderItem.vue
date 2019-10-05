@@ -26,13 +26,14 @@
       <br />
 
       <h2 class="slide-title-link">
-        <g-link :to="slide.path" >{{slide.title}}</g-link>
+        <g-link :to="slide.path">{{slide.title}}</g-link>
       </h2>
 
       <hr align="center" />
       <ul>
-         <li v-for="tableContentItem in slide.headings" :key="tableContentItem.id">
-          - <g-link :href="slide.path+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
+        <li v-for="tableContentItem in slide.headings" :key="tableContentItem.id">
+          -
+          <g-link :to="slide.path.slice(0, -1)+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
         </li>
       </ul>
       <div class="slide-read-button">
@@ -44,7 +45,6 @@
 
 <script>
 import ReadButton from "~/components/ReadButton.vue";
-
 export default {
   name: "SliderItem",
   props: ["slide", "index"],
@@ -66,12 +66,11 @@ export default {
 <style lang="scss" scoped>
 $container-size: 30vw;
 $element-size: 6vw;
-
 .circle {
   // display: inline-block;
   width: $container-size;
   height: $container-size;
-  padding: $element-size / 2;
+  padding: 5vw 3vw 3vw 3vw;
   margin: $element-size/2 0;
   background: lightgray;
   border: 2px solid #fff;
@@ -79,7 +78,6 @@ $element-size: 6vw;
   border-radius: 50%;
   // margin-top: 1vw;
 }
-
 .label {
   width: $element-size;
   height: $element-size;
@@ -98,11 +96,9 @@ $element-size: 6vw;
   }
   // transform-origin: 50%, + $element-size / 2 - $container-size / 2;
 }
-
-.label:hover{
+.label:hover {
   border: 2px solid #007bff;
 }
-
 //Magic starts here
 @for $i from 2 through 10 {
   @for $j from 2 through $i {
@@ -113,17 +109,14 @@ $element-size: 6vw;
     }
   }
 }
-
 .slide-box {
   height: 35vw;
 }
-
 .slide-number {
   font-family: "Keania One", cursive;
   font-size: 12vw;
   margin-top: -0.3vw;
 }
-
 // .circle {
 //   border-radius: 50%;
 //   /* background-color: #252f6f; */
@@ -131,32 +124,27 @@ $element-size: 6vw;
 //   height: 30vw;
 //   text-align: center;
 // }
-
 .slide-category-link {
   font-size: 1.5vw;
   color: #fff;
   font-family: "Oswald", sans-serif;
   text-decoration: none;
 }
-
 .slide-title-link {
   font-size: 2vw;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
 }
-
 .slide-box ul {
   font-size: 1.1vw;
 }
-
 .slide-read-button {
   bottom: 0;
   position: absolute;
   right: 5vw;
 }
-
-hr{
-    margin: 1.5vw 0;
+hr {
+  margin: 1.5vw 0;
 }
 </style>
