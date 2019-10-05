@@ -11,11 +11,7 @@ export default {
   computed: {
     headerStyle: function() {
       if (this.article.color != "") {
-        return (
-          "background: radial-gradient(90% 50%,rgba(81, 78, 100, 0.1)," +
-          this.article.color +
-          ") no-repeat center;"
-        );
+        return "background: radial-gradient(90% 50%,rgba(81, 78, 100, 0.1)," + this.article.color +") no-repeat center;";
       } else {
         return "background: radial-gradient(ellipse closest-side,rgba(81, 78, 100, 0.5),#252f6f) no-repeat center;";
       }
@@ -28,11 +24,9 @@ export default {
 .card-image {
   width: 100%;
   height: 100%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
 }
-.card-image__img {
+
+.card-image__img{
   width: 100%;
 }
 </style>
