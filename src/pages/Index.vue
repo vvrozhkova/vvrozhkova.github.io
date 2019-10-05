@@ -24,7 +24,6 @@ export default {
     titleTemplate: "TestAutomation.Space",
     link: [{ rel: "canonical", href: "testautomation.space" }],
     meta: [
-      { description: siteConfig.siteDescription },
       { property: "og:locale", content: "ru_RU" },
       { property: "og:type", content: "article" },
       { property: "og:title", content: siteConfig.siteName },

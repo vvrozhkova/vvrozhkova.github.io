@@ -12,7 +12,7 @@ import 'prismjs/themes/prism-okaidia.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-export default function (Vue, {head}) {
+export default function (Vue, { head }) {
     // Set default layout as a global component
     Vue.use(BootstrapVue);
     Vue.component('Layout', DefaultLayout);
@@ -24,9 +24,11 @@ export default function (Vue, {head}) {
         integrity: "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf",
         crossorigin: "anonymous"
     });
-    head.bodyAttrs = {class: 'body commonBody'};
+    head.bodyAttrs = { class: 'body commonBody' };
 
-    head.script.push({src: '//cookieinfoscript.com/js/cookieinfo.min.js',
-    id:'cookieinfo', type: 'text/javascript'});
+    head.script.push({
+        src: '//cookieinfoscript.com/js/cookieinfo.min.js',
+        id: 'cookieinfo'
+    });
 
 }
