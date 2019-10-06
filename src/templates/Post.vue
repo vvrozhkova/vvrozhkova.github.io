@@ -136,7 +136,7 @@ export default {
 
 @media (max-width: 1200px) {
   .post-table-content {
-    top: 17vw;
+    top: 18vw;
   }
 }
 @media (min-width: 1201px) {

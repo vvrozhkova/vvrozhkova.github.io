@@ -74,12 +74,13 @@ footer {
   background-color: #252f6f;
   color: #7a7a8c;
   padding: 1vw 5vw;
-  font-size: 0.7vw;
+  font-size: 0.8vw;
   position: absolute;
   bottom: 0;
 }
 
 .footer-description{
     margin: auto;
+    font-size: 1vw;
 }
 </style>
