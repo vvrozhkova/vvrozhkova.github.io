@@ -47,7 +47,7 @@ export default {
 
  @media (max-width: 1199px) {
 .main {
-    margin-top: 17vw;
+    margin-top: 18vw;
   }
 } 
 
@@ -65,7 +65,7 @@ export default {
 
 @media (min-width: 1800px) {
 .main {
-    margin-top: 6vw;
+    margin-top: 5vw;
   }
 } 
 

@@ -43,7 +43,7 @@ export default {
 <style scoped>
 .header {
   align-items: center;
-  padding: 1vw;
+  /* padding: 1vw; */
   margin: 0;
 }
 
@@ -83,7 +83,7 @@ nav.menu {
 
 @media (min-width: 1800px) {
   .header {
-    height: 6vw;
+    height: 5vw;
   }
 }
 </style>
