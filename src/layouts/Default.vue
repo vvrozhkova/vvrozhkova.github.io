@@ -31,7 +31,7 @@ export default {
 <style scoped>
 .container-fluid {
   padding: 0;
-  margin-bottom: 7vw;
+  margin-bottom: 9vw;
 }
 /* @media (max-width: 499px) {
   .main {
@@ -47,7 +47,7 @@ export default {
 
  @media (max-width: 1199px) {
 .main {
-    margin-top: 18vw;
+    margin-top: 19vw;
   }
 } 
 
