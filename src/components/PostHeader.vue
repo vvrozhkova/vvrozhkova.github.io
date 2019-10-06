@@ -66,7 +66,7 @@ export default {
 
 .post-header-image {
   left: 10vw;
-  height: 30vw;
+  max-height: 30vw;
 }
 
 .post-image__gradient,

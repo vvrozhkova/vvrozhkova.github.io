@@ -26,14 +26,15 @@ export default {
 
 <style scoped>
 .card-image {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding: 2vw 1vw 0vw 1vw;
 }
 
 .card-image__img {
-  width: 100%;
+  max-width: 100%;
 }
 </style>

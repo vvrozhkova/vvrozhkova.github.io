@@ -10,7 +10,7 @@
         <g-link :to="article.path.slice(0, -1)+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
       </li>
     </ul>
-    <CardTags :tags="article.tags" />
+    <CardTags class="card-tags" :tags="article.tags" />
     <div class="card-read-btn">
       <ReadButton :path="article.path" />
     </div>
@@ -32,13 +32,26 @@ export default {
 };
 </script>
 
+<style lang="scss" >
+
+.card-tags{
+  position: absolute;
+  bottom: 1vw;
+
+  .article-tag__link{
+    padding: 0vw 0.5vw;
+    font-size: 1.2vw;
+  }
+}
+</style>
+
 <style scoped>
 ul {
   margin-bottom: 1vw;
   overflow: hidden;
 }
 .card-content-part {
-  height: 100%;
+  /* height: 100%; */
   font-size: 1vw;
   padding: 1vw;
 }
@@ -55,6 +68,7 @@ ul {
   position: absolute;
   bottom: 1vw;
 }
+
 h2 {
   font-size: inherit;
 }
