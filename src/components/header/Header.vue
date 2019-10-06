@@ -65,7 +65,7 @@ nav.menu {
 
 @media (min-width: 768px) {
   .header {
-    height: 17vw;
+    height: 19vw;
   }
 }
 
