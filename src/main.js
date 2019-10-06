@@ -28,7 +28,8 @@ export default function (Vue, { head }) {
 
     head.script.push({
         src: '//cookieinfoscript.com/js/cookieinfo.min.js',
-        id: 'cookieinfo'
+        id: 'cookieinfo', 'data-message': 'Мы используем куки, чтобы улучшить ваш пользовательский опыт. Продолжая посещать этот сайт, вы соглашаетесь на использование нами файлов',
+        'data-linkmsg': 'cookie.'
     });
 
 }
