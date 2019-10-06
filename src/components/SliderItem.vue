@@ -70,7 +70,7 @@ $element-size: 6vw;
   // display: inline-block;
   width: $container-size;
   height: $container-size;
-  padding: 5vw 3vw 3vw 3vw;
+  padding: 6vw 3vw 3vw 3vw;
   margin: $element-size/2 0;
   background: lightgray;
   border: 2px solid #fff;
@@ -115,7 +115,7 @@ $element-size: 6vw;
 .slide-number {
   font-family: "Keania One", cursive;
   font-size: 12vw;
-  margin-top: -0.3vw;
+  margin-top: -4vw;
 }
 // .circle {
 //   border-radius: 50%;

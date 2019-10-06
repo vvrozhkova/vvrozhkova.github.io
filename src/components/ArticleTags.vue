@@ -22,9 +22,10 @@ export default {
 .article-tag__link {
   border: 0.1vw solid #fff;
   border-radius: 0.7vw;
-  padding: 0 0.3vw;
+  padding: 0 0.4vw;
   /* background-color: #252151; */
   opacity: 0.9;
+  font-size: 1vw;
 }
 .article-tag__link:hover {
   border: 0.1vw solid #0052cc;
