@@ -16,12 +16,6 @@ $oswald: 'Oswald', sans-serif;
   background-color: $neon_blue;
 }
 
-.post-content  h2 {
-  padding-top: 8vw;
-  margin-top: -8vw;
-}
-
-
 .comment-message p{
   margin: 0;
 }
@@ -166,7 +160,8 @@ hr {
     content: counter(listCounter, decimal-leading-zero);
     font-family: "Keania One", cursive;
     color: blue;
-    padding: 0 0.4vw;
+    padding: 0.3vw 0.4vw;
+    float: left;
     font-size: 0.7vw;
   }
 
@@ -206,14 +201,13 @@ hr {
 
 }
 
-
 #terminal {
   max-width: 90%;
   margin: 1vw auto;
   background-color: #2d2d2d;
-  border-radius: 5px;
-  box-shadow: 0px 0px 1.2vw 1vw rgba(0, 0, 0, 0.75);
-  padding: 10px;
+  border-radius: 0.2vw;
+  box-shadow: 0px 0px 0.5vw 0.3vw rgba(0, 0, 0, 0.75);
+  padding: 0.5vw;
   position: relative;
 
   .right {
@@ -230,21 +224,21 @@ hr {
   .center {
     text-align: center;
     position: relative;
-    top: -7px;
+    top: -0.3vw;
   }
 
   .title {
-    font-size: 0.75em;
+    font-size: 0.75vw;
     color: #999;
-    height: 18px;
+    height: 0.8vw;
   }
 
   .window {
     color: #d6d6d6;
-    font-size: 14px;
+    font-size: 0.7em;
     font-family: monospace;
     overflow-wrap: break-word;
-    line-height: 1.25em;
+    line-height: 1.25vw;
 
     pre {
       margin: 0 !important;
@@ -259,8 +253,9 @@ hr {
     padding: 0 !important;
 
     li {
-      width: 12px;
-      height: 12px;
+      width: 0.5vw;
+      height: 0.5vw;
+      margin-right: 0.1vw;
       border-radius: 50%;
       display: inline-block;
 
@@ -293,31 +288,32 @@ hr {
     margin: 0 !important;
     box-shadow: none;
     max-width: 100%;
-    padding-top: 5px;
+    padding-top: 0.2vw;
   }
 
   .comment {
     text-align: center;
     color: #272822;
-    font-size: 0.7vw;
+    font-size: 1em;
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   }
   
   .arrows {
-    margin: 0 50%;
+    // margin: 0 50%;
     color: #747474;
-    width: 100%;
+    width: 15%;
+    float: left;
   }
 
   .address-line .fas {
-    margin-right: 20%;
+    margin-right: 0.2vw;
     font-weight: 900;
   }
   
   .address-line .line {
     width: 100%;
     background-color: #fff;
-    margin: 0.8% 0;
+    margin: 0.2vw 0;
     border-radius: 0.2vw;
     color: #747474;
     font-size: 0.6vw;
@@ -343,4 +339,8 @@ hr {
     }
   }
 
+}
+
+p{
+  margin-bottom: 1vw !important;
 }

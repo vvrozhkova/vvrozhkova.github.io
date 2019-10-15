@@ -10,6 +10,9 @@ color: '#AC5323'
 keywords: "a, b, c"
 ---
 
+import SimpleTerminal from "~/components/post_items/SimpleTerminal.vue";
+import ExtendedTerminal from "~/components/post_items/ExtendedTerminal.vue";
+
 ## Скачиваем JDK 
 
 Чтобы скачать пакет Open JDK нужно:
@@ -22,9 +25,7 @@ keywords: "a, b, c"
 
 * Переходим в папку в которую будем производить установку и создаем в ней папку для хранения jdk
 
-<div id="terminal">
-<div class="title right">bash</div>
-<div class="window">
+<simple-terminal title="bash">
 
 ```bash
 user@user-TestAutomation.Space:~$ cd /usr/
@@ -32,67 +33,50 @@ user@user-TestAutomation.Space:/usr$ sudo mkdir /java/
 [sudo] пароль для user: 
 user@user-TestAutomation.Space:/usr$ 
 ```
-</div>
-</div>
+</simple-terminal>
 
 * Копируем в созданую папку скаченный архив
 
-<div id="terminal">
-<div class="title right">bash</div>
-<div class="window">
+<simple-terminal title="bash">
 
 ```bash
 user@user-TestAutomation.Space:/usr$ sudo mv /home/user/Downloads/openjdk-..._bin.tar.gz /usr/java/
 [sudo] пароль для user: 
 user@user-TestAutomation.Space:/usr$ 
 ```
-</div>
-</div>
+</simple-terminal>
 
 * И распаковываем tar-архив
 
-<div id="terminal">
-<div class="title right">bash</div>
-<div class="window">
+<simple-terminal title="bash">
 
 ```bash
 user@user-TestAutomation.Space:/usr$ sudo tar zxvf /usr/java/openjdk-..._bin.tar.gz
 [sudo] пароль для user: 
 user@user-TestAutomation.Space:/usr$ 
 ```
-</div>
-</div>
+</simple-terminal>
 
  ## Настраиваем переменные окружения PATH и JAVA_HOME
 
- <ol>
-<li>Открыть на редактирование файл <code class="language-text">.bashrc</code>
-<div id="terminal">
-<div class="title right">bash</div>
-<div class="window">
+1. Открыть на редактирование файл `.bashrc`
 
-```bash
-nano /home/user/.bashrc
-```
+    <simple-terminal title="bash">
 
-</div>
-</div>
-</li>
-<li>В конец добавляем строчки
-<div id="terminal">
-<div class="title right">bash</div>
-<div class="window">
+    ```bash
+    nano /home/user/.bashrc
+    ```
+    </simple-terminal>
 
-```bash
-export JAVA_HOME=/usr/java/jdk
-export PATH=$JAVA_HOME/bin:$PATH
-```
+2. В конец добавляем строчки
 
-</div>
-</div>
-</li>
+    <simple-terminal title="bash">
 
-<li>Нажимаем <code class="language-text">Ctrl+X</code> и соглашаемся с сохранением изменений, нажав на <code class="language-text">Y</code></li>
-<li>Теперь нужно перезапустить консоль и проверить версию Java</li>
-</ol>
-
+    ```bash
+    export JAVA_HOME=/usr/java/jdk
+    export PATH=$JAVA_HOME/bin:$PATH
+    ```
+    </simple-terminal>
+    
+3. Нажимаем `Ctrl+X` и соглашаемся с сохранением изменений, нажав на `Y`
+4. Теперь нужно перезапустить консоль и проверить версию Java

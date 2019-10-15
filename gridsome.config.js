@@ -17,6 +17,7 @@ module.exports = {
     },
     runtimeCompiler: true,
     transformers: {
+
         remark: {
             externalLinksTarget: '_blank',
             externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
@@ -24,8 +25,12 @@ module.exports = {
             // slug: false,
             // autolinkHeadings:false,
             plugins: [
+                // 'to-vfile',
+                // 'remark',
+                // 'remark-generic-extensions',
+                // 'remark-html',
                 '@gridsome/remark-prismjs',
-                'remark-attr',
+                // 'remark-attr',
                 'remark-emoji'
             ]
         }
@@ -57,11 +62,16 @@ module.exports = {
             }
         },
         {
-            use: '@gridsome/source-filesystem',
+            use: '@gridsome/vue-remark',
             options: {
-                typeName: 'Post',
-                path: 'blog/posts/ru/**/*.md',
-                route: '/:title',
+                typeName: 'Post', // Required
+                baseDir: './blog/posts/ru', // Where .md files are located
+                pathPrefix: '/', // Add route prefix. Optional
+                template: './src/templates/Post.vue', // Optional
+                  route: '/:title',
+                plugins: [
+                    '@gridsome/remark-prismjs',
+                ],
                 refs: {
                     tags: {
                         typeName: 'Tag',
@@ -76,6 +86,26 @@ module.exports = {
                 }
             }
         },
+        // {
+        //     use: '@gridsome/source-filesystem',
+        //     options: {
+        //         typeName: 'Post',
+        //         path: 'blog/posts/ru/**/*.md',
+        //         route: '/:title',
+        //         refs: {
+        //             tags: {
+        //                 typeName: 'Tag',
+        //                 route: '/tag/:id',
+        //                 create: true
+        //             },
+        //             category: {
+        //                 typeName: 'Category',
+        //                 route: '/category/:id',
+        //                 create: true
+        //             }
+        //         }
+        //     }
+        // },
         {
             use: '@gridsome/source-filesystem',
             options: {

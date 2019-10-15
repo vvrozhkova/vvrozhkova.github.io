@@ -67,6 +67,5 @@ typings/
 /blog/ignore_posts/*
 package-lock.json
 .DS_Store
-blog/.DS_Store
-src/.DS_Store
 static/search.json
+.history

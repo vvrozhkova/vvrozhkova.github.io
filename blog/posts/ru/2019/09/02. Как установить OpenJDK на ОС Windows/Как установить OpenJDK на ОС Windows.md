@@ -23,19 +23,18 @@ keywords: "a, b, c"
 * Нажать правой кнопкой мыши на скаченный архив и выбрать `Извлечь всё`
 * Оставляем путь извлечения по умолчанию в туже папку и нажимаем `Извлечь`
 
-<div id="terminal" class="screen">
-<div class="window">
+import PostImage from "~/components/post_items/PostImage.vue";
+
+<post-image comment="Извлечение jdk архива">
 
 ![Извлечение jdk архива](./img/extract_archive.jpg)
-<br/>
-<span class="comment">Извлечение jdk архива</span>
-</div>
-</div>
+
+</post-image>
 
 * Создаем папку для хранения jdk `C://Program Files(x86)/Java/` и копируем в неё извлеченный архив. Получаем следущую иерархию:
 
 
- ```bash hljs
+ ```bash
  | C:
     |-- Program Files (x86)
         |-- Java
@@ -48,86 +47,65 @@ keywords: "a, b, c"
 
 * Нажать правой кнопкой мыши на меню Пуск и выбрать пункт "Система"
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Пуск - Система">
 
 ![Извлечение jdk архива](./img/setup_win_sys_vars_step1.jpg)
-<br/>
-<span class="comment">Пуск - Система</span>
-</div>
-</div>
+
+</post-image>
 
 * Выбрать "Сведения о системе"
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Сведения о системе">
 
 ![hgfgf](./img/setup_win_sys_vars_step2.jpg)
-<br/>
-<span class="comment">Сведения о системе</span>
-</div>
-</div>
+
+</post-image>
 
 * Выбрать "Дополнительные параметры"
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Дополнительные параметры">
 
 ![hgfgf](./img/setup_win_sys_vars_step3.jpg)
-<br/>
-<span class="comment">Дополнительные параметры</span>
-</div>
-</div>
+
+</post-image>
 
 * Перейти на вкладку "Дополнительно" и нажать кнопку "Переменные среды"
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Переменные среды">
 
 ![hgfgf](./img/setup_win_sys_vars_step4.jpg)
-<br/>
-<span class="comment">Переменные среды</span>
-</div>
-</div>
+
+</post-image>
 
 Далее есть 2 варианта:
 
 * переменная JAVA_HOME ещё не добавлена<br>
 \- нажимаем кнопку "Создать"(Системные переменные) и вводим имя переменной: JAVA_HOME, значение: путь к папке jdk(до папки bin)
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Добавляем переменную JAVA_HOME">
 
 ![hgfgf](./img/setup_win_sys_vars_step6.jpg)
-<br/>
-<span class="comment">Добавляем переменную JAVA_HOME</span>
-</div>
-</div>
+
+</post-image>
 
 * переменная JAVA_HOME уже добавлена<br>
 \- проверяем что директория указана верно, если нет то нажимаем Изменить и редактируем директорию в поле значение
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Нажать 'Изменить', если переменная JAVA_HOME уже существует">
 
 ![hgfgf](./img/setup_win_sys_vars_step5.jpg)
-<br/>
-<span class="comment">Нажать "Изменить", если переменная JAVA_HOME уже существует</span>
-</div>
-</div>
+
+</post-image>
 
 Теперь можно приступить к настройке переменной PATH:
 
 * Находим в списке переменных среды переменную PATH и нажимаем "Изменить"
 
-<div id="terminal" class="screen">
-<div class="window">
+<post-image comment="Нажать 'Создать'">
 
 ![hgfgf](./img/setup_win_sys_vars_step7.jpg)
-<br/>
-<span class="comment">Нажать "Создать"</span>
-</div>
-</div>
+
+</post-image>
 
 * В окне "Изменить переменную среды" нажать "Создать"
 * ввести `%JAVA_HOME%\bin`

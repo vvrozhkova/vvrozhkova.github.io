@@ -12,7 +12,7 @@
     </div>
 
     <main itemprop="articleBody" class="post-content-box row">
-      <div class="post-table-content col-12 col-xl-4">
+      <div id="table-content" class="post-table-content col-12 col-xl-4">
         <h2>СОДЕРЖАНИЕ:</h2>
         <ul>
           <li v-for="tableContentItem in $page.post.headings" :key="tableContentItem.id">
@@ -23,7 +23,8 @@
         </ul>
       </div>
       <div class="post-content col-12 col-xl-8">
-        <div itemprop="text" v-html="$page.post.content" />
+        <VueRemarkContent />
+        <!-- <div itemprop="text" v-html="$page.post.content" /> -->
         <Comments :comments="$page.comments.edges" :pageSlug="$page.post.path" />
       </div>
     </main>
@@ -48,9 +49,8 @@ export default {
       bodyAttrs: { class: "postBody body" },
       script: [
         { src: "https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" },
-        { src: "https://yastatic.net/share2/share.js",
-        async: "async" }
-        ],
+        { src: "https://yastatic.net/share2/share.js", async: "async" }
+      ],
       meta: [
         { description: this.$page.post.description },
         { property: "og:locale", content: "ru_RU" },
@@ -79,6 +79,20 @@ export default {
       return this.comments.filter(edge => {
         return edge.node.replies === parentId;
       });
+    }
+  },
+  updated() {
+    let height = document.getElementsByTagName("header")[0].clientHeight;
+    if(document.body.clientWidth < 1200){
+      height += document.getElementById("table-content").clientHeight;
+    }
+    let els = document.getElementsByClassName("post-content")[0].getElementsByTagName("h2");
+    for (let i = 0; i < els.length; i++) {
+      els[i].setAttribute(
+        "style",
+        "padding-top: " + height + "px;margin-top: -" + height + "px;"
+      );
+      console.log(els[i].innerText + " " + height + " " + i);
     }
   }
 };
@@ -137,16 +151,19 @@ export default {
 @media (max-width: 1200px) {
   .post-table-content {
     top: 18vw;
+    display: block;
+    /* max-height: 16vw; */
+    /* overflow: scroll; */
   }
 }
 @media (min-width: 1201px) {
   .post-table-content {
     top: 5vw;
+    display: table;
   }
 }
 
 .post-table-content {
-  display: table;
   position: sticky;
   background: #fff;
   z-index: 10;
