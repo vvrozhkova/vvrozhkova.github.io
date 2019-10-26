@@ -13,7 +13,7 @@
 <script>
 export default {
   mounted() {
-    if (isDisplayed(document.getElementById("progress-bar"))) {
+    // if (isDisplayed(document.getElementById("progress-bar"))) {
       var winHeight = window.innerHeight,
         docHeight = document.body.clientHeight,
         progressBar = document.getElementById("progress-bar"),
@@ -33,7 +33,7 @@ export default {
           .setAttribute("style", "width:" + value + "%");
       });
     }
-  }
+  // }
 };
 
 function isDisplayed(element) {
