@@ -5,7 +5,7 @@
       :related="$page.relatedCategory.related"
       :size="$page.category.belongsTo.totalCount"
     >Category:</CategoryHeader>
-    <div class="category category_center">
+    <div class="category category_center container-fluid">
       <ArticleCard
         :article="post.node"
         :key="post.id"
@@ -90,7 +90,6 @@ export default {
 
 <style scoped>
 .category_center {
-  margin: 0 auto;
   width: 70%;
 }
 </style>
@@ -117,12 +116,8 @@ nav[role="navigation"] {
     cursor: default;
   }
 }
-</style>
 
-<style>
-
-.category .article-card__horizontal{
+.category .article-card__horizontal {
   height: auto;
 }
-
 </style>

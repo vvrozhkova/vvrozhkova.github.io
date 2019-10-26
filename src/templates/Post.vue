@@ -1,13 +1,17 @@
 <template>
   <Layout class="postPage" itemscope itemtype="http://schema.org/TechArticle">
+    <BackToTopButton />
+    <ScrollBar />
     <PostHeader :post="$page.post" />
-    <div class="post-share row">
-      <span class="post-share-title">
-        <h3>Share it:</h3>
-      </span>
+    <div class="post-share container-fluid">
+      <div class="row">
+        <span class="post-share-title">
+          <h3>Share it:</h3>
+        </span>
 
-      <div class="post-share-btns">
-        <div class="ya-share2" data-counter="ig" data-services="vkontakte,facebook,telegram"></div>
+        <div class="post-share-btns">
+          <div class="ya-share2" data-counter="ig" data-services="vkontakte,facebook,telegram"></div>
+        </div>
       </div>
     </div>
 
@@ -32,11 +36,17 @@
 </template>
 
 <script>
-import Header from "~/components/header/Header.vue";
-import Footer from "~/components/Footer.vue";
 import PostHeader from "~/components/PostHeader.vue";
 import Comments from "~/components/Comments.vue";
+import ScrollBar from "~/components/ScrollBar.vue";
+import BackToTopButton from "~/components/BackToTopButton.vue";
+import "~/assets/css/bigfoot-default.css";
+
 const siteConfig = require("~/../gridsome.config");
+global.jQuery = require("jquery");
+var $ = global.jQuery;
+window.$ = $;
+var bigfoot = require("~/assets/js/bigfoot.min.js");
 
 String.prototype.replaceAll = function(search, replace) {
   return this.split(search).join(replace);
@@ -69,10 +79,10 @@ export default {
     };
   },
   components: {
-    Header,
-    Footer,
     PostHeader,
-    Comments
+    Comments,
+    ScrollBar,
+    BackToTopButton
   },
   methods: {
     getNavItems(parentId) {
@@ -81,21 +91,48 @@ export default {
       });
     }
   },
+  mounted() {
+    $.bigfoot();
+  },
   updated() {
-    let height = document.getElementsByTagName("header")[0].clientHeight;
-    if(document.body.clientWidth < 1200){
-      height += document.getElementById("table-content").clientHeight;
-    }
-    let els = document.getElementsByClassName("post-content")[0].getElementsByTagName("h2");
-    for (let i = 0; i < els.length; i++) {
-      els[i].setAttribute(
-        "style",
-        "padding-top: " + height + "px;margin-top: -" + height + "px;"
-      );
-      console.log(els[i].innerText + " " + height + " " + i);
-    }
+    setTableContentTop();
+    setPostHeadersOffset();
+    window.addEventListener("resize", function() {
+      setTableContentTop();
+      setPostHeadersOffset();
+    });
   }
 };
+
+function getMenuHeight() {
+  return document.getElementsByClassName("header")[0].clientHeight;
+}
+
+function setTableContentTop() {
+  var menuHeight = getMenuHeight();
+  var tableContent = document.getElementById("table-content");
+  tableContent.style.top = menuHeight + "px";
+}
+
+function setPostHeadersOffset() {
+  var offset = getMenuHeight();
+  console.log("без содержания - " + offset);
+  if (document.body.clientWidth < 1200) {
+    offset += document.getElementById("table-content").clientHeight;
+  }
+  console.log("c содержания - " + offset);
+
+  let els = document
+    .getElementsByClassName("post-content")[0]
+    .getElementsByTagName("h2");
+  for (let i = 0; i < els.length; i++) {
+    els[i].setAttribute(
+      "style",
+      "padding-top: " + offset + "px;margin-top: -" + offset + "px;"
+    );
+    console.log(els[i].innerText + " " + offset + " " + i);
+  }
+}
 </script>
 
 <page-query>
@@ -148,25 +185,12 @@ export default {
   margin: 0 10%;
 }
 
-@media (max-width: 1200px) {
-  .post-table-content {
-    top: 18vw;
-    display: block;
-    /* max-height: 16vw; */
-    /* overflow: scroll; */
-  }
-}
-@media (min-width: 1201px) {
-  .post-table-content {
-    top: 5vw;
-    display: table;
-  }
-}
-
 .post-table-content {
   position: sticky;
   background: #fff;
   z-index: 10;
+  display: table;
+
   /* float: right; */
 }
 
@@ -193,7 +217,6 @@ export default {
 .post-share {
   background-color: #252f6f;
   padding: 1vw 6vw;
-  border: 1px solid #fff;
 }
 
 .post-share-title {

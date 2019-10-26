@@ -1,21 +1,23 @@
 <template>
-  <header class="post-header row" :style="headerStyle">
-    <div class="col-6">
-      <h5 class="post-category" >
-        <ArticleCategory :article="post" />
-      </h5>
-      <br />
-      <h1>
-        <ArticleTitle :article="post" />
-      </h1>
-      <hr align="left" class="line" />
-      <div class="post-description">{{post.description}}</div>
+  <header class="post-header container-fluid" :style="headerStyle">
+    <div class="row">
+      <div class="col-7">
+        <h5 class="post-category">
+          <ArticleCategory :article="post" />
+        </h5>
+        <br />
+        <h1>
+          <ArticleTitle :article="post" />
+        </h1>
+        <hr align="left" class="line" />
+        <div class="post-description">{{post.description}}</div>
 
-      <ArticleTags :tags="post.tags" />
-    </div>
-    <div class="post-header-image col-6">
-      <!-- <div class="post-image__gradient"></div> -->
-      <g-image :src="post.image" class="post-image__img" :alt="post.title"></g-image>
+        <ArticleTags :tags="post.tags" />
+      </div>
+      <div class="post-header-image col-5">
+        <!-- <div class="post-image__gradient"></div> -->
+        <g-image :src="post.image" class="post-image__img" :alt="post.title"></g-image>
+      </div>
     </div>
   </header>
 </template>
@@ -33,26 +35,26 @@ export default {
     ArticleTags
   },
   props: ["post"],
-  computed:{
-   headerStyle: function(){
-     if (this.post.color!="") {
-         return "background-color:" + this.post.color + ";";
-        } else {
-          return "background-color: #252152;" 
-        }
-   } 
+  computed: {
+    headerStyle: function() {
+      if (this.post.color != "") {
+        return "background-color:" + this.post.color + ";";
+      } else {
+        return "background-color: #252152;";
+      }
+    }
   }
 };
 </script>
 
 <style scoped>
 .post-description {
-  font-size: 1vw;
+  /* font-size: 1.5vw; */
   margin-bottom: 1vw;
-  width: 40vw;
+  /* width: 40vw; */
 }
 
-.post-category{
+.post-category {
   line-height: 0;
   margin-bottom: -1.5vw;
 }
@@ -61,18 +63,18 @@ export default {
   padding: 2vw;
   font-size: 1.5vw;
   overflow: hidden;
-  max-height: 33vw;
 }
 
 .post-header-image {
-  left: 10vw;
-  max-height: 30vw;
+  /* left: 10vw; */
+  max-height: 33vw;
+  margin: auto;
 }
 
 .post-image__gradient,
 .post-image__img {
-  position: absolute;
-  width: 60%;
+  /* position: absolute; */
+  width: 90%;
   height: inherit;
 }
 
@@ -86,7 +88,7 @@ export default {
   z-index: 1;
 }
 
-hr{
+hr {
   margin: 1vw 0;
 }
 </style>

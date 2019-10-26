@@ -34,12 +34,12 @@
         top: 0;
     }
 
-    .section__title_right {
-        right: 7vw;
+    .section__title_right  {
+        right: 3vw;
     }
 
     .section__title_left {
-        left: 7vw;
+        left: 3vw;
     }
 
 </style>

@@ -1,9 +1,7 @@
 <template>
-    <div class="logo">
-        <g-link to="/">
-            <img :alt="$static.metadata.siteName+' Logo'" src="../../assets/img/logo.svg">
-        </g-link>
-    </div>
+  <g-link class="logo" to="/">
+    <img :alt="$static.metadata.siteName+' Logo'" src="@/assets/img/logo.svg" />
+  </g-link>
 </template>
 
 <static-query>
@@ -14,7 +12,8 @@
     }
 </static-query>
 
-
-
-
-
+<style scoped>
+.logo {
+  margin: auto;
+}
+</style>

@@ -1,12 +1,13 @@
 <template>
-  <div class="container-fluid">
+  <div class="main-layout">
     <Header />
-    <div class="main">
+    <main>
       <slot />
-    </div>
+    </main>
     <Footer />
   </div>
 </template>
+
 <script>
 import Header from "~/components/header/Header.vue";
 import Footer from "~/components/Footer.vue";
@@ -15,7 +16,7 @@ export default {
   name: "Default",
   components: {
     Header,
-    Footer
+    Footer,
   }
 };
 </script>
@@ -28,45 +29,8 @@ export default {
     }
 </static-query>
 
-<style scoped>
-.container-fluid {
-  padding: 0;
+<style >
+.main-layout{
   margin-bottom: 9vw;
 }
-/* @media (max-width: 499px) {
-  .main {
-    margin-top: 29vw;
-  }
-} */
-
-/* @media (min-width: 500px) {
-  .main {
-    margin-top: 20vw;
-  }
-} */
-
- @media (max-width: 1199px) {
-.main {
-    margin-top: 19vw;
-  }
-} 
-
-@media (min-width: 1200px) {
-.main {
-    margin-top: 9vw;
-  }
-} 
-
-@media (min-width: 1300px) {
-.main {
-    margin-top: 8vw;
-  }
-}  
-
-@media (min-width: 1800px) {
-.main {
-    margin-top: 5vw;
-  }
-} 
-
 </style>
