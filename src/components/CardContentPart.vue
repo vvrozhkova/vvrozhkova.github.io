@@ -61,7 +61,7 @@ ul {
 }
 .card-title {
   font-size: 2vw;
-  margin: 0;
+  /* margin: 0; */
 }
 .card-read-btn {
   right: 1vw;

@@ -17,19 +17,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu-item {
-  text-align: center;
-}
-
 .menu-item__box {
-  width: 6em;
-  height: auto;
-  padding: 0.5em 0.5em 0.1em 0.5em;
+  text-align: center;
+  width: 6rem;
+  padding: 0.4rem;
   margin: auto;
   border: 2px solid #0052cc;
   &:hover {
     border: 2px solid #fff;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
   }
   i {
     font-size: 3rem;
@@ -39,7 +35,6 @@ export default {
 .menu-item__link {
   color: #fff;
   font-family: "ZCOOL QingKe HuangYou", cursive;
-  text-decoration: none;
   font-size: 1.2rem;
 }
 </style>

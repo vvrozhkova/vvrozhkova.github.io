@@ -1,3 +1,8 @@
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+
+@import "~bootstrap/scss/variables";
+
 @import url('https://fonts.googleapis.com/css?family=Play:400,700&display=swap&subset=cyrillic-ext');
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 @import url('https://fonts.googleapis.com/css?family=Keania+One');
@@ -19,6 +24,7 @@ $oswald: 'Oswald', sans-serif;
 .comment-message p{
   margin: 0;
 }
+
 .white {
   color: $white;
 }
@@ -135,10 +141,6 @@ hr {
   width: 200px;
   background-color: #0052cc;
   height: 3px;
-}
-
-.row {
-  margin: 0;
 }
 
 .post-content-box {
@@ -344,3 +346,4 @@ hr {
 p{
   margin-bottom: 1vw !important;
 }
+

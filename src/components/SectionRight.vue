@@ -1,4 +1,6 @@
 <template>
+  <div class="container-fluid">
+
     <Section class="row" :title="title" titleAlign="right">
         <div class="col-10">
             <div class="row">
@@ -19,6 +21,7 @@
         </div>
         <div class="col-2"></div>
     </Section>
+  </div>
 </template>
 
 <script>

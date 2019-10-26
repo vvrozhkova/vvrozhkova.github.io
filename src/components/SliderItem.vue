@@ -4,7 +4,7 @@
       <div class="slide-number">0{{index}}</div>
     </div>
     <div class="col-4">
-      <div class="circle" :style="headerStyle">
+      <div class="circle" :style="'background-color: '+slide.color+';'">
         <g-image :src="slide.image" class="card-img" :alt="slide.title"></g-image>
         <g-link
           v-for="tag in slide.tags"
@@ -12,7 +12,7 @@
           :to="tag.path"
           rel="tag"
           class="label rounded-circle"
-          :style="headerStyle"
+          :style="'background-color: '+slide.color+';'"
         >
           <span>{{tag.title}}</span>
         </g-link>
@@ -48,15 +48,6 @@ import ReadButton from "~/components/ReadButton.vue";
 export default {
   name: "SliderItem",
   props: ["slide", "index"],
-  computed: {
-    headerStyle: function() {
-      if (this.slide.color != "") {
-        return "background-color:" + this.slide.color + ";";
-      } else {
-        return "background-color: #252152;";
-      }
-    }
-  },
   components: {
     ReadButton
   }
@@ -72,7 +63,7 @@ $element-size: 6vw;
   height: $container-size;
   padding: 6vw 3vw 3vw 3vw;
   margin: $element-size/2 0;
-  background: lightgray;
+  background: #252152;
   border: 2px solid #fff;
   position: relative;
   border-radius: 50%;
@@ -117,13 +108,7 @@ $element-size: 6vw;
   font-size: 12vw;
   margin-top: -4vw;
 }
-// .circle {
-//   border-radius: 50%;
-//   /* background-color: #252f6f; */
-//   width: 30vw;
-//   height: 30vw;
-//   text-align: center;
-// }
+
 .slide-category-link {
   font-size: 1.5vw;
   color: #fff;
@@ -142,7 +127,7 @@ $element-size: 6vw;
 .slide-read-button {
   bottom: 0;
   position: absolute;
-  right: 5vw;
+  right: 15px;
 }
 hr {
   margin: 1.5vw 0;

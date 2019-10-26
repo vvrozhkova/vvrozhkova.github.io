@@ -34,7 +34,7 @@
           class="search-result__link"
           v-for="(post, index) in results"
         >
-          <div :class="{ 'search-highlighted' : index === highlightedIndex }" class="search-result">
+          <div :class="{ 'search-highlighted' : index === highlightedIndex }" class="search-result__box">
             <span class="search-result__title">{{post.item.title}}</span>
             <br />
             <span class="search-result__description">{{ post.item.description }}</span>
@@ -139,43 +139,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (min-width: 768px) {
-  .search__box {
-    margin-top: 1vw;
-  }
-  .search-results {
-    left: 1em;
-    top: 2.5em;
-    width: 90%;
-  }
-}
-
-@media (max-width: 767px) {
-  .search__box {
-    margin-top: 2vw;
-  }
-  .search-results {
-    left: 3em;
-    top: 3em;
-    width: 88%;
-  }
-
-  .search {
-    margin-bottom: 1vw;
-  }
-}
 
 .search {
-  display: table;
+  margin: auto;
 }
 
 .search__box {
-  width: 100%;
-  position: relative;
   border-bottom: 2px solid lightgrey;
-  height: 2vw;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .search__box:focus-within {
@@ -184,13 +154,13 @@ export default {
 }
 
 .search__icon {
-  font-size: 1.2em;
-  padding: 0 0.5em;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
 }
 
 .search__close-icon {
   position: absolute;
-  font-size: 1.5vw;
+  font-size: 2rem;
   right: 0;
   cursor: pointer;
 }
@@ -200,7 +170,7 @@ export default {
   border: none;
   outline: none;
   color: #fff;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 
 .search-results {
@@ -211,7 +181,6 @@ export default {
   z-index: 1500000;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid grey;
-  //   padding: 0.5vw;
 }
 
 .search-result__link,
@@ -220,7 +189,7 @@ export default {
   text-decoration: none;
 }
 
-.search-result {
+.search-result__box {
   padding: 0 0.5vw;
   border-bottom: 1px solid lightgray;
 }

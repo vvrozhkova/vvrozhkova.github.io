@@ -12,6 +12,7 @@ keywords: "a, b, c"
 
 import SimpleTerminal from "~/components/post_items/SimpleTerminal.vue";
 import ExtendedTerminal from "~/components/post_items/ExtendedTerminal.vue";
+import Footnote from "~/components/post_items/Footnote.vue";
 
 ## Скачиваем JDK 
 
@@ -23,7 +24,7 @@ import ExtendedTerminal from "~/components/post_items/ExtendedTerminal.vue";
 
 ## Извлекаем архив
 
-* Переходим в папку в которую будем производить установку и создаем в ней папку для хранения jdk
+* Переходим в папку в которую будем производить установку и создаем в ней папку для хранения jdk<footnote num="1" message="message"/>
 
 <simple-terminal title="bash">
 

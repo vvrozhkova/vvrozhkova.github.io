@@ -1,51 +1,49 @@
 <template>
-    <header class="category-header row">
-        <div class="category-title col-4">
-            <h1><slot/></h1>
-            <g-link :to="item.path" class="category-item__link">{{item.title}}</g-link>
-        </div>
-        <div class="category-related col-4">
-            <h2>RELATED:</h2>
-            <ul>
-                <li v-for="relTag in related" :key="relTag.id">
-                    <g-link :to="relTag.path" class="category-item__link">{{relTag.title}}</g-link>
-                </li>
-            </ul>
-        </div>
-        <div class="col-4">
-            <h3>{{size}} article(s)</h3>
-        </div>
-
-    </header>
+  <header class="category-header container-fluid">
+    <div class="row">
+      <div class="category-title col-4">
+        <h1>
+          <slot />
+        </h1>
+        <g-link :to="item.path" class="category-item__link">{{item.title}}</g-link>
+      </div>
+      <div class="category-related col-4">
+        <h2>RELATED:</h2>
+        <ul>
+          <li v-for="relTag in related" :key="relTag.id">
+            <g-link :to="relTag.path" class="category-item__link">{{relTag.title}}</g-link>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <h3>{{size}} article(s)</h3>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script>
-    export default {
-        name: "CategoryHeader",
-        props: [
-            'size',
-            'item',
-            'related'
-        ]
-    }
+export default {
+  name: "CategoryHeader",
+  props: ["size", "item", "related"]
+};
 </script>
 
 <style scoped>
-    .category-header {
-        background-color: #252f6f;
-        padding: 1vw 3vw;
-        margin-bottom: 2vw;
-    }
+.category-header {
+  background-color: #252f6f;
+  padding: 1vw 3vw;
+  margin-bottom: 2vw;
+}
 
-    .category-item__link {
-        padding: 0.2vw 1vw;
-        border: 0.2vw solid white;
-        border-radius: 1vw;
-    }
+.category-item__link {
+  padding: 0.2vw 1vw;
+  border: 0.2vw solid white;
+  border-radius: 1vw;
+}
 
-    .category-related ul li {
-        display: flex;
-        margin-bottom: 0.5vw;
-    }
-
+.category-related ul li {
+  display: flex;
+  margin-bottom: 0.5vw;
+}
 </style>

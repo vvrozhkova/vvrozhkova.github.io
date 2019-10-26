@@ -15,8 +15,9 @@ export default {
 
       menu_box.classList.toggle("active");
       if (menu_box.offsetHeight > 0) {
-        document.getElementsByClassName("post-table-content")[0].style = "top: 25vw !important;";
-      } else{
+        document.getElementsByClassName("post-table-content")[0].style =
+          "top: 25vw !important;";
+      } else {
         document.getElementsByClassName("post-table-content")[0].style = "";
       }
     }
@@ -33,11 +34,11 @@ export default {
 
 .menu__btn {
   span::before {
-    top: -1.5vw;
+    top: -2vw;
   }
 
   span::after {
-    top: 1.5vw;
+    top: 2vw;
   }
 
   span,
@@ -47,14 +48,15 @@ export default {
     content: "";
     display: block;
     position: absolute;
-    width: 5vw;
-    height: 0.4vw;
+    width: 7vw;
+    height: 0.6vw;
     background-color: #fff;
   }
 }
 
 #menu__toggle {
   opacity: 0;
+  height: 0;
   &:checked ~ {
     .menu__btn > span {
       transform: rotate(45deg);
@@ -72,14 +74,15 @@ export default {
   }
 }
 
-/* стилизуем кнопку */
 .menu__btn {
   display: flex;
   align-items: center;
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 7vw;
   cursor: pointer;
   z-index: 1;
+  
+  margin: auto;
 }
 </style>
 

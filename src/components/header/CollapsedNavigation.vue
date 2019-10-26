@@ -19,23 +19,19 @@ export default {
   }
 }
 
-/* контейнер меню */
 .menu__box {
   display: none;
   text-align: center;
   width: 100%;
-
   transition-duration: 0.25s;
   &.active {
     display: block;
   }
 }
 
-/* элементы меню */
 .menu__item {
   padding: 2.5vw 5vw;
   color: #fff;
-  //   font-family: "Roboto", sans-serif;
   font-size: 4vw;
   font-weight: 600;
   text-decoration: none;

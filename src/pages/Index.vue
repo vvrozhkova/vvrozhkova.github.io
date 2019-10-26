@@ -1,12 +1,10 @@
 <template>
   <Layout>
-    <main>
-      <Slider :items="$page.lastPosts.edges" />
-      <FavoriteSection :posts="$page.posts.edges" />
-      <SectionLeft :posts="$page.uiPosts.belongsTo.edges" title="ui" />
-      <SectionRight :posts="$page.uiPosts.belongsTo.edges" title="api" />
-      <SectionLeft :posts="$page.uiPosts.belongsTo.edges" title="mobile" />
-    </main>
+    <Slider :items="$page.lastPosts.edges" />
+    <FavoriteSection :posts="$page.posts.edges" />
+    <SectionLeft :posts="$page.uiPosts.belongsTo.edges" title="ui" />
+    <SectionRight :posts="$page.uiPosts.belongsTo.edges" title="api" />
+    <SectionLeft :posts="$page.uiPosts.belongsTo.edges" title="mobile" />
   </Layout>
 </template>
 
@@ -31,7 +29,11 @@ export default {
       { property: "og:url", content: siteConfig.siteUrl },
       { property: "og:site_name", content: siteConfig.siteName },
       { name: "yandex-verification", content: "067903c2cc71daeb" },
-      { property: "keywords", content: "testing, automation testing, тестирование, автоматизация тестирования" }
+      {
+        property: "keywords",
+        content:
+          "testing, automation testing, тестирование, автоматизация тестирования"
+      }
     ]
   },
   components: {
