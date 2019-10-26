@@ -45,7 +45,7 @@ import "~/assets/css/bigfoot-default.css";
 const siteConfig = require("~/../gridsome.config");
 global.jQuery = require("jquery");
 var $ = global.jQuery;
-window.$ = $;
+// window.$ = $;
 var bigfoot = require("~/assets/js/bigfoot.min.js");
 
 String.prototype.replaceAll = function(search, replace) {

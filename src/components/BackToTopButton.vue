@@ -7,7 +7,7 @@
 <script>
 global.jQuery = require("jquery");
 var $ = global.jQuery;
-window.$ = $;
+// window.$ = $;
 
 export default {
   mounted() {
