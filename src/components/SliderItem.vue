@@ -29,7 +29,7 @@
         <g-link :to="slide.path">{{slide.title}}</g-link>
       </h2>
 
-      <hr align="center" />
+      <hr />
       <ul>
         <li v-for="tableContentItem in slide.headings" :key="tableContentItem.id">
           -
