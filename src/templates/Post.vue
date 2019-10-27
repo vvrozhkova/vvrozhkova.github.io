@@ -190,8 +190,6 @@ function setPostHeadersOffset() {
   background: #fff;
   z-index: 10;
   display: table;
-
-  /* float: right; */
 }
 
 .post-table-content,

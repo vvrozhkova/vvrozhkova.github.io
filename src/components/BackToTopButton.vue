@@ -46,15 +46,6 @@ export default {
   z-index: 1000;
   font-size: 2rem;
 }
-/* #button::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
-} */
 #button:hover {
   cursor: pointer;
   background-color: #333;

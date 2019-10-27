@@ -76,6 +76,7 @@ $element-size: 6vw;
   position: absolute;
   left: 40%;
   top: 40%;
+  background: #252152;
   text-align: center;
   border: 2px solid #fff;
   display: table;

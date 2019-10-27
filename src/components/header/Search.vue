@@ -13,7 +13,7 @@
         @keyup.enter="gotoLink"
         @keyup.esc="searchResultsVisible = false"
         class="search__input neon_blue"
-        placeholder="Search (Press  &quot;/&quot; to focus)"
+        placeholder="Search (Press  '/' to focus)"
         ref="search"
         type="text"
         v-model="query"

@@ -1,8 +1,6 @@
 <template>
   <div class="add-new-comment">
     <form id="comment-form" @submit="formSubmit" method="POST">
-      <!-- <input v-model="redirect" type="hidden" value="vvrozhkova.github.io/" /> -->
-      <!-- <input v-model="slug" type="hidden" value="test" /> -->
       <div class="form-group">
         <label for="commentAuthorName">Имя</label>
         <input
@@ -27,8 +25,6 @@
     </form>
   </div>
 </template>
-
-
 
 <script>
 export default {
@@ -102,6 +98,6 @@ export default {
 }
 
 .add-new-comment.active {
-  display: block !important;
+  display: block;
 }
 </style>
