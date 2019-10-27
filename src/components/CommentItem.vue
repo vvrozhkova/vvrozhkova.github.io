@@ -61,7 +61,6 @@ export default {
 <style lang="scss" scoped>
 .comment {
   border: 1px solid #cfcfcf;
-  //border-radius: 5px;
   margin-bottom: 1vw;
   padding: 0.8vw;
   color: #fff;

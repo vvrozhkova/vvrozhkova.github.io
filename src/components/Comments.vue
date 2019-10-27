@@ -16,7 +16,6 @@
   </div>
 </template>
 
-
 <script>
 import AddCommentForm from "~/components/AddCommentForm.vue";
 import Comment from "~/components/Comment.vue";
@@ -40,11 +39,6 @@ export default {
 </script>
 
 <style>
-/* .comments {
-        width: 50%;
-        margin: 0 auto;
-        color: black;
-    } */
 
 .comment-child {
   margin-left: 5vw;

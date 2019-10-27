@@ -1,5 +1,5 @@
 <template>
-  <header class="post-header container-fluid" :style="headerStyle">
+  <header class="post-header container-fluid" :style="'background-color:' + post.color + ';'">
     <div class="row">
       <div class="col-7">
         <h5 class="post-category">
@@ -15,7 +15,6 @@
         <ArticleTags :tags="post.tags" />
       </div>
       <div class="post-header-image col-5">
-        <!-- <div class="post-image__gradient"></div> -->
         <g-image :src="post.image" class="post-image__img" :alt="post.title"></g-image>
       </div>
     </div>
@@ -34,24 +33,13 @@ export default {
     ArticleTitle,
     ArticleTags
   },
-  props: ["post"],
-  computed: {
-    headerStyle: function() {
-      if (this.post.color != "") {
-        return "background-color:" + this.post.color + ";";
-      } else {
-        return "background-color: #252152;";
-      }
-    }
-  }
+  props: ["post"]
 };
 </script>
 
 <style scoped>
 .post-description {
-  /* font-size: 1.5vw; */
   margin-bottom: 1vw;
-  /* width: 40vw; */
 }
 
 .post-category {
@@ -63,6 +51,7 @@ export default {
   padding: 2vw;
   font-size: 1.5vw;
   overflow: hidden;
+  background-color: #252152;
 }
 
 .post-header-image {

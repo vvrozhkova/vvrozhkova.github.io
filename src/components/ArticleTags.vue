@@ -23,7 +23,6 @@ export default {
   border: 0.1vw solid #fff;
   border-radius: 0.7vw;
   padding: 0 0.4vw;
-  /* background-color: #252151; */
   opacity: 0.9;
   font-size: 1vw;
 }

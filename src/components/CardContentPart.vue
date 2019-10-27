@@ -21,6 +21,7 @@
 import ArticleTitle from "~/components/ArticleTitle.vue";
 import CardTags from "~/components/ArticleTags.vue";
 import ReadButton from "~/components/ReadButton.vue";
+
 export default {
   name: "CardContentPart",
   components: {
@@ -51,7 +52,6 @@ ul {
   overflow: hidden;
 }
 .card-content-part {
-  /* height: 100%; */
   font-size: 1vw;
   padding: 1vw;
 }
@@ -61,7 +61,6 @@ ul {
 }
 .card-title {
   font-size: 2vw;
-  /* margin: 0; */
 }
 .card-read-btn {
   right: 1vw;

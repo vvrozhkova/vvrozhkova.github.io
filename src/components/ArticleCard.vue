@@ -2,7 +2,7 @@
   <div
     :class="[cardAlign === 'horizontal' ? 'row article-card__horizontal' : 'article-card__vertical']"
     class="article-card"
-    :style="backgroundStyle"
+    :style="'background-color:' + article.color + ';'"
   >
     <CardImagePart
       :article="article"
@@ -24,16 +24,7 @@ export default {
     CardImagePart,
     CardContentPart
   },
-  props: ["article", "cardAlign"],
-  computed: {
-    backgroundStyle: function() {
-      if (this.article.color != "") {
-        return "background-color:" + this.article.color + ";";
-      } else {
-        return "background-color: #252f6f;";
-      }
-    }
-  }
+  props: ["article", "cardAlign"]
 };
 </script>
 
@@ -50,7 +41,6 @@ export default {
 .article-card {
   background-color: #252f6f;
   border-radius: 1vw;
-  /* padding: 1vw; */
   font-size: 1.3vw;
 }
 .article-card-row {

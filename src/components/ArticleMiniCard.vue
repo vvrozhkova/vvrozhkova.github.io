@@ -1,21 +1,21 @@
 <template>
-  <article class="mini-card" :style="headerStyle">
-    <g-link :to="article.path" class="mini-card__link">
+  <g-link :to="article.path" class="mini-card__link">
+    <article class="mini-card" :style="'background-color:' + article.color + ';'">
       <ArticleCategory :article="article" class="mini-card-category" />
       <br />
       <h2>
         <ArticleTitle :article="article" class="mini-card-title" />
       </h2>
-
       <div class="mini-card-image">
-        <!-- -->
-        <div class="card-image__gradient" :style="gradientStyle"></div>
+        <div
+          class="card-image__gradient"
+          :style="'background: radial-gradient(90% 50%,rgba(81, 78, 100, 0.1),' + article.color + ') no-repeat center;'"
+        ></div>
         <g-image :src="article.image" class="card-image__img" :alt="article.title"></g-image>
       </div>
-      <!-- <CardImage class="mini-card-image" :article="article" /> -->
       <ArticleTags class="mini-card-tags" :tags="article.tags" />
-    </g-link>
-  </article>
+    </article>
+  </g-link>
 </template>
 
 <script>
@@ -23,6 +23,7 @@ import ArticleCategory from "~/components/ArticleCategory.vue";
 import ArticleTitle from "~/components/ArticleTitle.vue";
 import CardImage from "~/components/CardImage.vue";
 import ArticleTags from "~/components/ArticleTags.vue";
+
 export default {
   name: "ArticleMiniCard",
   props: ["article"],
@@ -31,26 +32,6 @@ export default {
     ArticleTitle,
     CardImage,
     ArticleTags
-  },
-  computed: {
-    headerStyle: function() {
-      if (this.article.color != "") {
-        return "background-color:" + this.article.color + ";";
-      } else {
-        return "background-color: #252152;";
-      }
-    },
-    gradientStyle: function() {
-      if (this.article.color != "") {
-        return (
-          "background: radial-gradient(90% 50%,rgba(81, 78, 100, 0.1)," +
-          this.article.color +
-          ") no-repeat center;"
-        );
-      } else {
-        return "background: radial-gradient(ellipse closest-side,rgba(81, 78, 100, 0.5),#252f6f) no-repeat center;";
-      }
-    }
   }
 };
 </script>
@@ -73,6 +54,12 @@ export default {
   width: inherit;
   height: inherit;
   position: absolute;
+  background: radial-gradient(
+      ellipse closest-side,
+      rgba(81, 78, 100, 0.5),
+      #252f6f
+    )
+    no-repeat center;
   top: 0;
   left: 0;
 }
@@ -85,7 +72,7 @@ export default {
   font-size: 0.7vw;
   width: 12vw;
   height: 15vw;
-  /* background: #252f6f; */
+  background-color: #252152;
   box-shadow: -1vw 0 1vw #000;
   display: flex;
   border-radius: 1vw;
