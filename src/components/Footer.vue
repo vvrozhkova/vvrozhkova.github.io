@@ -19,7 +19,7 @@
         <i class="fab fa-telegram-plane"></i>
       </a>
       </div>-->
-      <div class="col-3">
+      <div class="col-3" id="counter">
       </div>
       <div class="footer-description col-6 text-center">
         © Виктория Рожкова, 2014-2019
@@ -56,7 +56,7 @@
 export default {
   name: "Footer",
   mounted(){
-    document.write('<a href="//www.liveinternet.ru/click" '+
+    document.getElementById('counter').innerHTML = '<a href="//www.liveinternet.ru/click" '+
     'target="_blank"><img src="//counter.yadro.ru/hit?t14.1;r'+
     escape(document.referrer)+((typeof(screen)=='undefined')?'':
     ';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
@@ -64,7 +64,7 @@ export default {
     ';h'+escape(document.title.substring(0,150))+';'+Math.random()+
     '" alt="" title="LiveInternet: показано число просмотров за 24'+
     ' часа, посетителей за 24 часа и за сегодня" '+
-    'border="0" width="88" height="31"><\/a>')
+    'border="0" width="88" height="31"><\/a>'
   }
 };
 </script>
