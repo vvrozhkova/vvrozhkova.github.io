@@ -1,6 +1,9 @@
 <template>
   <div class="card-image-part">
-    <ArticleCategory class="card-category" :article="article" />
+    <g-link :to="article.category.path" itemprop="articleSection">
+      <ArticleCategory class="card-category" :article="article" />
+    </g-link>
+
     <CardImage :article="article" />
   </div>
 </template>
@@ -8,6 +11,7 @@
 <script>
 import ArticleCategory from "~/components/ArticleCategory.vue";
 import CardImage from "~/components/CardImage.vue";
+
 export default {
   name: "CardImagePart",
   components: {

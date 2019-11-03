@@ -18,6 +18,7 @@
 <script>
 import CardImagePart from "~/components/CardImagePart.vue";
 import CardContentPart from "~/components/CardContentPart.vue";
+
 export default {
   name: "ArticleCard",
   components: {

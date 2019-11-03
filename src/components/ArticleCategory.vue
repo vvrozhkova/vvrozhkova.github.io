@@ -1,5 +1,5 @@
 <template>
-  <g-link :to="article.category.path" class="article-category__link" itemprop="articleSection">
+  <div class="article-category">
     <strong>[ {{article.category.title.toUpperCase()}} ]</strong>
     <time itemprop="datePublished" :datetime="article.date" class="white">
       {{new Date(article.date).toLocaleDateString(undefined, {
@@ -8,7 +8,7 @@
       day: "numeric"
       })}}
     </time>
-  </g-link>
+  </div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-.article-category__link {
+.article-category {
   color: #0052cc;
   font-size: inherit;
   display: table;
