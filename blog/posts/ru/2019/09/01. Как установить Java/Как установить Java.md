@@ -50,8 +50,8 @@ keywords: "a, b, c"
 
 ### &nbsp;&nbsp;&nbsp; для OC Windows
 
-[Как установить OpenJDK на ОС Windows](./kak-ustanovit-open-jdk-na-os-windows)
+[Как установить OpenJDK на ОС Windows](/kak-ustanovit-open-jdk-na-os-windows)
 
 ### &nbsp;&nbsp;&nbsp; для OC Linux
 
-[Как установить OpenJDK на ОС Linux](./kak-ustanovit-open-jdk-na-os-linux)
+[Как установить OpenJDK на ОС Linux](/kak-ustanovit-open-jdk-na-os-linux)
