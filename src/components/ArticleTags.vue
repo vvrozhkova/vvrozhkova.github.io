@@ -25,7 +25,7 @@ export default {
   text-align: center;
 }
 .article-tag__link:hover {
-  border: 0.1vw solid #0052cc;
-  color: #0052cc;
+  border: 0.1vw solid var(--neon-blue);
+  color: var(--neon-blue);
 }
 </style>

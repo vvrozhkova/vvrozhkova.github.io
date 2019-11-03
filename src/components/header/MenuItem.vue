@@ -22,7 +22,7 @@ export default {
   width: 6rem;
   padding: 0.4rem;
   margin: auto;
-  border: 2px solid #0052cc;
+  border: 2px solid var(--neon-blue);
   &:hover {
     border: 2px solid #fff;
     border-radius: 0.5rem;
@@ -33,7 +33,7 @@ export default {
 }
 
 .menu-item__link {
-  color: #fff;
+  color: var(--white);
   font-family: "ZCOOL QingKe HuangYou", cursive;
   font-size: 1.2rem;
 }

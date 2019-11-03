@@ -31,14 +31,14 @@ export default {
 
 <style scoped>
 .category-header {
-  background-color: #252f6f;
+  background-color: var(--dark-purple);
   padding: 1vw 3vw;
   margin-bottom: 2vw;
 }
 
 .category-item__link {
   padding: 0.2vw 1vw;
-  border: 0.2vw solid white;
+  border: 0.2vw solid var(--white);
   border-radius: 1vw;
 }
 

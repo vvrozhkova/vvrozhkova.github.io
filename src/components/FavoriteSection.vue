@@ -30,7 +30,7 @@
     .favorite-section {
         position: relative;
         background-color: #dadada;
-        color: #252151;
+        color: var(--dark-purple);
     }
 
     .mini-card-grid {

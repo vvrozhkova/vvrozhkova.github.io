@@ -57,7 +57,7 @@ export default {
 .carousel-control-prev {
   height: 4vw;
   width: 4vw;
-  border: 0.2vw solid #fff;
+  border: 0.2vw solid var(--white);
   top: auto;
   z-index: 10;
   padding: 0.5vw;
@@ -65,7 +65,7 @@ export default {
 
 .carousel-control-next:hover,
 .carousel-control-prev:hover {
-  border: 0.2vw solid #0052cc;
+  border: 0.2vw solid var(--neon-blue);
 }
 
 .carousel-control-next:hover .carousel-control-next-icon {

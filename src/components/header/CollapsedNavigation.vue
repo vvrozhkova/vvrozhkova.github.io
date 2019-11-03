@@ -34,7 +34,7 @@ export default {
 
 .collapsed-menu__item {
   padding: 2.5vw 5vw;
-  color: #fff;
+  color: var(--white);
   font-size: 4vw;
   font-weight: 600;
   text-decoration: none;

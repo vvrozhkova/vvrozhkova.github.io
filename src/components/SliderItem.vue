@@ -63,8 +63,8 @@ $element-size: 6vw;
   height: $container-size;
   padding: 6vw 3vw 3vw 3vw;
   margin: $element-size/2 0;
-  background: #252152;
-  border: 2px solid #fff;
+  background: var(--dark-purple);
+  border: 2px solid var(--white);
   position: relative;
   border-radius: 50%;
   // margin-top: 1vw;
@@ -76,9 +76,9 @@ $element-size: 6vw;
   position: absolute;
   left: 40%;
   top: 40%;
-  background: #252152;
+  background: var(--dark-purple);
   text-align: center;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
   display: table;
   line-height: 0.8vw;
   font-size: 1vw;
@@ -89,7 +89,7 @@ $element-size: 6vw;
   // transform-origin: 50%, + $element-size / 2 - $container-size / 2;
 }
 .label:hover {
-  border: 2px solid #007bff;
+  border: 2px solid var(--neon-blue);
 }
 //Magic starts here
 @for $i from 2 through 10 {
@@ -112,14 +112,14 @@ $element-size: 6vw;
 
 .slide-category-link {
   font-size: 1.5vw;
-  color: #fff;
+  color: var(--white);
   font-family: "Oswald", sans-serif;
   text-decoration: none;
 }
 .slide-title-link {
   font-size: 2vw;
   font-weight: bold;
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 .slide-box ul {

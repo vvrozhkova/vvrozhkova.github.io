@@ -55,7 +55,7 @@ export default {
   background: radial-gradient(
       ellipse closest-side,
       rgba(81, 78, 100, 0.5),
-      #252f6f
+      var(--dark-purple)
     )
     no-repeat center;
   top: 0;
@@ -70,8 +70,8 @@ export default {
   font-size: 0.7vw;
   width: 12vw;
   height: 15vw;
-  background-color: #252152;
-  box-shadow: -1vw 0 1vw #000;
+  background-color: var(--dark-purple);
+  box-shadow: -1vw 0 1vw var(--black);
   display: flex;
   border-radius: 1vw;
   flex-direction: column;

@@ -10,6 +10,22 @@
 @import url('https://fonts.googleapis.com/css?family=Jura');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
+:root {
+  --neon-blue: #0052cc;
+  --navy: navy;
+  --black: black;
+  --white: #ffffff;
+  --light-blue: rgb(83, 161, 224);
+  --grey: grey;
+  --light-grey: lightgrey;
+  --violet: #3f51b5;
+  --light-violet: #b2b9e1;
+  --dark-purple: #252f6f;
+  // --purple: #3f51b5;
+  // --light-purple: #3f51b5;
+  // --purple-highlight: #b2b9e1
+}
+
 $neon_blue: #0052cc;
 $white: #fff;
 $zcool_font: "ZCOOL QingKe HuangYou", cursive;

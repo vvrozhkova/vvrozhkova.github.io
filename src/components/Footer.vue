@@ -61,12 +61,12 @@ export default {
 }
 
 .social a:hover {
-  border: 1px solid #0052cc;
+  border: 1px solid var(--neon-blue);
 }
 
 .social a,
 .socialBtn {
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -83,8 +83,8 @@ export default {
 footer  {
   position: absolute;
   bottom: 0;
-  background-color: #252f6f;
-  color: #7a7a8c;
+  background-color: var(--dark-purple);
+  color: var(--light-violet);
   padding-bottom: 1vw;
   padding-top: 1vw;
   font-size: 0.8vw;

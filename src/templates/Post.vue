@@ -200,18 +200,18 @@ function setPostHeadersOffset() {
 }
 
 .post-table-content a:hover {
-  color: navy;
-  border-bottom: 2px dotted navy;
+  color: var(--navy);
+  border-bottom: 2px dotted var(--navy);
 }
 
 .postPage {
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 /* share section */
 
 .post-share {
-  background-color: #252f6f;
+  background-color: var(--dark-purple);
   padding: 1vw 6vw;
 }
 

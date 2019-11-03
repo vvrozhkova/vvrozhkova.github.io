@@ -16,15 +16,15 @@ export default {
 
 <style scoped>
 .read-button__box:hover {
-  border: 0.2vw solid #0052cc;
-  color: #0052cc;
+  border: 0.2vw solid var(--neon-blue);
+  color: var(--neon-blue);
 }
 .read-button__link {
   text-decoration: none;
 }
 .read-button__box {
-  border: 0.2vw solid #fff;
-  color: #fff;
+  border: 0.2vw solid var(--white);
+  color: var(--white);
   text-align: center;
   font-size: 1.1vw;
   font-family: "Oswald", sans-serif;

@@ -54,7 +54,7 @@ export default {
     position: absolute;
     width: 7vw;
     height: 0.6vw;
-    background-color: #fff;
+    background-color: var(--white);
   }
 }
 

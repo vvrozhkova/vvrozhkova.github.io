@@ -51,7 +51,7 @@ export default {
   padding: 2vw;
   font-size: 1.5vw;
   overflow: hidden;
-  background-color: #252152;
+  background-color: var(--dark-purple);
 }
 
 .post-header-image {

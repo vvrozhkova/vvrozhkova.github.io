@@ -40,7 +40,7 @@ export default {
   height: 53vw;
 }
 .article-card {
-  background-color: #252f6f;
+  background-color: var(--dark-purple);
   border-radius: 1vw;
   font-size: 1.3vw;
 }

@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 .article-category {
-  color: #0052cc;
+  color: var(--neon-blue);
   font-size: inherit;
   display: table;
 }

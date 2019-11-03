@@ -32,7 +32,7 @@ export default {
 <style scoped>
 #button {
   display: inline-block;
-  background-color: #0052cc;
+  background-color: var(--neon-blue);
   width: 50px;
   height: 50px;
   text-align: center;

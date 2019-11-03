@@ -63,14 +63,14 @@ export default {
   border: 1px solid #cfcfcf;
   margin-bottom: 1vw;
   padding: 0.8vw;
-  color: #fff;
+  color: var(--white);
 
   .comment-name::first-letter {
     text-transform: uppercase;
   }
 
   .openLink {
-    color: #000;
+    color: var(--black);
     float: right;
     cursor: pointer;
     &:before {

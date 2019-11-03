@@ -43,6 +43,6 @@ function isDisplayed(element) {
 
 <style scoped>
 .progress-bar {
-  background-color: #252f6f;
+  background-color: var(--dark-purple);
 }
 </style>
