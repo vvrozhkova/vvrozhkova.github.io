@@ -201,6 +201,7 @@ function setPostHeadersOffset() {
 
 .post-table-content a:hover {
   color: navy;
+  border-bottom: 2px dotted navy;
 }
 
 .postPage {
