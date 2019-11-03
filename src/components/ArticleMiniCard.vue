@@ -1,7 +1,6 @@
 <template>
+  <g-link :to="article.path" class="mini-card__link">
     <article class="mini-card" :style="'background-color:' + article.color + ';'">
-        <g-link :to="article.path" class="mini-card__link">
-
       <ArticleCategory :article="article" class="mini-card-category" />
       <br />
       <h2>
@@ -15,9 +14,8 @@
         <g-image :src="article.image" class="card-image__img" :alt="article.title"></g-image>
       </div>
       <ArticleTags class="mini-card-tags" :tags="article.tags" />
-        </g-link>
-
     </article>
+  </g-link>
 </template>
 
 <script>
@@ -94,7 +92,7 @@ export default {
   transform: translate(0, -1vw);
   z-index: 15;
 }
-.mini-card:not(:first-child) {
+.mini-card__link:not(:first-child) {
   margin-left: -3vw;
 }
 .mini-card-category {

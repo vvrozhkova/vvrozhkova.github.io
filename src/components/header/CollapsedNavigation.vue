@@ -1,7 +1,10 @@
 <template>
-  <ul class="menu__box">
+  <ul class="collapsed-menu">
     <li v-for="category in categories" :key="category.node.id">
-      <g-link class="menu__item" :to="category.node.link">{{category.node.title.toUpperCase()}}</g-link>
+      <g-link
+        class="collapsed-menu__item"
+        :to="category.node.link"
+      >{{category.node.title.toUpperCase()}}</g-link>
     </li>
   </ul>
 </template>
@@ -14,12 +17,12 @@ export default {
 
 <style lang="scss" scoped>
 @media (min-width: 768px) {
-  .menu__box.active {
+  .collapsed-menu.active {
     display: none !important;
   }
 }
 
-.menu__box {
+.collapsed-menu {
   display: none;
   text-align: center;
   width: 100%;
@@ -29,7 +32,7 @@ export default {
   }
 }
 
-.menu__item {
+.collapsed-menu__item {
   padding: 2.5vw 5vw;
   color: #fff;
   font-size: 4vw;
