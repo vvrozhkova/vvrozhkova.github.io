@@ -1,5 +1,5 @@
 <template>
-  <article class="mini-card" :style="'background-color:' + article.color + ';'">
+  <article class="mini-card" :style="'background-color:' + color + ';'">
     <g-link :to="article.path" class="mini-card__link">
       <ArticleCategory :article="article" class="mini-card-category" />
       <br />
@@ -25,7 +25,7 @@ import ArticleTags from "~/components/ArticleTags.vue";
 
 export default {
   name: "ArticleMiniCard",
-  props: ["article"],
+  props: ["article", "color"],
   components: {
     ArticleCategory,
     CardImage,

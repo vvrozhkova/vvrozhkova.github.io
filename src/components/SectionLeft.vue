@@ -5,15 +5,15 @@
       <div class="col-10">
         <div class="row">
           <div class="col-4">
-            <ArticleCard cardAlign="vertical" v-if="posts[0] != null" :article="posts[0].node" />
+            <ArticleCard cardAlign="vertical" v-if="posts[0] != null" :article="posts[0].node" :color="posts[0].node.color"/>
           </div>
           <div class="col-8">
             <div class="col">
-              <ArticleCard cardAlign="horizontal" v-if="posts[1] != null" :article="posts[1].node" />
+              <ArticleCard cardAlign="horizontal" v-if="posts[1] != null" :article="posts[1].node" :color="posts[1].node.color"/>
             </div>
             <div class="w-100"></div>
             <div class="col">
-              <ArticleCard cardAlign="horizontal" v-if="posts[2] != null" :article="posts[2].node" />
+              <ArticleCard cardAlign="horizontal" v-if="posts[2] != null" :article="posts[2].node" :color="posts[2].node.color"/>
             </div>
           </div>
         </div>

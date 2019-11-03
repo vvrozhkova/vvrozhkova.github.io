@@ -2,7 +2,7 @@
     <div class="favorite-section">
         <Section title="Избранное" titleAlign="right">
             <div class="mini-card-grid">
-                <ArticleMiniCard :article="post.node" :key="post.node.id" v-for="post in posts"/>
+                <ArticleMiniCard :article="post.node" :key="post.node.id" v-for="post in posts" :color="post.node.color"/>
             </div>
         </Section>
     </div>
