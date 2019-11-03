@@ -196,8 +196,7 @@ function setPostHeadersOffset() {
 }
 
 .post-table-content a {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  border-bottom: 2px dotted black;
 }
 
 .post-table-content a:hover {
