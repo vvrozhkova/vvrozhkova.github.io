@@ -19,7 +19,9 @@
         <i class="fab fa-telegram-plane"></i>
       </a>
       </div>-->
-      <div class="footer-description col-9 text-center">
+      <div class="col-3">
+      </div>
+      <div class="footer-description col-6 text-center">
         © Виктория Рожкова, 2014-2019
         <br />Коммерческое использование материалов сайта TestAutomation.Space запрещено. В
         остальных случаях обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу,
@@ -49,8 +51,18 @@
 </template>
 
 <script>
+document.write('<a href="//www.liveinternet.ru/click" '+
+'target="_blank"><img src="//counter.yadro.ru/hit?t14.1;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+';h'+escape(document.title.substring(0,150))+';'+Math.random()+
+'" alt="" title="LiveInternet: показано число просмотров за 24'+
+' часа, посетителей за 24 часа и за сегодня" '+
+'border="0" width="88" height="31"><\/a>')
+
 export default {
-  name: "Footer"
+  name: "Footer",
 };
 </script>
 
@@ -80,7 +92,7 @@ export default {
   margin: 1vw 0vw;
 }
 
-footer  {
+footer {
   position: absolute;
   bottom: 0;
   background-color: var(--dark-purple);
