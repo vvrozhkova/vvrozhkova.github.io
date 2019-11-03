@@ -17,7 +17,7 @@
         <ArticleTags :tags="post.tags" />
       </div>
       <div class="post-header-image col-5" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
-        <g-image itemprop="url" :src="post.image" class="post-image__img" :alt="post.title"></g-image>
+        <g-image itemprop="url" :src="siteConfig.siteUrl+post.image" class="post-image__img" :alt="post.title"></g-image>
       </div>
     </div>
   </header>
@@ -26,6 +26,7 @@
 <script>
 import ArticleCategory from "~/components/ArticleCategory.vue";
 import ArticleTags from "~/components/ArticleTags.vue";
+const siteConfig = require("~/../gridsome.config");
 
 export default {
   name: "PostHeader",
