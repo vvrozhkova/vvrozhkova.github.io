@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <main itemprop="articleBody" class="post-content-box row">
+    <main class="post-content-box row">
       <div id="table-content" class="post-table-content col-12 col-xl-4">
         <h2>СОДЕРЖАНИЕ:</h2>
         <ul>
@@ -25,7 +25,7 @@
         </ul>
       </div>
       <div class="post-content col-12 col-xl-8">
-        <VueRemarkContent />
+        <VueRemarkContent itemprop="articleBody"/>
         <!-- <div itemprop="text" v-html="$page.post.content" /> -->
         <Comments :comments="$page.comments.edges" :pageSlug="$page.post.path" />
       </div>
