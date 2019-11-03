@@ -179,15 +179,12 @@ hr {
 
 .post-content {
   a {
-    color: #000;
-    text-decoration: underline;
-    text-decoration-style: dotted;
+    border-bottom: 2px dotted #000;
   }
 
   a:hover {
     color: navy;
-    text-decoration: underline;
-    text-decoration-style: dotted;
+    border-bottom: 2px dotted navy;
   }
 
   img {
