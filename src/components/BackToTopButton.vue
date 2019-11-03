@@ -1,31 +1,42 @@
 <template>
-  <a id="button">
+  <a id="button" v-on:click="animate" v-scroll="handleScroll">
     <i class="fas fa-chevron-up"></i>
   </a>
 </template>
 
 <script>
-global.jQuery = require("jquery");
-var $ = global.jQuery;
-// window.$ = $;
-
 export default {
-  mounted() {
-    var btn = $("#button");
-      $(window).scroll(function() {
-        console.log($(window).scrollTop());
-        if ($(window).scrollTop() > 100) {
-          btn.addClass("show");
-        } else {
-          btn.removeClass("show");
-        }
-      });
-
-      btn.on("click", function(e) {
-        e.preventDefault();
-        $("html, body").animate({ scrollTop: 0 }, "300");
-      });
+  directives: {
+    scroll: {
+      inserted: function(el, binding) {
+        let fun = function(evt) {
+          if (document.getElementById("button") == null) {
+            window.removeEventListener("scroll", fun);
+          } else {
+            binding.value(evt, el);
+          }
+        };
+        window.addEventListener("scroll", fun);
+      }
     }
+  },
+  methods: {
+    handleScroll: function(evt, el) {
+      if (window.scrollY > 100) {
+        el.classList.add("show");
+      } else {
+        el.classList.remove("show");
+      }
+    },
+    animate: function(event) {
+      var scrollStep = -window.scrollY / (300 / 15),
+        scrollInterval = setInterval(function() {
+          if (window.scrollY != 0) {
+            window.scrollBy(0, scrollStep);
+          } else clearInterval(scrollInterval);
+        }, 15);
+    }
+  }
 };
 </script>
 
