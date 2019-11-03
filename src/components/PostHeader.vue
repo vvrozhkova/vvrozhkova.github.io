@@ -16,8 +16,8 @@
 
         <ArticleTags :tags="post.tags" />
       </div>
-      <div class="post-header-image col-5" itemscope itemtype="http://schema.org/ImageObject">
-        <g-image :itemprop="post.image" :src="post.image" class="post-image__img" :alt="post.title"></g-image>
+      <div class="post-header-image col-5" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+        <g-image itemprop="url" :src="post.image" class="post-image__img" :alt="post.title"></g-image>
       </div>
     </div>
   </header>

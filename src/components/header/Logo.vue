@@ -1,7 +1,8 @@
 <template>
   <g-link class="logo" to="/" itemprop="publisher" itemscope itemtype="http://schema.org/Organization" >
-    <meta itemscope itemtype="http://schema.org/ImageObject" itemprop="logo">
-    <img itemprop="@/assets/img/logo.svg" :alt="$static.metadata.siteName+' Logo'" src="@/assets/img/logo.svg" />
+    <div itemscope="itemscope" itemtype="http://schema.org/ImageObject" itemprop="logo">
+      <img itemprop="url" :alt="$static.metadata.siteName+' Logo'" src="@/assets/img/logo.svg">
+    </div>
     <meta itemprop="name" content="TestAutomation.Space"/>
   </g-link>
 </template>
