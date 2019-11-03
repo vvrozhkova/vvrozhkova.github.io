@@ -12,7 +12,7 @@
           :to="tag.path"
           rel="tag"
           class="label rounded-circle"
-          :style="'background-color: '+slide.color+';'"
+          :style="'background-color: '+color+';'"
         >
           <span>{{tag.title}}</span>
         </g-link>
