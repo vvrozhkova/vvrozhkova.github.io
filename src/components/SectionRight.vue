@@ -6,15 +6,15 @@
 
                 <div class="col-8">
                     <div class="col">
-                        <ArticleCard cardAlign="horizontal" :article="posts[2].node" :color="posts[2].node.color"/>
+                        <ArticleCard cardAlign="horizontal" :article="posts[2].node" />
                     </div>
                     <div class="w-100"></div>
                     <div class="col">
-                        <ArticleCard cardAlign="horizontal" :article="posts[0].node" :color="posts[0].node.color"/>
+                        <ArticleCard cardAlign="horizontal" :article="posts[0].node" />
                     </div>
                 </div>
                 <div class="col-4">
-                    <ArticleCard cardAlign="vertical" :article="posts[0].node" :color="posts[0].node.color"/>
+                    <ArticleCard cardAlign="vertical" :article="posts[0].node" />
                 </div>
             </div>
         </div>

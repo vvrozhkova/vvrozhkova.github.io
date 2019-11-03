@@ -5,9 +5,7 @@
     <PostHeader :post="$page.post" />
     <div class="post-share container-fluid">
       <div class="row">
-        <span class="post-share-title">
-          <h3>Share it:</h3>
-        </span>
+        <h3 class="post-share-title">Share it:</h3>
 
         <div class="post-share-btns">
           <div class="ya-share2" data-counter="ig" data-services="vkontakte,facebook,telegram"></div>
@@ -218,14 +216,10 @@ function setPostHeadersOffset() {
 }
 
 .post-share-title {
-  padding: 1vw 0;
-}
-
-.post-share-btns {
-  padding: 1vw;
-}
-
-.post-share h3 {
-  padding: 0.5vw 1vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 1vw;
 }
 </style>

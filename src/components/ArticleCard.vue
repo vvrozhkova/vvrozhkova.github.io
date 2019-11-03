@@ -2,7 +2,7 @@
   <div
     :class="[cardAlign === 'horizontal' ? 'row article-card__horizontal' : 'article-card__vertical']"
     class="article-card"
-    :style="'background-color:' + color + ';'"
+    :style="'background-color:' + article.color + ';'"
   >
     <CardImagePart
       :article="article"
@@ -25,7 +25,7 @@ export default {
     CardImagePart,
     CardContentPart
   },
-  props: ["article", "cardAlign", "color"]
+  props: ["article", "cardAlign"]
 };
 </script>
 

@@ -10,7 +10,7 @@
       v-model="slide"
     >
       <b-carousel-slide :key="item.node.id" v-for="(item, index) in items">
-        <SliderItem :index="index+1" :slide="item.node" :color="item.node.color"/>
+        <SliderItem :index="index+1" :slide="item.node" />
       </b-carousel-slide>
     </b-carousel>
   </div>

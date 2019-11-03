@@ -4,7 +4,7 @@
       <div class="slide-number">0{{index}}</div>
     </div>
     <div class="col-4">
-      <div class="circle" :style="'background-color: '+color+';'">
+      <div class="circle" :style="'background-color: '+slide.color+';'">
         <g-image :src="slide.image" class="card-img" :alt="slide.title"></g-image>
         <g-link
           v-for="tag in slide.tags"
@@ -12,7 +12,7 @@
           :to="tag.path"
           rel="tag"
           class="label rounded-circle"
-          :style="'background-color: '+color+';'"
+          :style="'background-color: '+slide.color+';'"
         >
           <span>{{tag.title}}</span>
         </g-link>
@@ -47,7 +47,7 @@
 import ReadButton from "~/components/ReadButton.vue";
 export default {
   name: "SliderItem",
-  props: ["slide", "index", "color"],
+  props: ["slide", "index"],
   components: {
     ReadButton
   }
