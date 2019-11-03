@@ -6,7 +6,6 @@
           <ArticleCategory :article="post" />
           <meta itemprop="datePublished" :content="post.date">
           <meta itemprop="author" content="Victoria Rozhkova">
-          <meta itemprop="publisher" itemscope itemtype="http://schema.org/Organization" content="TestAutomation.Space">
         </h5>
         <br />
         <h1 itemprop="headline">
@@ -17,8 +16,8 @@
 
         <ArticleTags :tags="post.tags" />
       </div>
-      <div class="post-header-image col-5">
-        <g-image itemprop="image" :src="post.image" class="post-image__img" :alt="post.title"></g-image>
+      <div class="post-header-image col-5" itemscope itemtype="http://schema.org/ImageObject">
+        <g-image itemprop="post.image" :src="post.image" class="post-image__img" :alt="post.title"></g-image>
       </div>
     </div>
   </header>
