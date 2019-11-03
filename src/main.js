@@ -25,6 +25,7 @@ export default function (Vue, { head }) {
         crossorigin: "anonymous"
     });
     head.bodyAttrs = { class: 'body commonBody' };
+    head.htmlAttrs = { lang: "ru-RU" }
 
     head.script.push({
         src: '//cookieinfoscript.com/js/cookieinfo.min.js',

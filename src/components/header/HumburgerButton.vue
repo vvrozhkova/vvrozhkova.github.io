@@ -1,7 +1,11 @@
 <template>
-  <div class="humburger-btn">
-    <input id="menu__toggle" type="checkbox" />
-    <label class="menu__btn" v-on:click="openMenu" for="menu__toggle">
+  <div class="collapsed-menu-toggler">
+    <input id="collapsed-menu-toggler__chckbx" type="checkbox" />
+    <label
+      class="collapsed-menu-toggler__btn"
+      v-on:click="openMenu"
+      for="collapsed-menu-toggler__chckbx"
+    >
       <span></span>
     </label>
   </div>
@@ -11,7 +15,7 @@
 export default {
   methods: {
     openMenu: function(e) {
-      var menu_box = document.getElementsByClassName("menu__box")[0];
+      var menu_box = document.getElementsByClassName("collapsed-menu")[0];
 
       menu_box.classList.toggle("active");
       if (menu_box.offsetHeight > 0) {
@@ -27,12 +31,12 @@ export default {
 
 <style lang="scss" scoped>
 @media (min-width: 768px) {
-  .humburger-btn {
+  .collapsed-menu-toggler {
     display: none;
   }
 }
 
-.menu__btn {
+.collapsed-menu-toggler__btn {
   span::before {
     top: -2vw;
   }
@@ -54,7 +58,7 @@ export default {
   }
 }
 
-#menu__toggle {
+#collapsed-menu-toggler__chckbx {
   opacity: 0;
   height: 0;
   &:checked ~ {
@@ -74,14 +78,13 @@ export default {
   }
 }
 
-.menu__btn {
+.collapsed-menu-toggler__btn {
   display: flex;
   align-items: center;
   width: 7vw;
   height: 7vw;
   cursor: pointer;
   z-index: 1;
-  
   margin: auto;
 }
 </style>

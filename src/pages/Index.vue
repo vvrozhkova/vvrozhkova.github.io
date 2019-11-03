@@ -20,7 +20,7 @@ export default {
   metaInfo: {
     title: siteConfig.siteName,
     titleTemplate: "TestAutomation.Space",
-    link: [{ rel: "canonical", href: "testautomation.space" }],
+    link: [{ rel: "canonical", href: "https://testautomation.space" }],
     meta: [
       { property: "og:locale", content: "ru_RU" },
       { property: "og:type", content: "article" },
