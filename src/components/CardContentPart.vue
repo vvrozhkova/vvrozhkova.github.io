@@ -1,7 +1,7 @@
 <template>
   <div class="card-content-part">
     <h2>
-      <ArticleTitle :article="article" class="card-title" />
+      <g-link :to="article.path" class="card-title">{{article.title}}</g-link>
     </h2>
     <hr align="left" class="line" />
     <ul>
@@ -18,14 +18,12 @@
 </template>
 
 <script>
-import ArticleTitle from "~/components/ArticleTitle.vue";
 import CardTags from "~/components/ArticleTags.vue";
 import ReadButton from "~/components/ReadButton.vue";
 
 export default {
   name: "CardContentPart",
   components: {
-    ArticleTitle,
     CardTags,
     ReadButton
   },
@@ -34,12 +32,11 @@ export default {
 </script>
 
 <style lang="scss" >
-
-.card-tags{
+.card-tags {
   position: absolute;
   bottom: 1vw;
 
-  .article-tag__link{
+  .article-tag__link {
     padding: 0vw 0.5vw;
     font-size: 1.2vw;
   }

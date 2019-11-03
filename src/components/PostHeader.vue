@@ -7,7 +7,7 @@
         </h5>
         <br />
         <h1>
-          <ArticleTitle :article="post" />
+          <g-link itemprop="headline" :to="post.path">{{post.title}}</g-link>
         </h1>
         <hr align="left" class="line" />
         <div class="post-description">{{post.description}}</div>
@@ -23,14 +23,12 @@
 
 <script>
 import ArticleCategory from "~/components/ArticleCategory.vue";
-import ArticleTitle from "~/components/ArticleTitle.vue";
 import ArticleTags from "~/components/ArticleTags.vue";
 
 export default {
   name: "PostHeader",
   components: {
     ArticleCategory,
-    ArticleTitle,
     ArticleTags
   },
   props: ["post"]

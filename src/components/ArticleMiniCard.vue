@@ -4,7 +4,7 @@
       <ArticleCategory :article="article" class="mini-card-category" />
       <br />
       <h2>
-        <ArticleTitle :article="article" class="mini-card-title" />
+        <span class="mini-card-title">{{article.title}}</span>
       </h2>
       <div class="mini-card-image">
         <div
@@ -20,7 +20,6 @@
 
 <script>
 import ArticleCategory from "~/components/ArticleCategory.vue";
-import ArticleTitle from "~/components/ArticleTitle.vue";
 import CardImage from "~/components/CardImage.vue";
 import ArticleTags from "~/components/ArticleTags.vue";
 
@@ -29,7 +28,6 @@ export default {
   props: ["article"],
   components: {
     ArticleCategory,
-    ArticleTitle,
     CardImage,
     ArticleTags
   }
