@@ -31,10 +31,9 @@
 
       <hr />
       <ul>
-        <li v-for="tableContentItem in slide.headings" :key="tableContentItem.id">
-          -
-          <g-link :to="slide.path.slice(0, -1)+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
-        </li>
+        <g-link v-for="tableContentItem in slide.headings" :key="tableContentItem.id" :to="slide.path.slice(0, -1)+tableContentItem.anchor">
+          <li>- {{tableContentItem.value}}</li>
+        </g-link>
       </ul>
       <div class="slide-read-button">
         <ReadButton :path="slide.path" />
