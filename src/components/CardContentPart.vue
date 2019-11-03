@@ -3,7 +3,7 @@
     <h2>
       <g-link :to="article.path" class="card-title">{{article.title}}</g-link>
     </h2>
-    <hr align="left" class="line" />
+    <hr class="line" />
     <ul>
       <li v-for="tableContentItem in article.headings" :key="tableContentItem.id">
         -

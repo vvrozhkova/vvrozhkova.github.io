@@ -9,7 +9,7 @@
         <h1>
           <g-link itemprop="headline" :to="post.path">{{post.title}}</g-link>
         </h1>
-        <hr align="left" class="line" />
+        <hr class="line" />
         <div class="post-description">{{post.description}}</div>
 
         <ArticleTags :tags="post.tags" />

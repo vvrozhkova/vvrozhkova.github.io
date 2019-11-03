@@ -1,7 +1,7 @@
 <template>
   <div class="article-category">
     <strong>[ {{article.category.title.toUpperCase()}} ]</strong>
-    <time itemprop="datePublished" :datetime="article.date" class="white">
+    <time :datetime="article.date" class="white">
       {{new Date(article.date).toLocaleDateString(undefined, {
       year: "numeric",
       month: "long",

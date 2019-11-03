@@ -1,6 +1,6 @@
 <template>
   <div class="card-image-part">
-    <g-link :to="article.category.path" itemprop="articleSection">
+    <g-link :to="article.category.path">
       <ArticleCategory class="card-category" :article="article" />
     </g-link>
 
