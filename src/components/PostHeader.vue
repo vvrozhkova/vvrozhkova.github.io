@@ -4,13 +4,13 @@
       <div class="col-7">
         <h5 class="post-category">
           <ArticleCategory :article="post" />
-          <meta itemprop="datePublished" :datetime="post.date">
+          <meta itemprop="datePublished" :content="post.date">
           <meta itemprop="author" content="Victoria Rozhkova">
-          <meta itemprop="publisher" content="TestAutomation.Space">
+          <meta itemprop="publisher" itemscope itemtype="http://schema.org/Organization" content="TestAutomation.Space">
         </h5>
         <br />
         <h1 itemprop="headline">
-          <g-link :to="post.path">{{post.title}}</g-link>
+          <g-link itemprop="url" :to="post.path">{{post.title}}</g-link>
         </h1>
         <hr class="line" />
         <div itemprop="description" class="post-description">{{post.description}}</div>
