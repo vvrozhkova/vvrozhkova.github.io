@@ -19,9 +19,8 @@
         <i class="fab fa-telegram-plane"></i>
       </a>
       </div>-->
-      <div class="col-3" id="counter">
-      </div>
-      <div class="footer-description col-6 text-center">
+      <div class="col-2 text-center" id="counter"></div>
+      <div class="footer-description col-7 text-center">
         © Виктория Рожкова, 2014-2019
         <br />Коммерческое использование материалов сайта TestAutomation.Space запрещено. В
         остальных случаях обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу,
@@ -51,20 +50,30 @@
 </template>
 
 <script>
-
-
 export default {
   name: "Footer",
-  mounted(){
-    document.getElementById('counter').innerHTML = '<a href="//www.liveinternet.ru/click" '+
-    'target="_blank"><img src="//counter.yadro.ru/hit?t14.1;r'+
-    escape(document.referrer)+((typeof(screen)=='undefined')?'':
-    ';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
-    screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
-    ';h'+escape(document.title.substring(0,150))+';'+Math.random()+
-    '" alt="" title="LiveInternet: показано число просмотров за 24'+
-    ' часа, посетителей за 24 часа и за сегодня" '+
-    'border="0" width="88" height="31"><\/a>'
+  mounted() {
+    document.getElementById("counter").innerHTML =
+      '<a href="//www.liveinternet.ru/click" ' +
+      'target="_blank"><img src="//counter.yadro.ru/hit?t14.1;r' +
+      escape(document.referrer) +
+      (typeof screen == "undefined"
+        ? ""
+        : ";s" +
+          screen.width +
+          "*" +
+          screen.height +
+          "*" +
+          (screen.colorDepth ? screen.colorDepth : screen.pixelDepth)) +
+      ";u" +
+      escape(document.URL) +
+      ";h" +
+      escape(document.title.substring(0, 150)) +
+      ";" +
+      Math.random() +
+      '" alt="" title="LiveInternet: показано число просмотров за 24' +
+      ' часа, посетителей за 24 часа и за сегодня" ' +
+      'border="0" style="width:5vw;"></a>';
   }
 };
 </script>
@@ -106,7 +115,6 @@ footer {
 }
 
 .footer-description {
-  /* margin: auto; */
   font-size: 1vw;
 }
 </style>
