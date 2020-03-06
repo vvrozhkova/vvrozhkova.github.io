@@ -24,7 +24,7 @@ jobs:
       - run: npm install
       # - run: yarn install
       
-      - run: sudo npm install --global @gridsome/cli
+      - run: sudo npm clean-install --global @gridsome/cli
 
       - save_cache:
           paths:
