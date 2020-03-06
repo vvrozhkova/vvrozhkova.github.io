@@ -1,202 +1,33 @@
 <template>
   <Layout>
-    <Slider :items="$page.lastPosts.edges" />
-    <FavoriteSection :posts="$page.posts.edges" />
-    <SectionLeft :posts="$page.uiPosts.belongsTo.edges" title="ui" />
-    <SectionRight :posts="$page.uiPosts.belongsTo.edges" title="api" />
-    <SectionLeft :posts="$page.uiPosts.belongsTo.edges" title="mobile" />
+
+    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+    <g-image alt="Example image" src="~/favicon.png" width="135" />
+
+    <h1>Hello, world!</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+    </p>
+
+    <p class="home-links">
+      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
+      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
+    </p>
+
   </Layout>
 </template>
 
 <script>
-import Slider from "~/components/Slider.vue";
-import FavoriteSection from "~/components/FavoriteSection.vue";
-import SectionLeft from "~/components/SectionLeft.vue";
-import SectionRight from "~/components/SectionRight.vue";
-
-const siteConfig = require("~/../gridsome.config");
-
 export default {
   metaInfo: {
-    title: siteConfig.siteName,
-    titleTemplate: "TestAutomation.Space",
-    link: [{ rel: "canonical", href: "https://testautomation.space" }],
-    meta: [
-      { property: "og:locale", content: "ru_RU" },
-      { property: "og:type", content: "article" },
-      { property: "og:title", content: siteConfig.siteName },
-      { property: "og:description", content: siteConfig.siteDescription },
-      { property: "og:url", content: siteConfig.siteUrl },
-      { property: "og:site_name", content: siteConfig.siteName },
-      { name: "yandex-verification", content: "067903c2cc71daeb" },
-      {
-        property: "keywords",
-        content:
-          "testing, automation testing, тестирование, автоматизация тестирования"
-      }
-    ]
-  },
-  components: {
-    Slider,
-    FavoriteSection,
-    SectionLeft,
-    SectionRight
+    title: 'Hello, world!'
   }
-};
+}
 </script>
 
-<page-query>
-
-query Blog {
-    metadata {
-        siteUrl
-        siteName
-        siteDescription
-    }
-
-    lastPosts: allPost(sortBy: "date", limit: 7) {
-        edges {
-            node {
-                id
-                title
-                date
-                path
-                image
-                color
-                category {
-                    title
-                    path
-                }
-                tags {
-                    title
-                    path
-                }
-                headings(depth: h2){
-                    value
-                    anchor
-                }
-            }
-        }
-    }
-
-    uiPosts: category(id: "ui") {
-        title
-        belongsTo(limit: 3) {
-            edges {
-                node {
-                    ... on Post {
-                        id
-                        title
-                        content
-                        date
-                        path
-                        image
-                        color
-                        category {
-                            title
-                            path
-                        }
-                        tags {
-                            title
-                            path
-                        }
-                        headings(depth: h2){
-                            value
-                            anchor
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    apiPosts: category(id: "api") {
-        title
-            belongsTo(limit: 3) {
-                edges {
-                    node {
-                        ... on Post {
-                            id
-                            title
-                            content
-                            date
-                            path
-                            image
-                            color
-                            category {
-                                title
-                                path
-                            }
-                            tags {
-                                title
-                                path
-                            }
-                            headings(depth: h2){
-                                value
-                                anchor
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    mobilePosts: category(id: "mobile") {
-        title
-            belongsTo(limit: 3) {
-                edges {
-                    node {
-                        ... on Post {
-                            id
-                            title
-                            content
-                            date
-                            path
-                            image
-                            color
-                            category {
-                                title
-                                path
-                            }
-                            tags {
-                                title
-                                path
-                            }
-                            headings(depth: h2){
-                                value
-                                anchor
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    posts: allPost {
-        edges {
-            node {
-                id
-                title
-                content
-                date
-                path
-                image
-                color
-                category {
-                    title
-                    path
-                }
-                tags {
-                    title
-                    path
-                }
-                headings(depth: h2){
-                    value
-                    anchor
-                }
-            }
-        }
-    }
+<style>
+.home-links a {
+  margin-right: 1rem;
 }
-
-</page-query>
+</style>
