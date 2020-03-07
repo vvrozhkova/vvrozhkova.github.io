@@ -22,7 +22,7 @@ jobs:
             - v1-dependencies-
 
       - run: rm -rf node_modules
-      - run: npm install
+      - run: npm clean-install
       # - run: yarn install
       
       - run: sudo npm uninstall --global @gridsome/cli
