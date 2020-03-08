@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "testautomation.space",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -7,6 +7,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.13"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2"
   }
 }
