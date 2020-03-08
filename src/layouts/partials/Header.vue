@@ -2,7 +2,7 @@
   <header>
     <div class="header-inner container flex gap-30">
       <Logo />
-      <SearchForm />
+      <Search />
     </div>
   </header>
 </template>
@@ -10,10 +10,12 @@
 
 <script>
 import Logo from "./Logo.vue";
+import Search from "./Search.vue";
 
 export default {
   components: {
-    Logo
+    Logo,
+    Search
   }
 };
 </script>
