@@ -21,7 +21,7 @@ module.exports = function (api, options) {
     const { collection } = store.getCollection('Post');
 
     const posts = collection.data.map(post => {
-      return pick(post, ['title', 'path', 'content', 'description']);
+      return pick(post, ['title', 'path', 'content', 'category', 'description']);
     });
 
     const output = {

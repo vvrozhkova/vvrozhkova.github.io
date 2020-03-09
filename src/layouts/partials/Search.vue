@@ -48,7 +48,7 @@
             class="search-result__box"
             :class="{ 'search-highlighted' : index === highlightedIndex }"
           >
-            <div class="search-category">Категория</div>
+            <div class="search-category">{{post.item.category.toUpperCase()}}</div>
             <div class="search-description">
               <span class="search-result__title">
                 <b>{{post.item.title}}</b>
@@ -99,7 +99,7 @@ export default {
         distance: 10000,
         maxPatternLength: 32,
         minMatchCharLength: 1,
-        keys: ["title", "content", "description"]
+        keys: ["title", "content", "category", "description"]
       }
     };
   },
@@ -188,6 +188,8 @@ export default {
   .search-category {
     float: left;
     clear: left;
+    min-width: 3vw;
+    text-align: center;
   }
 
   .search-description {

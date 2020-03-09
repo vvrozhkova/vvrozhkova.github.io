@@ -39,51 +39,49 @@ export default {
 
 <page-query>
 
-  query Post ($path: String!) {
-    post: post (path: $path) {
-        title
-        content
-        description
-        color
-        category{
-            id
-            title
-            path
-        }
-        date
-        imagewords
-        path
-        image
-        headings(depth: h2){
-            value
-            anchor
-        }
-        subtitles: headings {
+query Post($path: String!) {
+  post: post(path: $path) {
+    title
+    content
+    description
+    category {
+      id
+      title
+      path
+    }
+    date
+    path
+    image
+    headings(depth: h2) {
+      value
+      anchor
+    }
+    subtitles: headings {
       depth
       value
       anchor
     }
-        tags{
-            id
-            title
-            path
-        }
+    tags {
+      id
+      title
+      path
     }
+  }
 
-    comments: allComment(sortBy: "date", filter:{post:{eq: $path}}){
-      edges{
-        node{
-          id
-          name
-          path
-          post
-          replies
-          content
-          date
-        }
+  comments: allComment(sortBy: "date", filter: { post: { eq: $path } }) {
+    edges {
+      node {
+        id
+        name
+        path
+        post
+        replies
+        content
+        date
       }
     }
   }
+}
     
 </page-query>
 
