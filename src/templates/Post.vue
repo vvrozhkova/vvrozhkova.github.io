@@ -1,12 +1,12 @@
 <template>
-  <PostLayout :subtitles="subtitles" :post="$page.post" :links="links">
+  <!-- <PostLayout :subtitles="subtitles" :post="$page.post" :links="links"> -->
     <VueRemarkContent class="post mb"></VueRemarkContent>
-  </PostLayout>
+  <!-- </PostLayout> -->
 </template>
 
 <script>
-import PostLayout from "@/layouts/PostLayout.vue";
-import links from '@/data/doc-links.yaml'
+// import PostLayout from "@/layouts/PostLayout.vue";
+// import links from '@/data/doc-links.yaml'
 
 export default {
   components: {
