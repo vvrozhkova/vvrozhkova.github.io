@@ -1,34 +1,32 @@
 <template>
-  <a href="/tag/java">
-    <div class="tag">
-      <span class="icon">
-        <i class="fab fa-java"></i>
-      </span>
-      <span class="tag-name">{{title}}</span>
-    </div>
-  </a>
+  <g-link class="tag" :to="tag.path">
+    <span class="icon">
+      <i :class="tag.icon"></i>
+    </span>
+    <span class="tag-name">{{tag.title}}</span>
+  </g-link>
 </template>
 
 <script>
 export default {
-  props: ["title"]
+  props: ["tag"]
 };
 </script>
 
-<style lang="scss" coped>
+<style lang="scss">
 .tag {
   background-color: #243149;
   color: #fff;
-  padding: 3px 10px;
-  min-width: 3vw;
+  padding: 0px 10px;
   text-align: center;
   display: inline-block;
-  margin: 10px 5px;
+  margin: 0 5px;
+  text-decoration: none;
   .icon {
     margin-right: 10px;
   }
-  i {
-    font-size: 1vw;
+  &:hover {
+    color: var(--primary-color);
   }
 }
 </style>

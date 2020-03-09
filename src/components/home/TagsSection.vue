@@ -4,9 +4,7 @@
       <b>Выберите тематику</b>
     </h1>
     <p>которая вас интересует</p>
-    <Tag :title="'java'" />
-    <Tag :title="'ui'" />
-    <Tag :title="'setup'" />
+    <Tag v-for="tag in $static.tags.edges" :key="tag.node.id" :tag="tag.node" />
   </Section>
 </template>
 
@@ -30,3 +28,18 @@ p {
   font-size: 1vw;
 }
 </style>
+
+<static-query>
+query {
+  tags: allRelatedTag {
+    edges {
+      node {
+        id
+        title
+        icon
+        path
+      }
+    }
+  }
+}
+</static-query>
