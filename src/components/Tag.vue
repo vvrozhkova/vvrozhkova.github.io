@@ -20,7 +20,7 @@ export default {
   padding: 0px 10px;
   text-align: center;
   display: inline-block;
-  margin: 0 5px;
+  margin: 5px 5px;
   text-decoration: none;
   .icon {
     margin-right: 10px;

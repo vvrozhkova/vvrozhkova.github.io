@@ -2,15 +2,18 @@
   <div id="app">
     <Header />
     <slot />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./partials/Header.vue";
+import Footer from "./partials/Footer.vue";
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 };
 </script>

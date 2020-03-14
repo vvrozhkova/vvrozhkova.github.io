@@ -21,11 +21,13 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-size: 3vw;
-}
-p {
-  font-size: 1vw;
+@media screen and (min-width: 850px) {
+  h1 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.5em;
+  }
 }
 </style>
 

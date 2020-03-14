@@ -21,7 +21,16 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  font-size: 7vw;
+@media screen and (min-width: 850px) {
+  h2 {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  h2 {
+    font-size: 4em;
+    font-weight: 900;
+  }
 }
 </style>
