@@ -10,6 +10,24 @@ module.exports = {
   siteDescription: 'Блог про автоматизацию тестирования и не только.',
   titleTemplate: '%s - TestAutomation.Space',
 
+  runtimeCompiler: true,
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      // slug: true,
+      // autolinkHeadings:true,
+      plugins: [
+        '@gridsome/remark-prismjs',
+        // 'remark-emoji',
+        // 'remark-math',
+        // 'remark-html',
+        // 'remark-html-katex'
+      ]
+    }
+  },
+
   plugins: [
     {
       use: '@gridsome/vue-remark',
@@ -23,12 +41,12 @@ module.exports = {
           '@gridsome/remark-prismjs'
         ],
         remark: {
-          autolinkHeadings: {
-            content: {
-              type: 'text',
-              value: '#'
-            }
-          }
+          // autolinkHeadings: {
+          //   content: {
+          //     type: 'text',
+          //     value: '#'
+          //   }
+          // }
         },
         refs: {
           tags: {

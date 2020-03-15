@@ -7,6 +7,15 @@ icon: "fab fa-java"
 image: ""
 date: 2019-11-04
 keywords: "история развития java, java"
+links: [
+        {
+          title: "Prologue",
+          items: [
+            { title: "Introduction", link: "/docs/" },
+            { title: "Core concepts", link: "/docs/core-concepts/" }
+          ]
+        }
+      ]
 ---
 
 ## Предпосылки создания языка

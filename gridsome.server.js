@@ -14,6 +14,10 @@ module.exports = function (api, options) {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
   })
 
+  configureWebpack: {
+    devtool: 'source-map'
+  }
+
   api.beforeBuild(({ config, store }) => {
     console.log(store);
 

@@ -40,10 +40,7 @@ export default {
   .icon {
     font-size: 5em;
   }
-  .tags {
-    width: 50%;
-    float: left;
-  }
+
   li {
     list-style: square;
   }
@@ -63,24 +60,6 @@ export default {
     &:hover:after {
       width: 100%;
     }
-  }
-
-  .tag {
-    width: fit-content;
-    color: #7a7a8c;
-    text-transform: uppercase;
-    font-size: 0.66rem;
-    white-space: nowrap;
-    border: 3px solid #28242f;
-    border-radius: 2rem;
-    padding: 0.2rem 0.85rem 0.25rem;
-    display: inline-block;
-    margin-right: 1vw;
-    text-decoration: none;
-  }
-
-  .tag:hover {
-    border: 3px solid #fff;
   }
 
   .date {

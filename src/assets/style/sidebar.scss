@@ -78,7 +78,7 @@
       font-size: .95rem;
   
       &.active {
-        color: var(--primary-color-dark);
+        color: var(--primary-color);
         position: relative;
         padding-left: .8rem;
   
@@ -91,7 +91,7 @@
           left: -1px;
           top: 50%;
           margin-top: -5px;
-          background-color: var(--primary-color-dark);
+          background-color: var(--primary-color);
           animation: scaleIn .7s forwards;
         }
       }

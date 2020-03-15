@@ -2,7 +2,7 @@
 import '~/assets/style/index.scss'
 
 // Add global components
-import Layout from '~/layouts/Default.vue'
+import Layout from '~/layouts/DefaultLayout.vue'
 
 import Typography from 'typography'
 
