@@ -50,7 +50,6 @@ export default {
     }
     date
     path
-    image
     links{
         title
         items{
