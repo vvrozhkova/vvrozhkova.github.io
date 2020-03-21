@@ -10,6 +10,13 @@ module.exports = {
   siteDescription: 'Блог про автоматизацию тестирования и не только.',
   titleTemplate: '%s - TestAutomation.Space',
 
+  icon: {
+    favicon: {
+      src: './static/favicon.png',
+      sizes: [16, 32, 96]
+    },
+  },
+
   runtimeCompiler: true,
   transformers: {
     remark: {
