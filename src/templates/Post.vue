@@ -1,6 +1,6 @@
 <template>
   <PostLayout :subtitles="subtitles" :post="$page.post" :links="links">
-    <VueRemarkContent class="post mb"/>
+    <VueRemarkContent class="post mb" />
   </PostLayout>
 </template>
 
@@ -18,7 +18,8 @@ export default {
         { property: "og:locale:alternate", content: "en_US" },
         { property: "og:type", content: "article" },
         { property: "og:title", content: this.$page.post.title },
-        { property: "og:description", content: this.$page.post.description }
+        { property: "og:description", content: this.$page.post.description },
+        { property: "keywords", content: this.$page.post.keywords }
       ]
     };
   },

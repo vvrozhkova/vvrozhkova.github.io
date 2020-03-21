@@ -1,5 +1,7 @@
 <template>
   <Layout class="has-sidebar docs-page">
+        <BackToTopButton />
+    <ScrollBar />
     <div class="container flex flex-align-top section--dark">
       <div class="sidebar">
         <h3>Смотрите также:</h3>
@@ -28,6 +30,9 @@
           <p>{{post.description}}</p>
           <div class="tags">
             <g-link class="tag" v-for="tag in post.tags" :key="tag.id" :to="tag.path">{{tag.title}}</g-link>
+          </div>
+          <div class="post-share-btns">
+            <div class="ya-share2" data-counter="ig" data-services="vkontakte,facebook,telegram"></div>
           </div>
         </div>
 
@@ -77,10 +82,22 @@
 
 <script>
 import Section from "@/components/Section.vue";
+import ScrollBar from "@/components/ScrollBar.vue";
+import BackToTopButton from "~/components/BackToTopButton.vue";
 
 export default {
   components: {
-    Section
+    Section,
+    ScrollBar,
+    BackToTopButton
+  },
+  metaInfo() {
+    return {
+      script: [
+        { src: "https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js" },
+        { src: "https://yastatic.net/share2/share.js", async: "async" }
+      ]
+    };
   },
   props: {
     subtitles: { type: Array, default: () => [] },
@@ -120,6 +137,11 @@ export default {
   &:hover {
     color: #7a7a8c;
   }
+}
+
+.post-share-btns {
+  float: right;
+  padding: 0.5em;
 }
 
 .post-header {
