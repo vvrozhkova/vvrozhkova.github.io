@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono&display=swap');
 .section.doc-content {
     padding-top: 2%;
   }
@@ -5,6 +6,7 @@
   .post {
     max-width: 100%;
     position: relative;
+    margin-top: 3em;
   
     ul li {
       margin-bottom: .5rem;
@@ -25,9 +27,9 @@
   
     
     h1, h2, h3 {
-      padding-top: 6rem;
-      margin-top: -5rem;
-  
+      padding-top: 3rem;
+      margin-top: -3rem;
+
   
       a {
         float: left;
@@ -84,23 +86,6 @@
   
     ul > li > p {
       font-weight: 400;
-    }
-  }
-  
-  
-  .github-edit-link {
-    font-size: .9rem;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    padding-top: 1rem;
-    
-    &:not(:hover) {
-      color: var(--primary-color-dark);
-    }
-  
-    svg {
-      margin-right: .5rem;
     }
   }
   

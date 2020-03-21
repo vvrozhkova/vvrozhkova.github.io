@@ -1,6 +1,6 @@
 <template>
   <PostLayout :subtitles="subtitles" :post="$page.post" :links="links">
-    <VueRemarkContent class="post mb"></VueRemarkContent>
+    <VueRemarkContent class="post mb"/>
   </PostLayout>
 </template>
 
@@ -9,12 +9,26 @@ import PostLayout from "@/layouts/PostLayout.vue";
 // import links from "@/data/doc-links.yaml";
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$page.post.title,
+      meta: [
+        { description: this.$page.post.description },
+        { property: "og:locale", content: "ru_RU" },
+        { property: "og:locale:alternate", content: "en_US" },
+        { property: "og:type", content: "article" },
+        { property: "og:title", content: this.$page.post.title },
+        { property: "og:description", content: this.$page.post.description }
+      ]
+    };
+  },
   components: {
     PostLayout
   },
+
   computed: {
     links() {
-      return this.$page.post.links
+      return this.$page.post.links;
     },
     subtitles() {
       let subtitles = this.$page.post.subtitles.filter(function(

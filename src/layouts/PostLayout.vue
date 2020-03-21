@@ -62,9 +62,12 @@
             class="submenu__item"
             :class="'submenu__item-depth-' + subtitle.depth"
             v-for="subtitle in subtitles"
-            :key="subtitle.value"
+            :key="subtitle.id"
           >
-            <a class="submenu__link" :href="post.path.slice(0, -1)+subtitle.anchor">{{ subtitle.value }}</a>
+            <g-link
+              class="submenu__link"
+              :to="post.path.slice(0, -1)+subtitle.anchor"
+            >{{ subtitle.value }}</g-link>
           </li>
         </ul>
       </div>
@@ -112,6 +115,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.tags .tag {
+  background: none;
+  &:hover {
+    color: #7a7a8c;
+  }
+}
+
 .post-header {
   max-width: 1300px;
   width: 100%;
@@ -125,7 +135,7 @@ export default {
 .type-row {
   background-color: #243149;
   padding: 0.5vw;
-  border-radius: 0.2vw;
+  border-radius: 5px;
   margin-bottom: 2vw;
 }
 
@@ -139,7 +149,8 @@ export default {
     padding-left: 10px;
     margin: 0 auto;
     word-wrap: break-word;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.8px;
+    line-height: 35px;
   }
   .cursor {
     border-left: 0.15em solid orange;

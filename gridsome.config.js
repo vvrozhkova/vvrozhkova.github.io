@@ -20,10 +20,10 @@ module.exports = {
       // autolinkHeadings:true,
       plugins: [
         '@gridsome/remark-prismjs',
-        // 'remark-emoji',
-        // 'remark-math',
-        // 'remark-html',
-        // 'remark-html-katex'
+        'remark-emoji',
+        'remark-math',
+        'remark-html',
+        'remark-html-katex'
       ]
     }
   },
@@ -38,16 +38,11 @@ module.exports = {
         template: './src/templates/Post.vue',
         route: '/:title',
         plugins: [
-          '@gridsome/remark-prismjs'
+          '@gridsome/remark-prismjs',
+          'remark-math',
+          'remark-html',
+          'remark-html-katex'
         ],
-        remark: {
-          // autolinkHeadings: {
-          //   content: {
-          //     type: 'text',
-          //     value: '#'
-          //   }
-          // }
-        },
         refs: {
           tags: {
             typeName: 'Tag',
