@@ -77,7 +77,7 @@
   display: inline-block;
   box-sizing: border-box;
   max-width: 90%;
-  margin: 1.96924em 0;
+  margin: 1.96924em 0 !important;
   background: #fafafa;
   opacity: 0;
   border-radius: 0.5em;
