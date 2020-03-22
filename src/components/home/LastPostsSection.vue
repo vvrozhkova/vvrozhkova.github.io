@@ -59,7 +59,8 @@ export default {
   a {
     width: 50%;
   }
-  .home-last-article__title,.home-last-article__tag {
+  .home-last-article__title,
+  .home-last-article__tag {
     font-size: 3.5vw;
     line-height: 1.4em;
   }

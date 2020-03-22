@@ -1,7 +1,8 @@
 <template>
-  <Card class="blog-posts__post" :link="post.path">
-    <div class="icon">
-      <i :class="post.icon"></i>
+  <Card class="blog-posts__post" :link="post.path" :image="post.image">
+    <div class="icon" v-if="!post.image">
+      <p v-if="post.emoji">{{post.emoji}}</p>
+      <i v-else :class="post.icon"></i>
     </div>
     <h3 v-html="post.title" />
     <ul>
@@ -35,8 +36,13 @@ export default {
 };
 </script>
 
-<style lang="scss" >
-.blog-posts {
+<style lang="scss" scoped>
+.blog-posts__post {
+  position: relative;
+  margin-bottom: 2rem;
+  .card__inner {
+    padding: var(--space-x2);
+  }
   .icon {
     font-size: 5em;
   }
@@ -66,13 +72,6 @@ export default {
     color: #7a7a8c;
     margin-bottom: 1vw;
     text-align: right;
-  }
-  &__post {
-    position: relative;
-    margin-bottom: 2rem;
-    .card__inner {
-      padding: var(--space-x2);
-    }
   }
 }
 </style>

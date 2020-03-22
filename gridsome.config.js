@@ -23,8 +23,6 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      // slug: true,
-      // autolinkHeadings:true,
       plugins: [
         '@gridsome/remark-prismjs',
         'remark-emoji',
@@ -37,6 +35,30 @@ module.exports = {
 
   plugins: [
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        // exclude: ['/exclude-me'],
+        config: {
+          '/category/**': {
+            changefreq: 'daily',
+            priority: 0.7
+          }, '/tag/**': {
+            changefreq: 'daily',
+            priority: 0.7
+          },
+          '/*': {
+            changefreq: 'always',
+            priority: 1
+          },
+          '/en/*': {
+            changefreq: 'always',
+            priority: 1
+          }
+        }
+      }
+    },
+    {
       use: '@gridsome/vue-remark',
       options: {
         typeName: 'Post',
@@ -46,10 +68,11 @@ module.exports = {
         route: '/:title',
         plugins: [
           '@gridsome/remark-prismjs',
+          'remark-emoji',
           'remark-math',
           'remark-html',
           'remark-html-katex'
-        ],
+      ],
         refs: {
           tags: {
             typeName: 'Tag',

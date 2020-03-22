@@ -65,6 +65,8 @@ query {
                 path
                 date
                 icon
+                image
+                emoji
                 tags {
                   id
                   title

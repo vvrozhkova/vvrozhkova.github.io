@@ -31,22 +31,16 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .section {
   padding: calc(2% + var(--space)) 0;
   position: relative;
   width: 100%;
   flex: 1;
-  .category-title {
-    text-align: right;
-  }
   &--secondary {
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    .category-title {
-      text-align: left;
-    }
     + .section--secondary {
       border-top-color: transparent;
       margin-top: -1px;

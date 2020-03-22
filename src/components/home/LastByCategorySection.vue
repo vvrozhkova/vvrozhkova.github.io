@@ -33,4 +33,12 @@ export default {
     font-weight: 900;
   }
 }
+
+.category-title {
+  text-align: right;
+}
+
+.section--secondary .category-title {
+  text-align: left;
+}
 </style>

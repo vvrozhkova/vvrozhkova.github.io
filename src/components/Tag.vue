@@ -25,8 +25,5 @@ export default {
   .icon {
     margin-right: 10px;
   }
-  &:hover {
-    color: var(--primary-color);
-  }
 }
 </style>

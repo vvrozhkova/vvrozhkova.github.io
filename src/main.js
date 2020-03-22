@@ -10,6 +10,8 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueFuse from 'vue-fuse'
 
+import 'katex/dist/katex.min.css'
+
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.6,
@@ -36,4 +38,10 @@ export default function (Vue, { router, head, isClient }) {
     integrity: "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf",
     crossorigin: "anonymous"
   })
+
+  head.script.push({
+    src: '//cookieinfoscript.com/js/cookieinfo.min.js',
+    id: 'cookieinfo', 'data-message': 'Мы используем куки, чтобы улучшить ваш пользовательский опыт. Продолжая посещать этот сайт, вы соглашаетесь на использование нами файлов',
+    'data-linkmsg': 'cookie.'
+  });
 }
