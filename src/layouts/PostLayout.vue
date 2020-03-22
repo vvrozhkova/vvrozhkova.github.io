@@ -1,6 +1,6 @@
 <template>
   <Layout class="has-sidebar docs-page">
-        <BackToTopButton />
+    <BackToTopButton />
     <ScrollBar />
     <div class="container flex flex-align-top section--dark">
       <div class="sidebar">
@@ -85,6 +85,12 @@ import Section from "@/components/Section.vue";
 import ScrollBar from "@/components/ScrollBar.vue";
 import BackToTopButton from "~/components/BackToTopButton.vue";
 
+import "~/assets/style/bigfoot-default.css";
+
+global.jQuery = require("jquery");
+var $ = global.jQuery;
+var bigfoot = require("~/assets/js/bigfoot.min.js");
+
 export default {
   components: {
     Section,
@@ -103,6 +109,9 @@ export default {
     subtitles: { type: Array, default: () => [] },
     links: { type: Array, default: () => [] },
     post: { type: Object, required: true }
+  },
+  mounted() {
+    $.bigfoot();
   },
   computed: {
     currentPath() {
@@ -140,8 +149,10 @@ export default {
 }
 
 .post-share-btns {
-  float: right;
+  right: 2vw;
   padding: 0.5em;
+  position: absolute;
+  z-index: 99;
 }
 
 .post-header {
