@@ -9,13 +9,9 @@
 </template>
 
 <script>
-import Section from "@/components/Section.vue";
-import Tag from "@/components/Tag.vue";
-
 export default {
   components: {
-    Section,
-    Tag
+    Tag: () => import("@/components/Tag")
   }
 };
 </script>

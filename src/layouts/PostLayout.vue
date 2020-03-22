@@ -81,10 +81,6 @@
 </template>
 
 <script>
-import Section from "@/components/Section.vue";
-import ScrollBar from "@/components/ScrollBar.vue";
-import BackToTopButton from "~/components/BackToTopButton.vue";
-
 import "~/assets/style/bigfoot-default.css";
 
 global.jQuery = require("jquery");
@@ -93,9 +89,8 @@ var bigfoot = require("~/assets/js/bigfoot.min.js");
 
 export default {
   components: {
-    Section,
-    ScrollBar,
-    BackToTopButton
+    ScrollBar: () => import("@/components/ScrollBar"),
+    BackToTopButton: () => import("~/components/BackToTopButton")
   },
   metaInfo() {
     return {

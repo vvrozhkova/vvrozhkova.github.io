@@ -3,6 +3,7 @@ import '~/assets/style/index.scss'
 
 // Add global components
 import Layout from '~/layouts/DefaultLayout.vue'
+import Section from '~/components/Section.vue'
 
 import Typography from 'typography'
 
@@ -23,6 +24,7 @@ const typography = new Typography({
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', Layout)
+  Vue.component('Section', Section)
 
   Vue.use(VueAxios, axios)
   Vue.use(VueFuse)

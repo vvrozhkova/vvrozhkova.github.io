@@ -24,11 +24,9 @@
 </template>
 
 <script>
-import Card from "./Card.vue";
-
 export default {
   components: {
-    Card
+    Card: () => import("./Card")
   },
   props: {
     post: { type: Object, required: true }

@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import PostLayout from "@/layouts/PostLayout.vue";
 // import links from "@/data/doc-links.yaml";
 const siteConfig = require("~/../gridsome.config");
 
@@ -31,7 +30,7 @@ export default {
     };
   },
   components: {
-    PostLayout
+    PostLayout: () => import("@/layouts/PostLayout")
   },
 
   computed: {

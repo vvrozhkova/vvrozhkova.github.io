@@ -11,9 +11,6 @@
 </template>
 
 <script>
-import TagsSection from "@/components/home/TagsSection.vue";
-import LastPostsSection from "@/components/home/LastPostsSection.vue";
-import LastByCategorySection from "@/components/home/LastByCategorySection.vue";
 const siteConfig = require("~/../gridsome.config");
 
 export default {
@@ -37,9 +34,10 @@ export default {
     ]
   },
   components: {
-    TagsSection,
-    LastPostsSection,
-    LastByCategorySection
+    TagsSection: () => import("@/components/home/TagsSection"),
+    LastPostsSection: () => import("@/components/home/LastPostsSection"),
+    LastByCategorySection: () =>
+      import("@/components/home/LastByCategorySection")
   }
 };
 </script>

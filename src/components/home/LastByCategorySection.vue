@@ -8,14 +8,10 @@
 </template>
 
 <script>
-import Section from "@/components/Section.vue";
-import PostCard from "@/components/PostCard.vue";
-
 export default {
   props: ["category"],
   components: {
-    Section,
-    PostCard
+    PostCard: () => import("@/components/PostCard")
   }
 };
 </script>
