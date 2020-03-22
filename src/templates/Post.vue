@@ -7,6 +7,7 @@
 <script>
 import PostLayout from "@/layouts/PostLayout.vue";
 // import links from "@/data/doc-links.yaml";
+const siteConfig = require("~/../gridsome.config");
 
 export default {
   metaInfo() {
@@ -19,7 +20,13 @@ export default {
         { property: "og:type", content: "article" },
         { property: "og:title", content: this.$page.post.title },
         { property: "og:description", content: this.$page.post.description },
-        { property: "keywords", content: this.$page.post.keywords }
+        { property: "keywords", content: this.$page.post.keywords },
+        { property: "og:image", content: this.$page.post.emoji },
+        {
+          property: "og:url",
+          content: siteConfig.siteUrl + this.$page.post.path
+        },
+        { property: "og:site_name", content: siteConfig.siteName }
       ]
     };
   },
@@ -58,6 +65,7 @@ export default {
     title
     content
     description
+    image
     category {
       id
       title
