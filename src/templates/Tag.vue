@@ -71,6 +71,6 @@ export default {
 </page-query>
 <style scoped>
 h2 {
-  font-size: 7vw;
+  font-size: 6vw;
 }
 </style>
