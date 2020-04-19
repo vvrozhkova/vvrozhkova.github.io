@@ -70,7 +70,7 @@ export default {
       title
       path
     }
-    date
+    date (format: "DD/MM/YYYY")
     path
     links{
         title

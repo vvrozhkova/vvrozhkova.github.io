@@ -4,7 +4,7 @@
     <div class="card__title" v-if="title">
       <span>{{ title }}</span>
     </div>
-    <div v-if="image" class="card__image">
+    <div v-if="image | image !='null'" class="card__image">
       <g-image :src="image" />
     </div>
     <div class="card__inner">
@@ -28,8 +28,12 @@ export default {
 </script>
 
 <style lang="scss" >
-.section--secondary .card {
+.section--secondary .card{
   background-color: var(--bg);
+  color: #b8c1ec;
+  h3{
+    color: #fffffe;
+  }
 }
 
 .card {
@@ -41,10 +45,7 @@ export default {
     border-color 0.3s;
   position: relative;
   z-index: 1;
-
-  // display: inline-block;
-  // width: 47%;
-  // margin-right: 1vw;
+  color: var(--bg);
 
   &__title {
     text-align: center;
@@ -107,7 +108,6 @@ export default {
   &--has-link:hover {
     transform: translateY(-3px);
     box-shadow: var(--glow);
-    color: currentColor;
   }
   h2,
   h3,

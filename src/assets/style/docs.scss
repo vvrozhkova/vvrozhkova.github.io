@@ -105,3 +105,8 @@
       border: 1px solid var(--border-color);
     }
   }
+
+  iframe{
+    z-index: 1000;
+    position: absolute;
+  }

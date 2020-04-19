@@ -3,8 +3,9 @@
     <tags-section />
     <last-posts-section />
     <last-by-category-section
-      v-for="category in $page.allCategory.edges"
+      v-for="(category, index) in $page.allCategory.edges"
       :key="category.node.id"
+      :indexS="index+1"
       :category="category.node"
     />
   </Layout>

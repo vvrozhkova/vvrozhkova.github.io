@@ -28,7 +28,10 @@ module.exports = {
         'remark-emoji',
         'remark-math',
         'remark-html',
-        'remark-html-katex'
+        'remark-html-katex',
+        [ '@noxify/gridsome-plugin-remark-embed', {
+          'enabledProviders' : ['Youtube', 'Twitter', 'Gist'],
+        }]
       ]
     }
   },
@@ -71,7 +74,10 @@ module.exports = {
           'remark-emoji',
           'remark-math',
           'remark-html',
-          'remark-html-katex'
+          'remark-html-katex',
+          [ '@noxify/gridsome-plugin-remark-embed', {
+            'enabledProviders' : ['Youtube', 'Twitter', 'Gist'],
+          }]
       ],
         refs: {
           tags: {

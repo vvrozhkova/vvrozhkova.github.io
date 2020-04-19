@@ -36,6 +36,7 @@ query {
         title
         icon
         path
+        emoji
       }
     }
   }

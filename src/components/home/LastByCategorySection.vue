@@ -1,5 +1,5 @@
 <template>
-  <Section secondary="true">
+  <Section :secondary="indexS%2==1">
     <h2 class="category-title">{{category.title.toUpperCase()}}</h2>
     <div class="blog-posts container container-md">
       <PostCard v-for="post in category.belongsTo.edges" :key="post.node.id" :post="post.node" />
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  props: ["category"],
+  props: ["category", "indexS"],
   components: {
     PostCard: () => import("@/components/PostCard")
   }
@@ -32,9 +32,11 @@ export default {
 
 .category-title {
   text-align: right;
+    color: #fffffe;
 }
 
 .section--secondary .category-title {
   text-align: left;
+    color: var(--bg);
 }
 </style>

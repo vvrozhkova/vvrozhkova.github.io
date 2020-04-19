@@ -20,7 +20,7 @@
 
       <Section class="doc-content flex-fit" container="base">
         <div class="post-header">
-          <div class="date">01/02/2020</div>
+          <div class="date">{{post.date}}</div>
           <div class="type-row">
             <div class="typewriter">
               <span class="cursor"></span>
@@ -161,7 +161,7 @@ export default {
 }
 
 .type-row {
-  background-color: #243149;
+  background-color: var(--bg);
   padding: 0.5vw;
   border-radius: 5px;
   margin-bottom: 2vw;

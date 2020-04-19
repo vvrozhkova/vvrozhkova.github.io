@@ -35,6 +35,9 @@ export default {
               title
               content
               date
+              icon
+              image
+              emoji
               path
               category {
                   title

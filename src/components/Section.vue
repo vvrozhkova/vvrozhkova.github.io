@@ -51,8 +51,8 @@ export default {
     z-index: 2;
   }
   &--dark {
-    color: black;
-    background: var(--light-bg);
+    color: var(--bg);
+    background: var(--bg-secondary);
     p {
       color: currentColor;
     }
@@ -62,7 +62,7 @@ export default {
     h3,
     h4,
     a {
-      color: black;
+      color: var(--border-color);
     }
   }
 }

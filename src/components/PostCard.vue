@@ -1,6 +1,6 @@
 <template>
   <Card class="blog-posts__post" :link="post.path" :image="post.image">
-    <div class="icon" v-if="!post.image">
+    <div class="icon" v-if="!post.image | post.image=='null'">
       <p v-if="post.emoji">{{post.emoji}}</p>
       <i v-else :class="post.icon"></i>
     </div>
@@ -50,7 +50,7 @@ export default {
   }
   li a {
     text-decoration: none;
-    color: #fff;
+    color: inherit;
     &:after {
       display: block;
       position: absolute;
@@ -67,7 +67,7 @@ export default {
   }
 
   .date {
-    color: #7a7a8c;
+    color: inherit;
     margin-bottom: 1vw;
     text-align: right;
   }
