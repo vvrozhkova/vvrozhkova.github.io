@@ -1,11 +1,10 @@
 <template>
 <div class="wrap">
-  <div class="card">
+  <div class="wordCard">
     <div class="front"><span>{{front}}</span></div>
     <div class="back"><span>{{back}}</span></div>
   </div>
 </div>
-
 </template>
 
 <script>
@@ -15,29 +14,37 @@ export default {
 </script>
 
 
-<style >
+<style lang="scss" scope>
+
 body {
   font-family: sans-serif;
 }
-.card {
+.wordCard {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
-  background-color: #BBDEFB;
+  /* background-color: #BBDEFB; */
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover{
+    cursor: pointer;
+  }
 }
 .wrap {
-  width: 300px;
-  height: 300px;
+  width: 11vw;
+  min-height: 50px;
+  margin: 0.8vw 0.5vw;
+  display: inline-block;
   position: relative;
   perspective: 1000px;
   z-index: 1000;
 }
+
 .front, .back {
+  padding: 1.5vw 1vw;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -48,15 +55,16 @@ body {
   align-items: center;
   transition: 1s;
   backface-visibility: hidden;
+  border: 2px solid var(--border-color);
   border-radius: 10px;
 }
 .front {
-  background-color: #fff;
+  background-color: var(--body-color);
 }
 .back {
-  background-color: #BDBDBD;
+  background-color: #eebbc3;
   transform: rotateY(180deg);
 }
-.card:hover .front {transform: rotateY(180deg);}
-.card:hover .back {transform: rotateY(360deg);}
+.wordCard:hover .front {transform: rotateY(180deg);}
+.wordCard:hover .back {transform: rotateY(360deg);}
 </style>
