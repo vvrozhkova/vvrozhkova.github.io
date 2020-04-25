@@ -42,6 +42,12 @@ body {
   perspective: 1000px;
   z-index: 1000;
 }
+@media screen and (max-width: 1050px) {
+  .front, .back {
+    line-height: 1.3vw;
+    font-size: 1.3vw;
+  }
+}
 
 .front, .back {
   padding: 1.5vw 1vw;
