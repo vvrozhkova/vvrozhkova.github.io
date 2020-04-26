@@ -50,7 +50,7 @@ query {
         siteName
         siteDescription
     }
-  allCategory {
+  allCategory(order: ASC) {
     edges {
       node {
         id
