@@ -39,8 +39,8 @@
     width: 25%;
   }
   .home-last-article__title {
-    font-size: 1.5vw;
-    line-height: 1.4em;
+    font-size: 1vw;
+    line-height: 1vw;
     /* line-height: 28px; */
   }
   .home-last-article__tag {

@@ -18,6 +18,8 @@ h1, h2, h3, h4 {
       tab-size: 2;
       hyphens: none;
       color: #d8d8d8;
+      position: relative;
+      z-index: 999;
     }
   
     pre::-moz-selection, pre ::-moz-selection,
