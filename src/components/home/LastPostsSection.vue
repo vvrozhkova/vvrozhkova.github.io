@@ -78,7 +78,7 @@ a {
 }
 
 .home-last-articles a {
-  color: #6b70fc;
+  color: var(--body-color);
   text-decoration: none;
 }
 
