@@ -12,7 +12,7 @@ links: [
         {
           title: "смотрите также:",
           items: [
-           { title: "Как установить OpenJDK на Mac OS", link: "/uroven-beginner-den-1/" },
+           { title: "Как установить OpenJDK на Mac OS", link: "/kak-ustanovit-open-jdk-na-mac-os/" },
           ]
         }
       ]
