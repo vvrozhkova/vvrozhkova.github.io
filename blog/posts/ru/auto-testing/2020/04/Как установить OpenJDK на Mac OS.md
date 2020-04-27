@@ -18,6 +18,8 @@ links: [
       ]
 ---
 
+import Footnote from "~/components/Footnote.vue";
+
 ## Скачиваем JDK 
 
 Чтобы скачать пакет Open JDK нужно:
@@ -30,24 +32,22 @@ links: [
 
 1. Переходим в папку в которую будем производить установку и создаем в ней папку для хранения jdk<footnote num="1" message="message"/>
 
-```bash
-user@user-TestAutomation.Space:~$ cd /Library/Java/JavaVirtualMachines/
+```bash{outputLines: 2}
+cd /Library/Java/JavaVirtualMachines/
 ```
 
 2. Копируем в созданую папку скаченный архив
 
-```bash
-user@user-TestAutomation.Space:/usr$ sudo mv ~/Downloads/openjdk-..._bin.tar.gz /Library/Java/JavaVirtualMachines/
+```bash{outputLines: 2}
+user@TestAutomation.Space:/usr$ sudo mv ~/Downloads/openjdk-..._bin.tar.gz /Library/Java/JavaVirtualMachines/
 [sudo] пароль для user: 
-user@user-TestAutomation.Space:/usr$ 
 ```
 
 3. И распаковываем tar-архив
 
-```bash
-user@user-TestAutomation.Space:/usr$ sudo tar zxvf /usr/java/openjdk-..._bin.tar.gz
+```bash{outputLines: 2}
+sudo tar zxvf /usr/java/openjdk-..._bin.tar.gz
 [sudo] пароль для user: 
-user@user-TestAutomation.Space:/usr$ 
 ```
 
 ## Настраиваем переменные окружения PATH и JAVA_HOME

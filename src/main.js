@@ -13,6 +13,10 @@ import VueFuse from 'vue-fuse'
 
 import 'katex/dist/katex.min.css'
 
+// require("gridsome-plugin-remark-prismjs-all/themes/night-owl.css");
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+require("prismjs/plugins/command-line/prism-command-line.css")
+
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.6,

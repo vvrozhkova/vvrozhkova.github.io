@@ -22,17 +22,7 @@ module.exports = {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-      plugins: [
-        '@gridsome/remark-prismjs',
-        'remark-emoji',
-        'remark-math',
-        'remark-html',
-        'remark-html-katex',
-        [ '@noxify/gridsome-plugin-remark-embed', {
-          'enabledProviders' : ['Youtube', 'Twitter', 'Gist'],
-        }]
-      ]
+      anchorClassName: 'icon icon-link'     
     }
   },
 
@@ -70,7 +60,15 @@ module.exports = {
         template: './src/templates/Post.vue',
         route: '/:title',
         plugins: [
-          '@gridsome/remark-prismjs',
+          [
+            'gridsome-plugin-remark-prismjs-all', {
+              prompt: {                 
+                    user: `user`,
+                    host: `TestAutomation.Space`,
+                    global: false,
+              }
+            }
+          ], 
           'remark-emoji',
           'remark-math',
           'remark-html',
