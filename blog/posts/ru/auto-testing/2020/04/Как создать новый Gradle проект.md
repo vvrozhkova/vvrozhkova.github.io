@@ -20,16 +20,16 @@ links: [
 Для создания нового проекта с модулем Gradle нужно выполнить следущие шаги:
 
 1. Если вы только что установили Inteliji Idea и у вас нет ещё созданных проектов то после запуска Idea предложит создать новый проект, пожтому выбираем Create New Project.
-![Добавляем новый проект](./../../../../../images/add_new_project_step1.1.png)
+![Добавляем новый проект](/images/add_new_project_step1.1.png)
 
 Если вы находитесь в уже созданном проекте то выбираем в верхнем меню File - New - Module...
-![Добавляем новый проект](./../../../../../images/add_new_project_step1.2.png)
+![Добавляем новый проект](/images/add_new_project_step1.2.png)
 
 2. Выбираем модуль Gradle, библиотека Java. Нажимаем Next.
-![Добавляем новый проект](./../../../../../images/add_new_project_step2.png)
+![Добавляем новый проект](/images/add_new_project_step2.png)
 
 3. Указываем индетификаторы GroupId и ArtifactId.
-![Добавляем новый проект](./../../../../../images/add_new_project_step3.png)
+![Добавляем новый проект](/images/add_new_project_step3.png)
 
 
 Here is a footnote reference[^1],
