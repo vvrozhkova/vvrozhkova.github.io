@@ -22,7 +22,10 @@ module.exports = {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link'  
+      anchorClassName: 'icon icon-link',
+      config:{
+        footnotes: true
+      }
     }
   },
 
@@ -59,6 +62,11 @@ module.exports = {
         pathPrefix: '/',
         template: './src/templates/Post.vue',
         route: '/:title',
+        remark:{
+          config:{
+            footnotes: true
+          }
+        },
         plugins: [
           [
             'gridsome-plugin-remark-prismjs-all', {
@@ -69,6 +77,7 @@ module.exports = {
               }
             }
           ], 
+         
           'remark-emoji',
           'remark-math',
           'remark-html',

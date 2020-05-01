@@ -18,7 +18,6 @@ links: [
       ]
 ---
 
-import Footnote from "~/components/Footnote.vue";
 
 ## Скачиваем JDK 
 
@@ -30,7 +29,7 @@ import Footnote from "~/components/Footnote.vue";
 
 ## Извлекаем архив
 
-1. Переходим в папку в которую будем производить установку и создаем в ней папку для хранения jdk<footnote num="1" message="message"/>
+1. Переходим в папку в которую будем производить установку и создаем в ней папку для хранения jdk[^Here is the footnote]
 
 ```bash{outputLines: 2}
 cd /Library/Java/JavaVirtualMachines/
