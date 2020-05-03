@@ -13,6 +13,7 @@ links: [
           title: "смотрите также:",
           items: [
            { title: "Как установить OpenJDK на Mac OS", link: "/kak-ustanovit-open-jdk-na-mac-os/" },
+           { title: "Как создать новый Gradle проект", link: "/kak-sozdat-novyj-gradle-proekt/" },
           ]
         }
       ]
