@@ -5,7 +5,6 @@
         v-for="article in $static.lastPosts.edges"
         :key="article.node.id"
         :to="article.node.path"
-        target="_blank"
       >
         <span class="home-last-article__title">
           {{article.node.title}}
