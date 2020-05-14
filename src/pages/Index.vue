@@ -55,7 +55,7 @@ query {
       node {
         id
         title
-        belongsTo {
+        belongsTo(limit: 3) {
           edges {
             node {
               ... on Post {
