@@ -13,7 +13,8 @@
 <script>
 export default {
   components: {
-    PostCard: () => import("@/components/PostCard")
+    PostCard: () => import("@/components/PostCard"),
+    Pager: () => import('gridsome')
   }
 };
 </script>
