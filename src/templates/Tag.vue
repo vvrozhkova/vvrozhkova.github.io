@@ -5,6 +5,7 @@
       <div class="blog-posts container container-md">
         <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node" />
       </div>
+      <Pager :info="$page.tag.belongsTo.pageInfo"/>
     </Section>
   </Layout>
 </template>
