@@ -11,10 +11,12 @@
 </template>
 
 <script>
+import { Pager } from 'gridsome'
+
 export default {
   components: {
     PostCard: () => import("@/components/PostCard"),
-    Pager: () => import('gridsome')
+    Pager
   }
 };
 </script>
