@@ -1,0 +1,11 @@
+nav{
+    text-align: center;
+    a {
+        border-radius: 2px;
+        border: 1px solid var(--border-color-darker);
+        background-color: var(--bg-secondary);
+        color: var(--bg);
+        text-decoration: none;
+        padding: 5px;
+    }
+}
