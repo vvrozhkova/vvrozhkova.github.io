@@ -6,6 +6,12 @@ nav[role="navigation"]{
         background-color: var(--bg-secondary);
         color: var(--bg);
         text-decoration: none;
-        padding: 5px;
+        padding: 0.5vw;
+        
+    }
+
+    .active{
+        background-color: var(--body-color);
+        font-weight: 900;
     }
 }
