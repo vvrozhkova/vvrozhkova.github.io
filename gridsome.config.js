@@ -12,7 +12,7 @@ module.exports = {
 
   icon: {
     favicon: {
-      src: './static/favicon.png',
+      src: './src/favicon.png',
       sizes: [16, 32, 96]
     },
   },
