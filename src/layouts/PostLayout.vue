@@ -5,7 +5,8 @@
     <div class="container flex flex-align-top section--dark">
       <div class="sidebar">
         <h3>Смотрите также:</h3>
-        <template v-if="links" v-for="(group, i1) in links">
+        <template v-if="links">
+          <div v-for="(group, i1) in links" :key="i1">
           <h3 class="menu-item" :key="`title-${i1}`">{{ group.title }}</h3>
           <template v-for="(item, i2) in group.items">
             <g-link
@@ -15,6 +16,7 @@
               :key="`link-${i1}-${i2}`"
             >{{ item.title }}</g-link>
           </template>
+          </div>
         </template>
       </div>
 
