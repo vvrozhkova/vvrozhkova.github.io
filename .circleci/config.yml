@@ -1,10 +1,5 @@
 version: 2
 jobs:
-  deploy-job:
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "6c:b5:2b:cc:03:48:f0:21:e4:8a:b7:8b:b9:c5:ec:78"
   build:
     docker:
       - image: circleci/node:9.9.0
@@ -17,6 +12,9 @@ jobs:
       - TARGET_REPOSITORY_URL: https://github.com/vvrozhkova/vvrozhkova.github.io.git
 
     steps:
+      - add_ssh_keys:
+            fingerprints:
+              - "6c:b5:2b:cc:03:48:f0:21:e4:8a:b7:8b:b9:c5:ec:78"
       - checkout
 
       # Download and cache dependencies
