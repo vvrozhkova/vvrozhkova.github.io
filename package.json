@@ -14,13 +14,13 @@
     "@gridsome/vue-remark": "^0.1.10",
     "@noxify/gridsome-plugin-remark-embed": "^1.1.5",
     "axios": "^0.21.2",
-    "gridsome": "^0.7.14",
+    "gridsome": "^0.7.23",
     "gridsome-plugin-remark-prismjs-all": "^0.3.5",
     "jquery": "^3.5.0",
     "lodash.pick": "^4.4.0",
     "remark-attr": "^0.9.0",
-    "remark-footnotes": "^1.0.0",
     "remark-emoji": "^2.0.2",
+    "remark-footnotes": "^1.0.0",
     "remark-html": "^13.0.2",
     "remark-html-katex": "^2.0.1",
     "remark-math": "^2.0.1",
@@ -30,7 +30,7 @@
     "vue-fuse": "^2.2.0"
   },
   "devDependencies": {
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "sass-loader": "^8.0.2"
   }
 }
