@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:9.9.0
+      - image: cimg/node:latest
     environment:
       - GH_EMAIL: vvrozhkova@gmail.com
       - GH_NAME: Victoria Rozhkova
