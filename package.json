@@ -25,12 +25,12 @@
     "remark-html-katex": "^2.0.1",
     "remark-math": "^2.0.1",
     "typography": "^0.16.18",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-axios": "^2.1.5",
     "vue-fuse": "^2.2.0"
   },
   "devDependencies": {
-    "node-sass": "^7.0.0",
-    "sass-loader": "^12.6.0"
+    "sass": "^1.49.8",
+    "sass-loader": "^10.1.1"
   }
 }
