@@ -1,10 +1,9 @@
 ---
 title: Как создать новый Gradle проект
-category: ui
+category: automation
 description: Создаем новый проект для автотестов на языке Java.
 tags: ["gradle", "setup", "java"]
-emoji: 💻
-icon: "null"
+icon: "fas fa-robot"
 image: "null"
 date: 2020-05-01
 keywords: "gradle, setup, java"

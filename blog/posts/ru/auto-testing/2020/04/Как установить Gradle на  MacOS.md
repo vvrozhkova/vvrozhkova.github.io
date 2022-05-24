@@ -1,10 +1,9 @@
 ---
 title: Как установить Gradle на Mac OS
-category: ui
+category: automation
 description: Устанавливаем Gradle локально на ПК с MacOS
 tags: ["gradle", "setup", "macos"]
-emoji: 💻
-icon: "null"
+icon: "fas fa-robot"
 image: "null"
 date: 2020-05-02
 keywords: "gradle, setup, macos"

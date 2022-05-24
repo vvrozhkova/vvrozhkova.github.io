@@ -1,6 +1,8 @@
 <template>
   <Section :secondary="indexS%2==1">
-    <h2 class="category-title">{{category.title.toUpperCase()}}</h2>
+    <g-link class="category-title" :to="category.path">
+    <h2 >{{category.title.toUpperCase()}}</h2>
+    </g-link>
     <div class="blog-posts container container-md">
       <PostCard v-for="post in category.belongsTo.edges" :key="post.node.id" :post="post.node" />
     </div>
@@ -19,7 +21,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 850px) {
   h2 {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 }
 
@@ -33,6 +35,7 @@ export default {
 .category-title {
   text-align: right;
     color: #fffffe;
+    text-decoration: none;
 }
 
 .section--secondary .category-title {

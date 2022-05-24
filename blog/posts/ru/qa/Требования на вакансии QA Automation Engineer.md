@@ -3,8 +3,7 @@ title: Требования на вакансии QA Automation Engineer
 category: qa
 description: Требования на вакансии QA Automation Engineer
 tags: ["qa"]
-emoji: 💻
-icon: "null"
+icon: "fas fa-bug"
 image: "null"
 date: 2020-05-01
 keywords: "gradle, setup, java"

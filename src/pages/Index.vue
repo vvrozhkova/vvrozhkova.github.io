@@ -55,6 +55,7 @@ query {
       node {
         id
         title
+        path
         belongsTo(limit: 3) {
           edges {
             node {
