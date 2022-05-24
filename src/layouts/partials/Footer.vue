@@ -3,7 +3,7 @@
   <footer class="text-center">
     <div id="counter"></div>
     <div class="copyright">
-      © Виктория Рожкова, 2020
+      © Виктория Рожкова, 2022
       <br />Коммерческое использование материалов сайта TestAutomation.Space запрещено. В
       остальных случаях обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу,
       содержащую этот материал.
@@ -19,7 +19,7 @@
         href="https://vk.com/testautomation.space_community"
       >https://vk.com/testautomation.space_community</a>
       <br /> -->
-      <i class="fab fa-vk"></i> страница:
+      <i class="fab fa-vk"></i>:
       <a
         target="_blank"
         href="https://vk.com/testautomation.space"
