@@ -10,7 +10,6 @@ date: 2020-05-02
 keywords: "gradle, setup, macos"
 links: [
         {
-          title: "смотрите также:",
           items: [
            { title: "Как установить OpenJDK на Mac OS", link: "/kak-ustanovit-open-jdk-na-mac-os/" },
           ]

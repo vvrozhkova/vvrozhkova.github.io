@@ -1,6 +1,6 @@
 ---
-title: ui
+title: qa
 related: ["mobile", "api"]
 icon: fas fa-laptop-code
-link: /category/ui
+link: /category/qa
 ---

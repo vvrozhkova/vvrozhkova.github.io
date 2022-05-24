@@ -9,6 +9,13 @@
     margin-top: 1em;
     display: inline-block;
 
+    blockquote {
+      border-left: 0.3rem solid var(--inline-code-text);
+
+      padding-left: 0.5em;
+      margin-left: 0;
+    }     
+
     a {
       position: relative;
     }

@@ -10,7 +10,6 @@ date: 2020-04-26
 keywords: "java, setup, macos"
 links: [
         {
-          title: "смотрите также:",
           items: [
            { title: "Как установить OpenJDK на Mac OS", link: "/kak-ustanovit-open-jdk-na-mac-os/" },
            { title: "Как создать новый Gradle проект", link: "/kak-sozdat-novyj-gradle-proekt/" },
