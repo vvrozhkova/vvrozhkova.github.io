@@ -42,7 +42,6 @@ export default {
               path
               icon
               image
-              emoji
               category{
                   title
                   path

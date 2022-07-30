@@ -40,7 +40,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #button {
   display: inline-block;
   background-color: var(--primary-color);

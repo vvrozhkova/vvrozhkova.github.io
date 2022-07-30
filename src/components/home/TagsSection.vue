@@ -4,7 +4,7 @@
       <b>Выберите тематику</b>
     </h1>
     <p>которая вас интересует</p>
-    <Tag v-for="tag in $static.tags.edges" :key="tag.node.id" :tag="tag.node" />
+    <Tag v-for="tag in $static.allCategory.edges" :key="tag.node.id" :tag="tag.node" />
   </Section>
 </template>
 
@@ -29,16 +29,33 @@ export default {
 
 <static-query>
 query {
-  tags: allRelatedTag {
+  allCategory: allRelatedCategory {
     edges {
       node {
         id
         title
         icon
         path
-        emoji
       }
     }
   }
 }
 </static-query>
+
+<!--
+// <static-query>
+// query {
+//   tags: allRelatedTag {
+//     edges {
+//       node {
+//         id
+//         title
+//         icon
+//         path
+//         emoji
+//       }
+//     }
+//   }
+// }
+// </static-query>
+-->

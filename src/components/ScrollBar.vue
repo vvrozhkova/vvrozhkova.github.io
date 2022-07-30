@@ -39,7 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .progress-bar {
   background-color: var(--primary-color);
 }

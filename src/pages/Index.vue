@@ -66,7 +66,6 @@ query {
                 date
                 icon
                 image
-                emoji
                 tags {
                   id
                   title

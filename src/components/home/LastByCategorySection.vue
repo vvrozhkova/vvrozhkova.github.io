@@ -21,7 +21,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 850px) {
   h2 {
-    font-size: 6vw;
+    font-size: 3vw;
   }
 }
 

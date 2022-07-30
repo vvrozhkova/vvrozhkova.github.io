@@ -69,11 +69,5 @@ package-lock.json
 .DS_Store
 static/search.json
 .history
-blog/posts/ru/math/comb/01. Правило сложения.md
-blog/posts/ru/math/comb/02. Правило умножения.md
-blog/posts/ru/math/comb/03. Принцип Дирихле.md
-blog/posts/ru/math/comb/04. Основные комбинаторные величины.md
-blog/posts/ru/math/comb/05. Размещения с повторениями и без.md
-blog/posts/ru/math/comb/06. Сочетания с повторениями и без.md
-blog/posts/ru/math/comb/07. Бином Ньютона для степеней 2,3,4.md
-blog/posts/ru/math/comb/08. Треугольник Паскаля.md
+blog/temp2
+blog/templates

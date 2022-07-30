@@ -12,6 +12,7 @@ import VueAxios from 'vue-axios'
 import VueFuse from 'vue-fuse'
 
 import 'katex/dist/katex.min.css'
+import '~/assets/style/mermaid/default/index.scss'
 
 // require("gridsome-plugin-remark-prismjs-all/themes/night-owl.css");
 require("prismjs/plugins/line-numbers/prism-line-numbers.css")

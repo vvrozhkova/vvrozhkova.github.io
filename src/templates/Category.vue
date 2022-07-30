@@ -26,7 +26,7 @@ export default {
     category(path: $path) {
       title
       path
-      belongsTo(perPage: 3, page: $page) @paginate  {
+      belongsTo(perPage: 10, page: $page, sortBy: "order", order: ASC) @paginate  {
         totalCount
         pageInfo {
             totalPages
@@ -41,8 +41,8 @@ export default {
               date
               icon
               image
-              emoji
               path
+              order
               category {
                   title
                   path
@@ -75,6 +75,6 @@ export default {
 </page-query>
 <style scoped>
 h2 {
-  font-size: 7vw;
+  font-size: 3vw;
 }
 </style>
