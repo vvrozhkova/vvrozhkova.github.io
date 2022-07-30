@@ -153,13 +153,24 @@ export default {
 </script>
 
 <style lang="scss">
+@media screen and (max-width: 850px) {
+  .header-search {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 850px) {
+  .header-search {
+    width: 50%;
+  }
+}
+
 .header-search {
   position: relative;
-  display: block;
   margin-bottom: 0;
   font-size: 0.9rem;
   flex: 1;
-  width: 50%;
   float: right;
   label {
     display: flex;
@@ -190,12 +201,14 @@ export default {
     clear: left;
     min-width: 3vw;
     text-align: center;
+    padding-right: 1%;
   }
 
   .search-description {
     display: flow-root;
     column-count: 1;
     border-left: 1px solid grey;
+    padding-left: 1%;
   }
 }
 

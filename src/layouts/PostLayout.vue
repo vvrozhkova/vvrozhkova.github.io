@@ -7,7 +7,7 @@
         <h3>Смотрите также:</h3>
         <template v-if="links">
           <div v-for="(group, i1) in links" :key="i1">
-          <h3 class="menu-item" :key="`title-${i1}`">{{ group.title }}</h3>
+          <h3 v-if="group.title" class="menu-item" :key="`title-${i1}`">{{ group.title }}</h3>
           <template v-for="(item, i2) in group.items">
             <g-link
               :exact="item.link == '/docs/'"
