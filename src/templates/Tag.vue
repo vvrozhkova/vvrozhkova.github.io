@@ -26,7 +26,7 @@ export default {
     tag (path: $path) {
       title
       path
-      belongsTo(perPage: 3, page: $page) @paginate {
+      belongsTo(perPage: 10, page: $page, sortBy: "order", order: ASC) @paginate {
         totalCount
         pageInfo {
           totalPages
@@ -42,6 +42,7 @@ export default {
               path
               icon
               image
+              order
               category{
                   title
                   path

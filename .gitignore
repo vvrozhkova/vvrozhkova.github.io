@@ -70,4 +70,5 @@ package-lock.json
 static/search.json
 .history
 blog/temp2
+blog/work_temp
 blog/templates
