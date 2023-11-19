@@ -63,6 +63,7 @@ query {
                 id
                 title
                 path
+                description
                 date
                 icon
                 image

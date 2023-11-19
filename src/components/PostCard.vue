@@ -5,7 +5,8 @@
       <i v-else :class="post.icon"></i>
     </div>
     <h3 v-html="post.title" />
-    <ul>
+    <div v-if="!post.headings.length">{{post.description}}</div>
+    <ul v-else>
       <li v-for="tableContentItem in post.headings" :key="tableContentItem.id">
         <g-link :to="post.path.slice(0, -1)+tableContentItem.anchor">{{tableContentItem.value}}</g-link>
       </li>

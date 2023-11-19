@@ -82,9 +82,8 @@ module.exports = {
             }
           ], 
           'remark-emoji',
-          'remark-math',
+          'gridsome-remark-katex',
           'remark-html',
-          'remark-html-katex',
           [ '@noxify/gridsome-plugin-remark-embed', {
             'enabledProviders' : ['Youtube', 'Twitter', 'Gist'],
           }]
