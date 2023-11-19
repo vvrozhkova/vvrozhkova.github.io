@@ -24,11 +24,7 @@ jobs:
           persist-credentials: false
 
       - name: Install 🔧
-        run: |
-          rm -rf node_modules
-          npm uninstall
-          npm install
-
+        run: npm install
         
       - name: Install Gridsome 🔧
         run: |
