@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"org.example.filosofia_java.chapter1.task16","l":"Overloading"},{"p":"net.mindview.util","l":"Print"},{"p":"org.example.filosofia_java.chapter1.task16","l":"Tree"}]

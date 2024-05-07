@@ -1,0 +1,42 @@
+make dc-up
+
+
+iMac-Viktoria:act-device-api vita$ make dc-up
+docker-compose -p ozon_route256 up -d
+[+] Running 5/0
+ ✔ Container postgres        Running                                                                                                                                                                     0.0s 
+ ✔ Container jaeger          Running                                                                                                                                                                     0.0s 
+ ✔ Container act-device-api  Running                                                                                                                                                                     0.0s 
+ ✔ Container swagger-ui      Running                                                                                                                                                                     0.0s 
+ ✔ Container nginx           Running      
+
+
+make tools-version 
+ 
+                                                                                                                                                               0.0s 
+iMac-Viktoria:act-device-api vita$ make tools-version
+curl 7.84.0 (x86_64-apple-darwin22.0) libcurl/7.84.0 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.11 nghttp2/1.47.0
+Release-Date: 2022-06-27
+Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp 
+Features: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM NTLM_WB SPNEGO SSL threadsafe UnixSockets
+golangci-lint has version 1.54.2 built with go1.21.0 from 411e0bb on 2023-08-21T11:04:00Z
+libprotoc 24.3
+Docker version 24.0.6, build ed223bc
+Docker Compose version v2.21.0-desktop.1
+
+make run
+
+iMac-Viktoria:act-device-api vita$ make run
+go run cmd/grpc-server/main.go
+{"level":"info","time":"2023-09-15T11:55:39+03:00","message":"Registered 50053"}
+{"level":"info","version":"dev","commitHash":"-","debug":true,"environment":"development","time":"2023-09-15T11:55:39+03:00","message":"Starting service: Ozon Code Platform Template API"}
+2023/09/15 11:55:39 goose: no migrations to run. current version: 1
+2023/09/15 11:55:39 debug logging disabled
+2023/09/15 11:55:39 Initializing logging reporter
+2023/09/15 11:55:39 debug logging disabled
+{"level":"info","time":"2023-09-15T11:55:39+03:00","message":"Traces started"}
+{"level":"info","time":"2023-09-15T11:55:39+03:00","message":"Gateway server is running on 0.0.0.0:8080"}
+{"level":"info","time":"2023-09-15T11:55:39+03:00","message":"Metrics server is running on 0.0.0.0:9100"}
+{"level":"info","time":"2023-09-15T11:55:39+03:00","message":"Status server is running on 0.0.0.0:8000"}
+{"level":"info","time":"2023-09-15T11:55:39+03:00","message":"GRPC Server is listening on: 0.0.0.0:8082"}
+{"level":"info","time":"2023-09-15T11:55:41+03:00","message":"The service is ready to accept requests"}

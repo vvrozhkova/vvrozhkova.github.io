@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"net.mindview.util"},{"l":"org.example.filosofia_java.chapter1.task16"}]

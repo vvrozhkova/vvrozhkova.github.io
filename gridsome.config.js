@@ -68,10 +68,10 @@ module.exports = {
           }
         },
         plugins: [
-          // ['gridsome-plugin-remark-mermaid',{
-          //   removeStyleTags: true,
-          //   mermaidOptions: {}
-          // }],
+          ['gridsome-plugin-remark-mermaid',{
+            removeStyleTags: true,
+            mermaidOptions: {}
+          }],
           [
             'gridsome-plugin-remark-prismjs-all', {
               prompt: {                 
