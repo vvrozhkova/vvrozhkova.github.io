@@ -48,7 +48,7 @@
             class="search-result__box"
             :class="{ 'search-highlighted' : index === highlightedIndex }"
           >
-            <div class="search-category">{{post.item.category.toUpperCase()}}</div>
+            <div class="search-category">{{ post?.item?.category?.toUpperCase() }}</div>
             <div class="search-description">
               <span class="search-result__title">
                 <b>{{post.item.title}}</b>
