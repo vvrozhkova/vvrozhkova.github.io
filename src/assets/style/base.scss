@@ -37,3 +37,5 @@ html, body {
   }
   
   ::selection { background: var(--select-color); }
+
+  input[type=checkbox] {width: auto}
