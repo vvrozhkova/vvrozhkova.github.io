@@ -1,9 +1,9 @@
 
 <template>
   <footer class="text-center">
-    <div id="counter"></div>
+    <!-- <div id="counter"></div> -->
     <div class="copyright">
-      © Виктория Рожкова, 2022
+      © Виктория Рожкова, 2026
       <br />Коммерческое использование материалов сайта TestAutomation.Space запрещено. В
       остальных случаях обязательно наличие индексируемой ссылки со словом "Источник" на сайт или на страницу,
       содержащую этот материал.
@@ -27,7 +27,7 @@
     </div>
   </footer>
 </template>
-<script>
+<!-- <script>
 export default {
   mounted() {
     document.getElementById("counter").innerHTML =
@@ -53,7 +53,7 @@ export default {
       'border="0" style="width:5vw;"></a>';
   }
 };
-</script>
+</script> -->
 
 <style lang="scss">
 #counter, .social, .copyright{

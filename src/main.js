@@ -46,9 +46,9 @@ export default function (Vue, { router, head, isClient }) {
     crossorigin: "anonymous"
   })
 
-  head.script.push({
-    src: '//cookieinfoscript.com/js/cookieinfo.min.js',
-    id: 'cookieinfo', 'data-message': 'Мы используем куки, чтобы улучшить ваш пользовательский опыт. Продолжая посещать этот сайт, вы соглашаетесь на использование нами файлов',
-    'data-linkmsg': 'cookie.'
-  });
+  // head.script.push({
+  //   src: '//cookieinfoscript.com/js/cookieinfo.min.js',
+  //   id: 'cookieinfo', 'data-message': 'Мы используем куки, чтобы улучшить ваш пользовательский опыт. Продолжая посещать этот сайт, вы соглашаетесь на использование нами файлов',
+  //   'data-linkmsg': 'cookie.'
+  // });
 }
