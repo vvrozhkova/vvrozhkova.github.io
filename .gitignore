@@ -72,3 +72,6 @@ static/search.json
 blog/temp2
 blog/work_temp
 blog/templates
+blog/categories/look_category.md
+blog/posts/ru/look/*
+src/assets/images/look/*
