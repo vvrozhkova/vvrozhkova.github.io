@@ -1,6 +1,6 @@
 ---
 title: sql
-related: ["interview"]
+related: []
 icon: fas fa-database
 link: /category/sql
 ---
