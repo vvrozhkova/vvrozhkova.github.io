@@ -1,1 +1,0 @@
-docker run --network host -v ~/newmancheck:/etc/newman -t postman/newman:alpine run /etc/newman/Devices.postman_collection.json -e /etc/newman/Devices.postman_environment.json
