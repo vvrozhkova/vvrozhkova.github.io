@@ -56,7 +56,7 @@ query {
         id
         title
         path
-        belongsTo(limit: 3) {
+        belongsTo(limit: 3, sortBy: "order", order: ASC) {
           edges {
             node {
               ... on Post {
