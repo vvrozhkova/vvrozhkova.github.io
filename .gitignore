@@ -75,3 +75,4 @@ blog/templates
 blog/categories/look_category.md
 blog/posts/ru/look/*
 src/assets/images/look/*
+.gigacode_vsc/*
